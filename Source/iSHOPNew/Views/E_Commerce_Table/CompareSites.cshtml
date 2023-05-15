@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "CompareSites";
+    Layout = "~/Views/Shared/_ECommerce.cshtml";
+}
+
+@*@Styles.Render("~/Content/Tables/Tables.css?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Scripts.Render("~/Scripts/E_Commerce_Table/CompareSites.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Scripts.Render("~/Scripts/E_Commerce_Table/Table-Common.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")*@
+
+@System.Web.Optimization.Styles.Render("~/bundle/styles/Ecom-table")
+@System.Web.Optimization.Scripts.Render("~/bundle/scripts/Ecom-table-Compare_Sites")
+
+<input type="hidden" id="hdn-page" name="hdn-e-commerce-tbl-CompareSites" />
+@*Tabs Block*@
+<div class="advance-filters" style="height: 47px;background-color: transparent;display:none;">
+    <div class="adv-fltr-top" style="height: 68%;">
+        <div class="adv-fltr demo">
+            <div class="adv-fltr-option">
+                <div class="adv-fltr-label width-1" data-val="DEMOGRAPHIC PROFILING">
+                    <span tabindex="1" visit-id-mapping="true" guest-id-mapping="true" visit-spname="usp_EcomAcrossSiteTrip" guest-spname="usp_EcomAcrossSiteShopper" visit-samplesize-spname="sp_FactBookTripSampleSizeAcross" guest-samplesize-spname="sp_FactBookRespondentSampleSizeAcross">DEMOGRAPHICS</span>
+                </div>
+            </div>
+        </div>
+        <div id="adv-fltr visitsId" class="adv-fltr visits">
+            <div class ="filtercenterallign">
+            <div class="adv-fltr-label width-5" data-val="PRE-VISITS">
+                <span tabindex="2" id-mapping="true" spname="usp_EcomAcrossSiteTrip" samplesize-spname="usp_EcomAcrossSiteTrip">ONLINE ORDERS</span>
+            </div>
+            <div class="adv-fltr-label width-5" data-val="IN-VISITS">
+                <span tabindex="3" id-mapping="true" spname="usp_EcomAcrossSiteTrip" samplesize-spname="usp_EcomAcrossSiteTrip">AUTO REPLENISHED DELIVERIES</span>
+            </div>
+            <div class="adv-fltr-label width-5" data-val="POST-VISITS">
+                <span tabindex="4" id-mapping="true" spname="usp_EcomAcrossSiteTrip" samplesize-spname="usp_EcomAcrossSiteTrip">ITEMS PURCHASED</span>
+            </div>
+                </div>
+        </div>
+        <div class="adv-fltr guests">
+            <div class="adv-fltr-option guesttabs">
+                <div class="adv-fltr-label width-3" data-val="ESTABLISHMENT IMAGERY">
+                    <span tabindex="2" id-mapping="true" spname="usp_EcomAcrossSiteShopper" samplesize-spname="usp_EcomAcrossSiteShopper">SHOPPING FREQUENCY</span>
+                </div>
+                <div class="adv-fltr-label width-3" data-val="BEVERAGE DETAILS">
+                    <span tabindex="3" id-mapping="true" spname="usp_EcomAcrossSiteShopper" samplesize-spname="usp_EcomAcrossSiteShopper">BEVERAGE PURCHASER</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@*End*@
+@*Right Filter Block*@
+@Html.Partial("_RightPanelFilter")
+@*End*@
+<div id="guestFrqncy" style="display:none;" class="tbl-dta-rows"><div class="tbl-dta-freq"><div class="tbl-data-freqbdr"></div><div class="tbl-data-freqtxt">VISITS FREQUENCY</div></div></div>
+<div class="tbl-emptyrow"></div>
+<div id="Table-Content"></div>

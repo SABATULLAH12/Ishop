@@ -1,0 +1,172 @@
+﻿
+.leftheader, .rightheader {
+    background-color: #ededee;
+    box-sizing: border-box;
+    float: left;
+    /*height: 57.75px;*/
+    height:auto;
+}
+.leftheader, .leftbody {
+    box-sizing: border-box;
+    width: 35%;
+}
+.rightheader, .rightbody {
+    width: 64.3%;
+}
+.rightbody, .leftbody {
+    background-color: #ededee;
+    box-sizing: border-box;
+    float: left;
+    min-height:5px;
+    max-height: calc(100% - 65px);
+}
+.rightbody {
+    position: relative;
+}
+.leftheader .rowitem ul li, .leftbody .rowitem ul li {
+    box-sizing: border-box;
+    color: #000000;
+    float: left;
+    list-style: outside none none;
+    position:relative;
+}
+.rightheader .rowitem ul li, .rightbody .rowitem ul li {
+    box-shadow: 14px 0 0 0 #ebebeb;
+    box-sizing: border-box;
+    float: left;
+    list-style: outside none none;
+    margin-right: 10px;
+    /*min-width: 300px;*/
+    min-width: 150px;
+    width: 100%;
+    position:relative;
+}
+.rowitem ul li {
+    border-bottom: 0.5px dotted #c0c0c0;
+    box-sizing: border-box;
+    min-height: 25px;
+}
+#Table-Content {
+    height: calc(100% - 139px);
+    overflow: hidden;
+    text-transform: uppercase;
+    width: 100%;  
+    box-sizing:border-box;   
+    color:#000000;   
+}
+.rowitem {
+    clear: both;
+    width: 100%;
+}
+.rowitem > ul {
+    background-color: #ededee;
+    display: flex;
+    height:100%;
+}
+.leftbody .rowitem ul > li:first-child, .leftheader .rowitem ul > li:first-child {
+    box-shadow: 14px 0 0 0 #ebebeb;
+    margin-right: 10px;
+    width: 100%;
+}
+.leftbody .rowitem ul > li:first-child + li, .leftheader .rowitem ul > li:first-child + li {
+    width: 20%;
+}
+.leftheader ul li, .rightheader ul li {
+    color: #000000;
+}
+.leftheader .rowitem:first-child ul li, .rightheader .rowitem:first-child ul li {
+   background-color: rgba(0,0,0,.1);
+    border-bottom: 1px solid #686868;
+    color: #000000;
+    font-weight: bold;
+    line-height: 24px;
+    height:auto;
+}
+.leftheader .rowitem:first-child + .rowitem ul li, .rightheader .rowitem:first-child + .rowitem ul li {
+    border: 0 none;
+}
+.leftbody ul li {
+    padding-left: 50px;
+}
+.leftbody .table-title li {
+    padding-left: 40px;
+}
+.leftbody .table-title ul li, .rightbody .table-title ul li {
+      position: relative;
+}
+.table-top-title-bottom-line {
+    background-color: #000000;
+    border-radius: 1px 10px 0 0;
+    bottom: 0;
+    display: block;
+    height: 4px;
+    left: 0;
+    position: absolute;
+    width: 20px;
+}
+.table-title-bottom-line {
+    background-color: #72aaff;
+    border-radius: 1px 10px 0 0;
+    bottom: 0;
+    display: block;
+    height: 4px;
+    left: 0;
+    position: absolute;
+    width: 20px;
+}
+.rowitem.table-title {
+    position: relative;
+    cursor:pointer;
+}
+.ShoppingFrequencyheader {
+    position: relative;
+}
+.leftbody span, .rightbody span, .leftheader span, .rightheader span {
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+    font-size:12.5px;
+    line-height:normal;
+    padding-top:0.5px;
+}
+.leftbody span, .rightbody span {
+   text-transform:uppercase;
+}
+
+.leftheader .rowitem:nth-child(2) span {
+    text-transform:uppercase;
+}
+
+.rowitem.table-title li {
+    border-top: 1px solid skyblue;
+}
+.no-data {
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+}
+.leftheader .rowitem, .rightheader .rowitem {
+    min-height: 29px;
+    background-color: #ededee;
+}
+.rightbody .rowitem ul li:after, .leftbody .rowitem ul li:after {
+    content: "";
+    width: 3px;
+    height: 2px;
+    background: #A8A8A8;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 2px;
+}
+.table-title ul li:after {
+    display:none;
+}
+.rowitem ul .itembold {
+    font-weight: bold;
+    padding-left: 40px;
+}
+input.exporttoexcel, #chk_SelectAll {
+    position: relative;
+    top: 2px;
+}

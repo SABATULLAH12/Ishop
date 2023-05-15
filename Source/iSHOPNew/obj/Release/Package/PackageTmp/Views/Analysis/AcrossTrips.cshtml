@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "iSHOP :: ADD’L CAPABILITIES";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*@Scripts.Render("~/Scripts/Analysis/SOAPReport.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Scripts.Render("~/Scripts/Analysis/Analysis-Common.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")*@
+
+@System.Web.Optimization.Scripts.Render("~/bundle/scripts/addlcapabilities-across_trips")
+<input type="hidden" id="hdn-page" name="hdn-Analysis-AcrossTrips" />

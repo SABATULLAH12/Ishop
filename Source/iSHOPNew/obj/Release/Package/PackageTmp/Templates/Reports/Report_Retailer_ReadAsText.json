@@ -1,0 +1,404 @@
+[
+  {
+    "Tab": "Demographics",
+    "TabLevelData": [
+      {
+        "Metric": "Total",
+        "Text": "By _objective"
+      },
+      {
+        "Metric": "Gender",
+        "Text": "By _objective"
+      },
+      {
+        "Metric": "Age",
+        "Text": "By _objective Year Olds"
+      },
+      {
+        "Metric": "Age/Gender",
+        "Text": "By _objective Year Olds"
+      },
+      {
+        "Metric": "Ethnicity",
+        "Text": "By _objective"
+      },
+      {
+        "Metric": "Gender/Ethnicity",
+        "Text": "By _objective"
+      },
+      {
+        "Metric": "Age/Ethnicity",
+        "Text": "By _objective"
+      },
+      {
+        "Metric": "Education",
+        "Text": "By _objective"
+      },
+      {
+        "Metric": "Employment Status",
+        "Text": "By _objective"
+      },
+      {
+        "Metric": "Marital Status",
+        "Text": "By _objective"
+      },
+      {
+        "Metric": "HH Income",
+        "Text": "By _objective HH Income"
+      },
+      {
+        "Metric": "HH Size - Total",
+        "Text": "By _objective Members"
+      },
+      {
+        "Metric": "HH Size - Adults in HH",
+        "Text": "By _objective"
+      },
+      {
+        "Metric": "HH Size - Children in HH",
+        "Text": "By _objective"
+      },
+      {
+        "Metric": "Socio Economic",
+        "Text": "By _objective"
+      },
+      {
+        "Metric": "Trade Areas",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "GEOGRAPHY",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "Density",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "Census Regions",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "Census Divisions",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "CCNA Regions",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "Bottler Regions",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "DMA Regions",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "Trade Areas",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "Albertson's/Safeway Trade Areas",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "Circle K Trade Areas",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "HEB Trade Areas",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "Kroger Trade Areas",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "Publix Trade Areas",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "States",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "FCL Ops OU",
+        "Text": "From _objective"
+      }
+    ]
+  },
+  {
+    "Tab": "In Store - Beverage Detail",
+    "TabLevelData": [
+      {
+        "Metric": "Beverage Purchased Summary",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "Beverage Categories Purchased",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "Manufacturer Beverage Purchased Summary",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "Regular SSD Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "Diet SSD Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "RTD Coffee Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "RTD Tea Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "RTD Smoothies Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "Protein Drinks Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "100% Orange Juice Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "100% Grape Juice Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "100% Apple Juice Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "100% Grape Fruit Juice Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "100% Cranberry Juice Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "100% Fruit Juice Blends Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "Vegetable Juice/Vegetable+Fruit Juice Blend Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "Other Flavour 100 % Juice Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "RTD Juice Drinks/Ade (&lt;100% Juice) Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "Unflavored Non Sparkling Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "Flavored Non Sparkling Water Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "Unflavored Sparkling Water Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "Flavored Sparkling Water Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "Sports Drink Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "Energy Drinks/Shots Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      },
+      {
+        "Metric": "Liquid Flavor Enhancers Brands",
+        "Text": "Where _objective Was Purchased In Store"
+      }
+    ]
+  },
+  {
+    "Tab": "In Store",
+    "TabLevelData": [
+      {
+        "Metric": "Items Purchased",
+        "Text": "Which Had _objective As Items Purchased"
+      },
+      {
+        "Metric": "Smartphone/Tablet Used to Influence Purchase",
+        "Text": "Where Purchase Was Influenced by Smartphone/Tablet"
+      },
+      {
+        "Metric": "Smartphone Usage to Influence Purchase",
+        "Text": "Where Purchase Was Influenced by Smartphone"
+      },
+      {
+        "Metric": "Tablet Usage to Influence Purchase",
+        "Text": "Where Purchase Was Influenced by Tablet"
+      }
+    ]
+  },
+  {
+    "Tab": "Post Shop/Trip Summary",
+    "TabLevelData": [
+      {
+        "Metric": "Checkout Method",
+        "Text": "Where _objective as A Check-Out Method"
+      },
+      {
+        "Metric": "Method of Payment and Store Cards",
+        "Text": "Where _objective Was Used As A Payment Method"
+      },
+      {
+        "Metric": "Coupon Redemption",
+        "Text": "Where _objective"
+      },
+      {
+        "Metric": "Trip Expenditure Detail",
+        "Text": "Which Involved An Expenditure of _objective In Store"
+      },
+      {
+        "Metric": "Number of Items Purchased Detail",
+        "Text": "Which Involved Purchase Of _objective"
+      },
+      {
+        "Metric": "Time Spent in Store Detail",
+        "Text": "Which Involved A Store Presence Time Of _objective"
+      },
+      {
+        "Metric": "Location After",
+        "Text": "Which Had _objective As The Destination After Trip"
+      },
+      {
+        "Metric": "Trip Satisfaction",
+        "Text": "Which Had \"_objective\" As A Trip Satisfaction Type"
+      },
+      {
+        "Metric": "Trip Attribute Satisfaction - Top 2 Box",
+        "Text": "Which Had _objective As A Trip Satisfaction Attribute"
+      }
+    ]
+  },
+  {
+    "Tab": "Pre Shop",
+    "TabLevelData": [
+      {
+        "Metric": "Day of Week",
+        "Text": "On _objective"
+      },
+      {
+        "Metric": "Daypart",
+        "Text": "In The _objective"
+      },
+      {
+        "Metric": "Who With",
+        "Text": "With _objective"
+      },
+      {
+        "Metric": "Location Prior",
+        "Text": "With _objective As Origin"
+      },
+      {
+        "Metric": "Trip Mission",
+        "Text": "For _objective"
+      },
+      {
+        "Metric": "Reasons For Store Choice Segment",
+        "Text": "To _objective"
+      },
+      {
+        "Metric": "Reasons for Store Choice - Top 2 Box",
+        "Text": "To _objective"
+      },
+      {
+        "Metric": "Claimed Visit Motiviations",
+        "Text": "Which Had \"_objective\" As The Claimed Visit Motivation"
+      },
+      {
+        "Metric": "Consideration of Another Store",
+        "Text": "Where _objective"
+      },
+      {
+        "Metric": "Type of Other Store Considered",
+        "Text": "Where _objective Was Considered As Another Store"
+      },
+      {
+        "Metric": "Pre Trip Planning",
+        "Text": "When _objective"
+      },
+      {
+        "Metric": "Preparation Types",
+        "Text": "Which Involved _objective As A Trip Preparation Type"
+      },
+      {
+        "Metric": "Use of Technology to Prepare",
+        "Text": "Which Involved _objective"
+      },
+      {
+        "Metric": "Computer Based Preparation Activities",
+        "Text": "Which Involved _objective"
+      },
+      {
+        "Metric": "Smartphone Based Preparation Activities",
+        "Text": "Which Involved _objective"
+      },
+      {
+        "Metric": "Tablet Based Preparation Activities",
+        "Text": "Which Involved _objective"
+      },
+      {
+        "Metric": "All Destination Items",
+        "Text": "Which Had _objective As A Destination Item"
+      },
+      {
+        "Metric": "Most Important Destination Item",
+        "Text": "Which Had _objective As The Most Important Destination Item"
+      }
+    ]
+  },
+  {
+    "Tab": "Shopper Frequency",
+    "TabLevelData": [
+      {
+        "Metric": "WEEKLY +",
+        "Text": ""
+      },
+      {
+        "Metric": "MONTHLY +",
+        "Text": ""
+      },
+      {
+        "Metric": "QUARTERLY +",
+        "Text": ""
+      },
+      {
+        "Metric": "ANNUALLY +",
+        "Text": ""
+      },
+      {
+        "Metric": "STORE IN TRADE AREA",
+        "Text": ""
+      },
+      {
+        "Metric": "MAIN STORE/FAVORITE STORE",
+        "Text": ""
+      }
+    ]
+  }  
+]

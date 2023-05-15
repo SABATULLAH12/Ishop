@@ -1,0 +1,307 @@
+E:\Projects\iSHOPNew\bin\iSHOPNew.dll
+E:\Projects\iSHOPNew\bin\iSHOPNew.pdb
+E:\Projects\iSHOPNew\bin\Antlr3.Runtime.dll
+E:\Projects\iSHOPNew\bin\EntityFramework.dll
+E:\Projects\iSHOPNew\bin\Microsoft.Web.Infrastructure.dll
+E:\Projects\iSHOPNew\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\Projects\iSHOPNew\bin\Newtonsoft.Json.dll
+E:\Projects\iSHOPNew\bin\System.Net.Http.Formatting.dll
+E:\Projects\iSHOPNew\bin\System.Web.Http.dll
+E:\Projects\iSHOPNew\bin\System.Web.Http.WebHost.dll
+E:\Projects\iSHOPNew\bin\System.Web.Mvc.dll
+E:\Projects\iSHOPNew\bin\System.Web.Optimization.dll
+E:\Projects\iSHOPNew\bin\System.Web.Providers.dll
+E:\Projects\iSHOPNew\bin\System.Web.Razor.dll
+E:\Projects\iSHOPNew\bin\System.Web.WebPages.Deployment.dll
+E:\Projects\iSHOPNew\bin\System.Web.WebPages.dll
+E:\Projects\iSHOPNew\bin\System.Web.WebPages.Razor.dll
+E:\Projects\iSHOPNew\bin\WebGrease.dll
+E:\Projects\iSHOPNew\bin\EntityFramework.xml
+E:\Projects\iSHOPNew\bin\Newtonsoft.Json.xml
+E:\Projects\iSHOPNew\bin\System.Net.Http.Formatting.xml
+E:\Projects\iSHOPNew\bin\System.Web.Http.xml
+E:\Projects\iSHOPNew\bin\System.Web.Http.WebHost.xml
+E:\Projects\iSHOPNew\bin\System.Web.Mvc.xml
+E:\Projects\iSHOPNew\bin\System.Web.Razor.xml
+E:\Projects\iSHOPNew\bin\System.Web.WebPages.xml
+E:\Projects\iSHOPNew\bin\System.Web.WebPages.Deployment.xml
+E:\Projects\iSHOPNew\bin\System.Web.WebPages.Razor.xml
+E:\Projects\iSHOPNew\obj\Debug\iSHOPNew.csprojResolveAssemblyReference.cache
+E:\Projects\iSHOPNew\obj\Debug\iSHOPNew.dll
+E:\Projects\iSHOPNew\obj\Debug\iSHOPNew.pdb
+E:\Projects\iSHOPNew\bin\iSHOPNew.DAL.dll
+E:\Projects\iSHOPNew\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\Projects\iSHOPNew\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\Projects\iSHOPNew\bin\Microsoft.Practices.ObjectBuilder2.dll
+E:\Projects\iSHOPNew\bin\iSHOPNew.DAL.pdb
+E:\Projects\iSHOPNew\bin\iSHOPNew.dll.config
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\iSHOPNew.dll.config
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\iSHOPNew.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\iSHOPNew.pdb
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\Antlr3.Runtime.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\EntityFramework.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\iSHOPNew.DAL.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\Newtonsoft.Json.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\System.Net.Http.Formatting.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\System.Web.Http.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\System.Web.Http.WebHost.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\System.Web.Mvc.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\System.Web.Optimization.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\System.Web.Providers.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\System.Web.Razor.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\System.Web.WebPages.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\System.Web.WebPages.Razor.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\WebGrease.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\Microsoft.Practices.ObjectBuilder2.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\iSHOPNew.DAL.pdb
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\EntityFramework.xml
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\Newtonsoft.Json.xml
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\System.Net.Http.Formatting.xml
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\System.Web.Http.xml
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\System.Web.Http.WebHost.xml
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\System.Web.Mvc.xml
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\System.Web.Razor.xml
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\System.Web.WebPages.xml
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\iSHOPNew\Source\iSHOPNew\bin\System.Web.WebPages.Razor.xml
+D:\Projects\iSHOPNew\Source\iSHOPNew\obj\Debug\iSHOPNew.csprojResolveAssemblyReference.cache
+D:\Projects\iSHOPNew\Source\iSHOPNew\obj\Debug\iSHOPNew.dll
+D:\Projects\iSHOPNew\Source\iSHOPNew\obj\Debug\iSHOPNew.pdb
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\iSHOPNew.dll.config
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\iSHOPNew.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\iSHOPNew.pdb
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\Antlr3.Runtime.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\EntityFramework.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\iSHOPNew.DAL.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\Newtonsoft.Json.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\System.Net.Http.Formatting.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\System.Web.Http.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\System.Web.Http.WebHost.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\System.Web.Mvc.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\System.Web.Optimization.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\System.Web.Providers.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\System.Web.Razor.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\System.Web.WebPages.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\System.Web.WebPages.Razor.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\WebGrease.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\Microsoft.Practices.ObjectBuilder2.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\iSHOPNew.DAL.pdb
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\EntityFramework.xml
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\Newtonsoft.Json.xml
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\System.Net.Http.Formatting.xml
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\System.Web.Http.xml
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\System.Web.Http.WebHost.xml
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\System.Web.Mvc.xml
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\System.Web.Razor.xml
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\System.Web.WebPages.xml
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\System.Web.WebPages.Razor.xml
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\obj\Debug\iSHOPNew.csprojResolveAssemblyReference.cache
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\obj\Debug\iSHOPNew.dll
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\obj\Debug\iSHOPNew.pdb
+D:\Projects\ISHOPRedesign\Source\iSHOPNew\bin\Aspose.Slides.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\iSHOPNew.dll.config
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\iSHOPNew.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\iSHOPNew.pdb
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\AQ.Common.GenerateReport.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\AQ.Security.Cryptography.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\Aspose.Slides.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\BundleTransformer.Core.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\BundleTransformer.MicrosoftAjax.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\ClosedXML.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\DocumentFormat.OpenXml.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\EntityFramework.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\ICSharpCode.SharpZipLib.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\iSHOP.BLL.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\iSHOP.DAL.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\iSHOPNew.DAL.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\Newtonsoft.Json.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\Svg.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\System.Net.Http.Formatting.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\System.Web.Http.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\System.Web.Http.WebHost.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\System.Web.Mvc.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\System.Web.Optimization.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\System.Web.Providers.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\System.Web.Razor.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\System.Web.WebPages.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\System.Web.WebPages.Razor.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\WebGrease.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\Microsoft.Practices.ObjectBuilder2.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\iSHOPNew.DAL.pdb
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\System.Net.Http.Formatting.xml
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\System.Web.Http.xml
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\System.Web.Http.WebHost.xml
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\System.Web.Mvc.xml
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\System.Web.Razor.xml
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\System.Web.WebPages.xml
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\System.Web.WebPages.Razor.xml
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\ru-ru\BundleTransformer.Core.resources.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\bin\ru-ru\BundleTransformer.MicrosoftAjax.resources.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\obj\Debug\iSHOPNew.csprojResolveAssemblyReference.cache
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\obj\Debug\iSHOPNew.dll
+D:\Projects\iSHOPNew - Branches\branches\iSHOP_Reports_Revamp_10_05_2018\iSHOPNew\obj\Debug\iSHOPNew.pdb
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\iSHOPNew.dll.config
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\iSHOPNew.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\iSHOPNew.pdb
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\AQ.Common.GenerateReport.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\AQ.Security.Cryptography.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\Aspose.Slides.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\BundleTransformer.Core.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\BundleTransformer.MicrosoftAjax.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\ClosedXML.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\DocumentFormat.OpenXml.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\EntityFramework.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\ICSharpCode.SharpZipLib.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\iSHOP.BLL.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\iSHOP.DAL.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\iSHOPNew.DAL.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\Microsoft.Web.Infrastructure.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\Newtonsoft.Json.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\Svg.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\System.Net.Http.Formatting.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\System.Web.Http.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\System.Web.Http.WebHost.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\System.Web.Mvc.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\System.Web.Optimization.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\System.Web.Providers.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\System.Web.Razor.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\System.Web.WebPages.Deployment.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\System.Web.WebPages.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\System.Web.WebPages.Razor.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\Utils.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\WebGrease.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\Microsoft.Practices.ObjectBuilder2.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\iSHOPNew.DAL.pdb
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\System.Net.Http.Formatting.xml
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\System.Web.Http.xml
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\System.Web.Http.WebHost.xml
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\System.Web.Mvc.xml
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\System.Web.Razor.xml
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\System.Web.WebPages.xml
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\System.Web.WebPages.Deployment.xml
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\System.Web.WebPages.Razor.xml
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\ru-ru\BundleTransformer.Core.resources.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\bin\ru-ru\BundleTransformer.MicrosoftAjax.resources.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\obj\Debug\iSHOPNew.csprojResolveAssemblyReference.cache
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\obj\Debug\iSHOPNew.dll
+D:\Dev\iShop\branches\Version_iSHOP_P2P_DualFilters\iSHOPNew\obj\Debug\iSHOPNew.pdb
+D:\ISHOP_CODE\Source\iSHOPNew\bin\iSHOPNew.dll.config
+D:\ISHOP_CODE\Source\iSHOPNew\bin\iSHOPNew.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\iSHOPNew.pdb
+D:\ISHOP_CODE\Source\iSHOPNew\bin\AQ.Common.GenerateReport.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\AQ.Security.Cryptography.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\Aspose.Slides.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\BundleTransformer.Core.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\BundleTransformer.MicrosoftAjax.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\ClosedXML.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\DocumentFormat.OpenXml.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\EntityFramework.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\ICSharpCode.SharpZipLib.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\iSHOP.BLL.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\iSHOP.DAL.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\iSHOPNew.DAL.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\Microsoft.Web.Infrastructure.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\Newtonsoft.Json.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\Svg.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Net.Http.Formatting.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Helpers.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Http.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Http.WebHost.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Mvc.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Optimization.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Providers.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Razor.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.WebPages.Deployment.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.WebPages.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.WebPages.Razor.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\Utils.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\WebGrease.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\Microsoft.Practices.ObjectBuilder2.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\iSHOPNew.DAL.pdb
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Helpers.xml
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Mvc.xml
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Razor.xml
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.WebPages.xml
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.WebPages.Deployment.xml
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.WebPages.Razor.xml
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Net.Http.Formatting.xml
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Http.xml
+D:\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Http.WebHost.xml
+D:\ISHOP_CODE\Source\iSHOPNew\bin\ru-ru\BundleTransformer.Core.resources.dll
+D:\ISHOP_CODE\Source\iSHOPNew\bin\ru-ru\BundleTransformer.MicrosoftAjax.resources.dll
+D:\ISHOP_CODE\Source\iSHOPNew\obj\Debug\iSHOPNew.csprojResolveAssemblyReference.cache
+D:\ISHOP_CODE\Source\iSHOPNew\obj\Debug\iSHOPNew.dll
+D:\ISHOP_CODE\Source\iSHOPNew\obj\Debug\iSHOPNew.pdb
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\iSHOPNew.dll.config
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\iSHOPNew.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\iSHOPNew.pdb
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\AQ.Common.GenerateReport.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\AQ.Security.Cryptography.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\Aspose.Slides.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\BundleTransformer.Core.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\BundleTransformer.MicrosoftAjax.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\ClosedXML.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\DocumentFormat.OpenXml.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\EntityFramework.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\ICSharpCode.SharpZipLib.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\iSHOP.BLL.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\iSHOP.DAL.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\iSHOPNew.DAL.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\Microsoft.Web.Infrastructure.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\Newtonsoft.Json.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\Svg.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Net.Http.Formatting.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Helpers.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Http.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Http.WebHost.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Mvc.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Optimization.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Providers.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Razor.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.WebPages.Deployment.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.WebPages.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.WebPages.Razor.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\Utils.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\WebGrease.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\Microsoft.Practices.ObjectBuilder2.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\iSHOPNew.DAL.pdb
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Helpers.xml
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Mvc.xml
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Razor.xml
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.WebPages.xml
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.WebPages.Deployment.xml
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.WebPages.Razor.xml
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Net.Http.Formatting.xml
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Http.xml
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\System.Web.Http.WebHost.xml
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\ru-ru\BundleTransformer.Core.resources.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\bin\ru-ru\BundleTransformer.MicrosoftAjax.resources.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\obj\Debug\iSHOPNew.csprojResolveAssemblyReference.cache
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\obj\Debug\iSHOPNew.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew\obj\Debug\iSHOPNew.pdb

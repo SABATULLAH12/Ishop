@@ -1,0 +1,499 @@
+﻿@{
+    ViewBag.Title = "iSHOP :: Reports";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*@Styles.Render("~/Content/Reports/Reports.css?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Scripts.Render("~/Scripts/Reports/RetailersShopperDeepDive.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Scripts.Render("~/Scripts/Reports/Reports-Common.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")*@
+
+@System.Web.Optimization.Styles.Render("~/bundle/styles/reports")
+@System.Web.Optimization.Scripts.Render("~/bundle/scripts/reports-Retailers_Shopper_Deep_Dive")
+<input type="hidden" id="hdn-page" name="hdn-report-RetailersShopperDeepDive" />
+
+<div>
+    <table class="clsMetricDataTitleRow1">
+        <tbody>
+            <tr>
+                <td colspan="2">
+                    <div>
+                        <table style="border-collapse: collapse; width: 100%;">
+                            <tbody>
+                                <tr>
+                                    <td class="clsMetricDataItem1" style="width: 34.3%;">
+                                        Section
+                                    </td>
+                                    <td class="clsMetricDataItem2">
+                                        Details
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="ShowChartArea2">
+    <table class="clsReportDataTable" id="tbleContentListForAll" style="display: table;">
+        <tbody>
+            <tr>
+                <td colspan="2">
+                    <div>
+                        <table>
+                            <tbody>
+                                <tr  style="display:none">
+                                    <td class="clsReportData1">
+                                        SUMMARY
+                                    </td>
+                                    <td class="clsReportData2">
+                                        THIS SECTION IS FOR USER CONVENIENCE TO WRITE THEIR THOUGHTS/SUMMARIZE
+                                        CONTENTS
+                                    </td>
+                                </tr>                                                                                        
+
+                                <tr>
+                                    <td class="clsReportData3">
+                                        FREQUENCY PROFILE
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="clsReportData5">SHOPPER FREQUENCY</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="clsReportData6">
+                                                        <ul class="clsReportData7">
+                                                            <li>SHOPPER FREQUENCY - (WITH TOTAL SHOPPERS AS BASE)</li>
+                                                            <li>SHOPPER FREQUENCY - (WITH SELECTED SHOPPER FREQUENCY AS BASE)</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr id="idFrequentShopper">
+                                    <td class="clsReportData3">
+                                        SHOPPER DEMOGRAPHICS
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="clsReportData5">WHO ARE THE SHOPPERS?</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="clsReportData6">
+                                                        <ul class="clsReportData7">
+                                                            <li>GENDER</li>
+                                                            <li>AGE</li>
+                                                            <li>RACE/ETHNICITY</li>
+                                                            <li>DENSITY</li>
+                                                            <li>SOCIOECONOMIC LEVEL</li>
+                                                            <li>HH INCOME</li>
+                                                            <li>HH SIZE</li>
+                                                            <li>MARITAL STATUS</li>
+                                                            <li>PARENTAL IDENTIFICATION</li>
+                                                            <li>ATTITUDINAL SEGMENTATION</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr id="idCrossRetailer">
+                                    <td class="clsReportData3">
+                                        CROSS RETAILER SHOPPER
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="clsReportData5">WHERE ELSE DO SHOPPERS FREQUENTLY SHOP?</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="clsReportData6">
+                                                        <ul class="clsReportData7">
+                                                            <li>CROSS RETAILER SHOPPING - RETAILERS AND CHANNELS</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr id="idShopperPerception">
+                                    <td class="clsReportData3">
+                                        SHOPPER PERCEPTIONS
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="clsReportData5">HOW DO SHOPPERS PERCIEVE STORES?</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="clsReportData6">
+                                                        <ul class="clsReportData7">
+                                                            <li>RETAILER LOYALTY PYRAMID</li>
+                                                            <li>STORE ASSOCIATIONS - HIGH LEVEL</li>
+                                                            <li>STORE IMAGERY - DETAILED</li>
+                                                            <li>GOOD PLACE TO SHOP FOR - HIGH LEVEL AND DETAILED</li>
+                                                            <li>MAIN STORE /FAVORITE STORE</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr id="idBeverageInteraction">
+                                    <td class="clsReportData3">
+                                        SHOPPERS BEVERAGE PURCHASE
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="clsReportData5">BEVERAGE PURCHASE FREQUENCY</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="clsReportData6">
+                                                        <ul class="clsReportData7">
+                                                            <li>BEVERAGE CATEGORIES PURCHASED - SUMMARY AND DETAILED</li>
+                                                            <li>MANUFACTURER BEVERAGE SUMMARY</li>
+                                                            <li>SHOPPERS SSD PURCHASE AND FAVORITE</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="clsReportDataTable" id="tbleBeverageContentListShopper" style="display: none;">
+        <tbody>
+            <tr>
+                <td colspan="2">
+                    <div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="clsReportData1">
+                                        INTRODUCTION
+
+                                    </td>
+                                    <td class="clsReportData2">
+                                        THIS SECTION IS FOR USER CONVENIENCE AND INCLUDES HOW TO
+                                        READ SECTION
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="clsReportData3">
+                                        SHOPPER DEMOGRAPHICS
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="clsReportData5">WHO ARE THE VISITORS?</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="clsReportData6">
+                                                        <ul class="clsReportData7">
+                                                            <li>GENDER</li>
+                                                            <li>AGE</li>
+                                                            <li>
+                                                                HOUSEHOLD SIZE
+                                                            </li>
+                                                            <li>ETHNICITY</li>
+                                                            <li>INCOME</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="clsReportData3">
+                                        SHOPPER SEGMENTS
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="clsReportData6">
+                                                        <ul class="clsReportData7">
+                                                            <li>PLEASURE SHOPPERS</li>
+                                                            <li>PAYDAY SHOPPERS</li>
+                                                            <li>
+                                                                QUALITY COMPARERS
+                                                            </li>
+                                                            <li>SOCIAL SHOPPERS</li>
+                                                            <li>TECHNOLOGY EMBRACERS</li>
+                                                            <li>ADVANCE PLANNERS</li>
+                                                            <li>BRAND BUYERS</li>
+                                                            <li>PRICE SEEKERS</li>
+                                                            <li>ERRAND RUNNERS</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="clsReportData3">
+                                        CHANNEL FREQUENCY
+
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="clsReportData5">
+                                                        % OF SHOPPER FOR BEVERAGE SHOPPING FREQUENCY ACROSS CHANNELS
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="clsReportData6">
+                                                        <ul class="clsReportData7">
+                                                            <li>GROCERY</li>
+                                                            <li>CONVENIENCE</li>
+                                                            <li>DRUG</li>
+                                                            <li>DOLLAR</li>
+                                                            <li>CLUB</li>
+                                                            <li>MASS MERC.</li>
+                                                            <li>SUPERCENTER</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="clsReportData3">
+                                        RETAILER FREQUENCY
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="clsReportData5">
+                                                        % OF SHOPPER FOR BEVERAGE SHOPPING FREQUENCY ACROSS TOP 10
+                                                        RETAILERS
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="clsReportDataTable" id="tbleBeverageContentListTrips" style="display: none;">
+        <tbody>
+            <tr>
+                <td colspan="2">
+                    <div>
+                        <table>
+                            <tbody>
+                                <tr>
+
+                                    <td class="clsReportData1">
+                                        INTRODUCTION
+                                    </td>
+                                    <td class="clsReportData2">
+                                        THIS SECTION IS FOR USER CONVENIENCE AND INCLUDES HOW TO
+                                        READ SECTION
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="clsReportData3">
+                                        BEVERAGE INSIGHTS – TEMP &amp; LOCATION
+
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <table>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td class="clsReportData6">
+                                                        <ul class="clsReportData7">
+                                                            <li>PRODUCT TEMPERATURE</li>
+                                                            <li>CHILLED LOCATION</li>
+                                                            <li>ROOM TEMPERATURE LOCATION</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="clsReportData3">
+                                        BEVERAGE INSIGHTS – INTENDED CONSUMER
+
+
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="clsReportData5">
+                                                        WHO ARE THE INTENDED CONSUMERS?
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="clsReportData6">
+                                                        <ul class="clsReportData7">
+                                                            <li>MYSELF</li>
+                                                            <li>ADULT</li>
+                                                            <li>TEEN 12-17 YEARS</li>
+                                                            <li>CHILDREN 0-11 YEARS</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="clsReportData3">
+                                        BEVERAGE INSIGHTS – IC &amp; FC
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="clsReportData5">
+                                                        WHEN WAS THE BEVERAGE INTENDED TO BE CONSUMED?
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="clsReportData6">
+                                                        <ul class="clsReportData7">
+                                                            <li>IMMEDIATE CONSUMPTION (WITHIN 10 MINUTES)</li>
+                                                            <li>IMMINENT CONSUMPTION (BETWEEN 10 MINUTES AND 4 HOURS)</li>
+                                                            <li>FUTURE CONSUMPTION (AFTER 4 HOURS)</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="clsReportData3">
+                                        BASKET DETAILS – BASKET SIZE &amp; CONTENTS
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="clsReportData5">
+                                                        AVERAGE BASKET SIZE CONTENTS (NO: OF ITEMS) ACROSS CATEGORIES
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="clsReportData3">
+                                        BASKET DETAILS – DESTINATION ITEMS
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="clsReportData5">% OF TIME THE CATEGORY WAS DESTINATION ITEM</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="clsReportData3">
+                                        TRIP DETAILS – TRIP MISSION
+
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="clsReportData5">TRIP MISSION DISTRIBUTION</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="clsReportData6">
+                                                        <ul class="clsReportData7">
+                                                            <li>STOCK-UP</li>
+                                                            <li>GRAB AND GO</li>
+                                                            <li>GRAB AND GO HOME</li>
+                                                            <li>NEED IT NOW</li>
+                                                            <li>FILL-IN FOOD</li>
+                                                            <li>FILL-IN NON-FOOD</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="clsReportData3">
+                                        TRIP DETAILS – TRIP SUMMARY
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="clsReportData5">TRIP MISSION DISTRIBUTION</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="clsReportData6">
+                                                        <ul class="clsReportData7">
+                                                            <li>AVERAGE BASKET SIZE (NO: OF ITEMS)</li>
+                                                            <li>AVERAGE AMOUNT SPENT ON BASKET (DOLLARS)</li>
+                                                            <li>AVERAGE AMOUNT OF TIME SPENT (MINUTES</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

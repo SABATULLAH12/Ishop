@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "Error";
+}
+@Styles.Render("~/Content/Error/Error.css?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Scripts.Render("~/Scripts/Error/Error.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+
+<div id="error-msg">
+    OOPS...SOMETHING WENT WRONG, PLEASE TRY AGAIN LATER.
+</div>

@@ -1,0 +1,798 @@
+﻿@{
+    ViewBag.Title = "Demographic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*@Styles.Render("~/Content/Dashboard/Demographic.css?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Scripts.Render("~/Scripts/Dashboard/Demographic.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")*@
+
+@System.Web.Optimization.Styles.Render("~/bundle/styles/dashboard-Demographic")
+@System.Web.Optimization.Scripts.Render("~/bundle/scripts/dashboard-Demographic")
+
+<input type="hidden" id="hdn-page" name="hdn-dashboard-Demographic" />
+
+<div class="dashboard-content">
+    <div class="demog-section demog-section-1">
+        <div class="demog-widget widget-gender">
+            <div class="demog-widget-header">
+                <div class="demog-widget-heading"><div class="vertical-align">GENDER</div></div>
+            </div>
+            <div class="demog-widget-container">
+                <div class="add-padd">
+                    <div class="gender-section male-section active-widget">
+                        <div class="gender-image male">
+                            <div class="male-img"></div>
+                        </div>
+                        <div class="gender-text male">
+                            <div class="metric-values">
+                                <div class="vertical-align">
+                                    <span class="mValDemog"></span>
+                                    <span class="cValDemog"></span>
+                                </div>
+                            </div>
+                            <div class="metric-text textDemog"><div class="vertical-align"></div></div>                            
+                        </div>
+                    </div>
+                    <div class="gender-section female-section">
+                        <div class="gender-image female">
+                            <div class="female-img"></div>
+                        </div>
+                        <div class="gender-text female">
+                            <div class="metric-values">
+                                <div class="vertical-align">
+                                    <span class="mValDemog"></span>
+                                    <span class="cValDemog"></span>
+                                </div>
+                            </div>
+                            <div class="metric-text textDemog"><div class="vertical-align"></div></div>                           
+                        </div>
+                    </div>
+                </div>
+                <div class="male-female-chart">
+                    <object class="donutChartGender" data="../Images/Demog/P2P Dashboard elements_Gender_PiChart_Bg.svg?v=23" type="image/svg+xml"></object>
+                </div>
+            </div>
+        </div>
+        <div class="demog-widget widget-age">
+            <div class="demog-widget-header">
+                <div class="demog-widget-heading"><div class="vertical-align">AGE</div></div>
+            </div>
+            <div class="demog-widget-container">
+                <div class="add-padd">
+                    <div class="age-container" pos="1">
+                        <div class="age-ind-section" pos="1">
+                            <div class="age-text textDemog"><div class="vertical-align" style="width:100%;"></div></div>
+                            <div class="age-values">
+                                <div class="vertical-align" style="width:100%;">
+                                    <span class="mValDemog"></span>
+                                    <span class="cValDemog"></span>
+                                </div>
+                            </div>
+                            <div class="age-bar age-bar-1"></div>
+                        </div>
+                        <div class="age-ind-section" pos="2">
+                            <div class="age-text textDemog"><div class="vertical-align" style="width:100%;"></div></div>
+                            <div class="age-values">
+                                <div class="vertical-align" style="width:100%;">
+                                    <span class="mValDemog"></span>
+                                    <span class="cValDemog"></span>
+                                </div>
+                            </div>
+                            <div class="age-bar age-bar-2"></div>
+                        </div>
+                        <div class="age-ind-section" pos="3">
+                            <div class="age-text textDemog"><div class="vertical-align" style="width:100%;"></div></div>
+                            <div class="age-values">
+                                <div class="vertical-align" style="width:100%;">
+                                    <span class="mValDemog"></span>
+                                    <span class="cValDemog"></span>
+                                </div>
+                            </div>
+                            <div class="age-bar age-bar-3"></div>
+                        </div>
+                    </div>
+                    <div class="age-container" pos="2">
+                        <div class="age-middle-container">
+                            <div class="age-middle-chart">
+                                <object class="age-pie-chart" data="../Images/Demog/P2P Dashboard elements_Age_PiChart_Bg.svg?v=23" type="image/svg+xml"> </object>
+                            </div>
+                            <div class="age-middle-img"></div>
+                        </div>
+                    </div>
+                    <div class="age-container" pos="3">
+                        <div class="age-ind-section" pos="6">
+                            <div class="age-text textDemog"><div class="vertical-align" style="width:100%;"></div></div>
+                            <div class="age-values">
+                                <div class="vertical-align" style="width:100%;">
+                                    <span class="mValDemog"></span>
+                                    <span class="cValDemog"></span>
+                                </div>
+                            </div>
+                            <div class="age-bar-reverse age-bar-4"></div>
+                        </div>
+                        <div class="age-ind-section" pos="5">
+                            <div class="age-text textDemog"><div class="vertical-align" style="width:100%;"></div></div>
+                            <div class="age-values">
+                                <div class="vertical-align" style="width:100%;">
+                                    <span class="mValDemog"></span>
+                                    <span class="cValDemog"></span>
+                                </div>
+                            </div>
+                            <div class="age-bar-reverse age-bar-5"></div>
+                        </div>
+                        <div class="age-ind-section" pos="4">
+                            <div class="age-text textDemog"><div class="vertical-align" style="width:100%;"></div></div>
+                            <div class="age-values">
+                                <div class="vertical-align" style="width:100%;">
+                                    <span class="mValDemog"></span>
+                                    <span class="cValDemog"></span>
+                                </div>
+                            </div>
+                            <div class="age-bar-reverse age-bar-6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="demog-widget widget-ethnicity">
+            <div class="demog-widget-header">
+                <div class="demog-widget-heading"><div class="vertical-align">ETHNICITY</div></div>
+            </div>
+            <div class="demog-widget-container">
+                <div class="add-padd">
+                    <div class="widget-main-container eth-main-container">
+                        <div class="eth-sub-container active-widget" pos="1">
+                            <div class="eth-container eth-1 textDemog"><div class="vertical-align"></div></div>
+                            <div class="eth-container eth-2 mValDemog"><div class="vertical-align"></div></div>
+                            <div class="eth-container eth-3 cValDemog"><div class="vertical-align"></div></div>
+                        </div>
+                        <div class="eth-sub-container" pos="2">
+                            <div class="eth-container eth-1 textDemog"><div class="vertical-align"></div></div>
+                            <div class="eth-container eth-2 mValDemog"><div class="vertical-align"></div></div>
+                            <div class="eth-container eth-3 cValDemog "><div class="vertical-align"></div></div>
+                        </div>
+                        <div class="eth-sub-container" pos="3">
+                            <div class="eth-container eth-1 textDemog"><div class="vertical-align"></div></div>
+                            <div class="eth-container eth-2 mValDemog"><div class="vertical-align"></div></div>
+                            <div class="eth-container eth-3 cValDemog"><div class="vertical-align"></div></div>
+                        </div>
+                        <div class="eth-sub-container" pos="4">
+                            <div class="eth-container eth-1 textDemog"><div class="vertical-align"></div></div>
+                            <div class="eth-container eth-2 mValDemog"><div class="vertical-align"></div></div>
+                            <div class="eth-container eth-3 cValDemog"><div class="vertical-align"></div></div>
+                        </div>
+                        <div class="eth-sub-container" pos="5">
+                            <div class="eth-container eth-1 textDemog"><div class="vertical-align"></div></div>
+                            <div class="eth-container eth-2 mValDemog"><div class="vertical-align"></div></div>
+                            <div class="eth-container eth-3 cValDemog "><div class="vertical-align"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="demog-widget widget-density">
+            <div class="demog-widget-header">
+                <div class="demog-widget-heading"><div class="vertical-align">DENSITY</div></div>
+            </div>
+            <div class="demog-widget-container">
+                <div class="add-padd">
+                    <div class="den-container" pos="1">
+                        <div class="den-text textDemog"><div class="vertical-align" style="width:100%;"></div></div>
+                        <div class="den-bar">
+                            <div class="den-bar-chart">
+                                <object class="bar-chart" data="../Images/Demog/P2P Dashboard elements_Density BarChart Bg.svg?v=23" type="image/svg+xml"></object>
+                            </div>
+                        </div>
+                        <div class="den-values">
+                            <div class="mValDemog"><div class="vertical-align" style="width:100%;text-align:right;"></div></div>
+                            <div class="den-pipe"><div class="vertical-align" style="width:100%;text-align:center;color:black;">|</div></div>
+                            <div class="cValDemog"><div class="vertical-align" style="width:100%;text-align:left;"></div></div>
+                        </div>
+                    </div>
+                    <div class="den-container" pos="2">
+                        <div class="den-text textDemog"><div class="vertical-align" style="width:100%;"></div></div>
+                        <div class="den-bar">
+                            <div class="den-bar-chart">
+                                <object class="bar-chart" data="../Images/Demog/P2P Dashboard elements_Density BarChart Bg.svg?v=23" type="image/svg+xml"></object>
+                            </div>
+                        </div>
+                        <div class="den-values">
+                            <div class="mValDemog"><div class="vertical-align" style="width:100%;text-align:right;"></div></div>
+                            <div class="den-pipe"><div class="vertical-align" style="width:100%;text-align:center;color:black;">|</div></div>
+                            <div class="cValDemog"><div class="vertical-align" style="width:100%;text-align:left;"></div></div>
+                        </div>
+                    </div>
+                    <div class="den-container" pos="3">
+                        <div class="den-text textDemog"><div class="vertical-align" style="width:100%;"></div></div>
+                        <div class="den-bar">
+                            <div class="den-bar-chart">
+                                <object class="bar-chart" data="../Images/Demog/P2P Dashboard elements_Density BarChart Bg.svg?v=23" type="image/svg+xml"></object>
+                            </div>
+                        </div>
+                        <div class="den-values">
+                            <div class="mValDemog"><div class="vertical-align" style="width:100%;text-align:right;"></div></div>
+                            <div class="den-pipe"><div class="vertical-align" style="width:100%;text-align:center;color:black;">|</div></div>
+                            <div class="cValDemog"><div class="vertical-align" style="width:100%;text-align:left;"></div></div>
+                        </div>
+                    </div>
+                    <div class="den-container" pos="4">
+                        <div class="den-text textDemog"><div class="vertical-align" style="width:100%;"></div></div>
+                        <div class="den-bar">
+                            <div class="den-bar-chart">
+                                <object class="bar-chart" data="../Images/Demog/P2P Dashboard elements_Density BarChart Bg.svg?v=23" type="image/svg+xml"></object>
+                            </div>
+                        </div>
+                        <div class="den-values">
+                            <div class="mValDemog"><div class="vertical-align" style="width:100%;text-align:right;"></div></div>
+                            <div class="den-pipe"><div class="vertical-align" style="width:100%;text-align:center;color:black;">|</div></div>
+                            <div class="cValDemog"><div class="vertical-align" style="width:100%;text-align:left;"></div></div>
+                        </div>
+                    </div>
+                    @*<div class="den-container" pos="5">
+                            <div class="den-text textDemog"><div class="vertical-align" style="width:100%;"></div></div>
+                            <div class="den-bar">
+                                <div class="den-bar-chart">
+                                    <object class="bar-chart" data="../Images/Demog/P2P Dashboard elements_Density BarChart Bg.svg?v=23" type="image/svg+xml"></object>
+                                </div>
+                            </div>
+                            <div class="den-values">
+                                <div class="mValDemog"><div class="vertical-align" style="width:100%;text-align:right;"></div></div>
+                                <div class="den-pipe"><div class="vertical-align" style="width:100%;text-align:center;color:black;">|</div></div>
+                                <div class="cValDemog"><div class="vertical-align" style="width:100%;text-align:left;"></div></div>
+                            </div>
+                        </div>
+                        <div class="den-container" pos="6">
+                            <div class="den-text textDemog"><div class="vertical-align" style="width:100%;"></div></div>
+                            <div class="den-bar">
+                                <div class="den-bar-chart">
+                                    <object class="bar-chart" data="../Images/Demog/P2P Dashboard elements_Density BarChart Bg.svg?v=23" type="image/svg+xml"></object>
+                                </div>
+                            </div>
+                            <div class="den-values">
+                                <div class="mValDemog"><div class="vertical-align" style="width:100%;text-align:right;"></div></div>
+                                <div class="den-pipe"><div class="vertical-align" style="width:100%;text-align:center;color:black;">|</div></div>
+                                <div class="cValDemog"><div class="vertical-align" style="width:100%;text-align:left;"></div></div>
+                            </div>
+                        </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="demog-section demog-section-2">
+        <div class="demog-widget widget-dhs">
+            <div class="demog-widget-header">
+                <div class="demog-widget-heading"><div class="vertical-align">SHOPPER HOUSEHOLD STATS</div></div>
+            </div>
+            <div class="demog-widget-container">
+                <div class="add-padd">
+                    <div class="widget-main-container">
+                        <div class="dhs-container" pos="1">
+                            <div class="mval mValDemog"><div class="vertical-align" style="top:70%;"></div></div>
+                            <div class="cval cValDemog "><div class="vertical-align"></div></div>
+                            <div class="tval textDemog"><div class="vertical-align"></div></div>
+                        </div>
+                        <div class="dhs-container" pos="2">
+                            <div class="dhs-image-container">
+                                <object class="dhs-image one" data="../Images/Demog/P2P Dashboard elements_1Person HHS BarChart Bg_white.svg?v=23#svgView(preserveAspectRatio(xMidYMax meet))" type="image/svg+xml"> </object>
+                            </div>
+                            <div class="dhs-data">
+                                <div class="dhs-values">
+                                    <div class="vertical-align" style="width:100%;">
+                                        <span class="dhs-mVal mValDemog"></span>
+                                        <span class="dhs-cVal cValDemog "></span>
+                                    </div>
+                                </div>
+                                <div class="dhs-text textDemog"><div class="vertical-align" style="width:100%;"></div></div>
+                            </div>
+                        </div>
+                        <div class="dhs-container" pos="3">
+                            <div class="dhs-image-container">
+                                <object class="dhs-image two" data="../Images/Demog/P2P Dashboard elements_2Person HHS BarChart Bg_white.svg?v=23#svgView(preserveAspectRatio(xMidYMax meet))" type="image/svg+xml"> </object>
+                            </div>
+                            <div class="dhs-data">
+                                <div class="dhs-values">
+                                    <div class="vertical-align" style="width:100%;">
+                                        <span class="dhs-mVal mValDemog"></span>
+                                        <span class="dhs-cVal cValDemog "></span>
+                                    </div>
+                                </div>
+                                <div class="dhs-text textDemog"><div class="vertical-align" style="width:100%;"></div></div>
+                            </div>
+                        </div>
+                        <div class="dhs-container active-widget" pos="4">
+                            <div class="dhs-image-container">
+                                <object class="dhs-image three" data="../Images/Demog/P2P Dashboard elements_3Person HHS BarChart Bg_white.svg?v=23#svgView(preserveAspectRatio(xMidYMax meet))" type="image/svg+xml"> </object>
+                            </div>
+                            <div class="dhs-data">
+                                <div class="dhs-values">
+                                    <div class="vertical-align" style="width:100%;">
+                                        <span class="dhs-mVal mValDemog"></span>
+                                        <span class="dhs-cVal cValDemog"></span>
+                                    </div>
+                                </div>
+                                <div class="dhs-text textDemog"><div class="vertical-align" style="width:100%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="demog-widget widget-ms">
+            <div class="demog-widget-header">
+                <div class="demog-widget-heading"><div class="vertical-align">MARITAL STATUS</div></div>
+            </div>
+            <div class="demog-widget-container">
+                <div class="add-padd">
+                    <div class="ms-container" pos="1">
+                        <div class="dhs-image-container">
+                            <object class="dhs-image one heightforMartl" data="../Images/Demog/P2P Dashboard elements_1Person HHS BarChart Bg_white.svg?v=23#svgView(preserveAspectRatio(xMidYMax meet))" type="image/svg+xml"> </object>
+                        </div>
+                        <div class="dhs-data" style="height:calc(40% + 18px);">
+                            <div class="ms-values" style="margin-top: 2px;">
+                                <div class="vertical-align" style="width:100%;">
+                                    <span class="dhs-mVal mValDemog"></span>
+                                    <span class="dhs-cVal cValDemog "></span>
+                                </div>
+                            </div>
+                            <div class="ms-text textDemog" style="margin-top:2px;"><div class="vertical-align" style="width:100%;line-height: 12px;"></div></div>
+                        </div>
+                    </div>
+                    <div class="ms-container" pos="2">
+                        <div class="dhs-image-container">
+                            <object class="dhs-image one heightforMartl" data="../Images/Demog/P2P Dashboard elements_2Person HHS BarChart Bg_white.svg?v=23#svgView(preserveAspectRatio(xMidYMax meet))" type="image/svg+xml"> </object>
+                        </div>
+                        <div class="dhs-data" style="height:calc(40% + 18px);">
+                            <div class="dhs-values" style="margin-top: -3px;">
+                                <div class="vertical-align" style="width:100%;">
+                                    <span class="dhs-mVal mValDemog"></span>
+                                    <span class="dhs-cVal cValDemog "></span>
+                                </div>
+                            </div>
+                            <div class="dhs-text textDemog" style="margin-top:2px;"><div class="vertical-align" style="width:100%;line-height: 12px;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="demog-widget widget-ps">
+            <div class="demog-widget-header">
+                <div class="demog-widget-heading"><div class="vertical-align">PARENTS</div></div>
+            </div>
+            <div class="demog-widget-container">
+                <div class="add-padd">
+                    <div class="ps-container" pos="1">
+                        <div class="dhs-image-container">
+                            <object class="dhs-image one" data="../Images/Demog/P2P Dashboard elements_3Person HHS BarChart Bg_white.svg?v=23#svgView(preserveAspectRatio(xMidYMax meet))" type="image/svg+xml"> </object>
+                        </div>
+                        <div class="dhs-data" style="height:calc(40% + 18px);">
+                            <div class="dhs-values" style="margin-top: -3px;">
+                                <div class="vertical-align" style="width:100%;">
+                                    <span class="dhs-mVal mValDemog"></span>
+                                    <span class="dhs-cVal cValDemog "></span>
+                                </div>
+                            </div>
+                            <div class="dhs-text textDemog" style="margin-top:2px;"><div class="vertical-align" style="width:100%;line-height: 12px;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="demog-widget widget-hi">
+            <div class="demog-widget-header">
+                <div class="demog-widget-heading"><div class="vertical-align">HOUSEHOLD INCOME</div></div>
+            </div>
+            <div class="demog-widget-container">
+                <div class="add-padd">
+                    <div class="hi-container vertical-shadow-sharp" pos="1" style="z-index:3;">
+                        <div class="hi-mval mValDemog"><div class="vertical-align"></div></div>
+                        <div class="hi-cVal cValDemog "><div class="vertical-align" style="top:40%;"></div></div>
+                        <div class="hi-tVal textDemog"><div class="vertical-align" style="width:100%;"></div></div>
+                    </div>
+                    <div class="hi-container vertical-shadow-sharp" pos="2" style="z-index:2;">
+                        <div class="hi-img-holder">
+                            <div class="hi-img1"></div>
+                        </div>
+                        <div class="hi-values">
+                            <div class="hi-data horizontal-shadow">
+                                <div class="vertical-align" style="width:100%;">
+                                    <span class="mValDemog"></span>
+                                    <span class="cValDemog "></span>
+                                </div>
+                            </div>
+                            <div class="hi-text textDemog">
+                                <div class="vertical-align" style="width:97%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hi-container active-widget" pos="3" style="z-index:1;">
+                        <div class="hi-img-holder">
+                            <div class="hi-img2"></div>
+                        </div>
+                        <div class="hi-values">
+                            <div class="hi-data horizontal-shadow">
+                                <div class="vertical-align" style="width:100%;">
+                                    <span class="mValDemog"></span>
+                                    <span class="cValDemog"></span>
+                                </div>
+                            </div>
+                            <div class="hi-text textDemog">
+                                <div class="vertical-align" style="width:97%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="demog-widget widget-se">
+            <div class="demog-widget-header">
+                <div class="demog-widget-heading"><div class="vertical-align">SOCIO ECONOMIC</div></div>
+            </div>
+            <div class="demog-widget-container">
+                <div class="add-padd">
+                    <div class="se-container" pos="1">
+                        <div class="se-text textDemog"><div class="vertical-align" style="width:60%;"></div></div>
+                        <div class="se-img-container"><div class="se-img se-img-sli"></div></div>
+                        <div class="se-values">
+                            <div class="vertical-align" style="width:100%;">
+                                <span class="mValDemog"></span>
+                                <span class="cValDemog"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="se-container" pos="2">
+                        <div class="se-text textDemog"><div class="vertical-align" style="width:60%;"></div></div>
+                        <div class="se-img-container"><div class="se-img se-img-s"></div></div>
+                        <div class="se-values">
+                            <div class="vertical-align" style="width:100%;">
+                                <span class="mValDemog"></span>
+                                <span class="cValDemog"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="se-container" pos="3">
+                        <div class="se-text textDemog"><div class="vertical-align" style="width:60%;"></div></div>
+                        <div class="se-img-container"><div class="se-img se-img-mc"></div></div>
+                        <div class="se-values">
+                            <div class="vertical-align" style="width:100%;">
+                                <span class="mValDemog"></span>
+                                <span class="cValDemog"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="se-container" pos="4">
+                        <div class="se-text textDemog"><div class="vertical-align" style="width:60%;"></div></div>
+                        <div class="se-img-container"><div class="se-img se-img-a"></div></div>
+                        <div class="se-values">
+                            <div class="vertical-align" style="width:100%;">
+                                <span class="mValDemog"></span>
+                                <span class="cValDemog"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="demog-section demog-section-3">
+        <div class="demog-widget widget-ss">
+            <div class="demog-widget-header">
+                <div class="demog-widget-heading"><div class="vertical-align">ATTITUDINAL STATEMENTS - TOP 2 BOX</div></div>
+            </div>
+            <div class="demog-widget-container">
+                <div class="add-padd" style="height:calc(100% - 16px);margin-top:15px;">
+                    <div class="ss-container" pos="1">
+                        <div class="ss-chart-area">
+                            <div class="ss-text textDemog"><div class="vertical-align" style="width:100%;top:90%;"></div></div>
+                            <div class="ss-chart">
+                                <object class="ss-bar-chart" data="../Images/Demog/P2P Dashboard elements_Diner Attitudes BarChart Bg.svg" type="image/svg+xml"> </object>
+                            </div>
+                        </div>
+                        <div class="ss-values">
+                            <div class="mValDemog"><div class="vertical-align" style="width:100%;text-align:right;"></div></div>
+                            <div class="ss-pipe"><div class="vertical-align" style="width:100%;text-align:center;color:black;">|</div></div>
+                            <div class="cValDemog"><div class="vertical-align" style="width:100%;text-align:left;"></div></div>
+                        </div>
+                    </div>
+                    <div class="ss-container" pos="2">
+                        <div class="ss-chart-area">
+                            <div class="ss-text textDemog"><div class="vertical-align" style="width:100%;top:90%;"></div></div>
+                            <div class="ss-chart">
+                                <object class="ss-bar-chart" data="../Images/Demog/P2P Dashboard elements_Diner Attitudes BarChart Bg.svg?v=23" type="image/svg+xml"> </object>
+                            </div>
+                        </div>
+                        <div class="ss-values">
+                            <div class="mValDemog"><div class="vertical-align" style="width:100%;text-align:right;"></div></div>
+                            <div class="ss-pipe"><div class="vertical-align" style="width:100%;text-align:center;color:black;">|</div></div>
+                            <div class="cValDemog"><div class="vertical-align" style="width:100%;text-align:left;"></div></div>
+                        </div>
+                    </div>
+                    <div class="ss-container" pos="3">
+                        <div class="ss-chart-area">
+                            <div class="ss-text textDemog"><div class="vertical-align" style="width:100%;top:90%;"></div></div>
+                            <div class="ss-chart">
+                                <object class="ss-bar-chart" data="../Images/Demog/P2P Dashboard elements_Diner Attitudes BarChart Bg.svg?v=23" type="image/svg+xml"> </object>
+
+                            </div>
+                        </div>
+                        <div class="ss-values">
+                            <div class="mValDemog"><div class="vertical-align" style="width:100%;text-align:right;"></div></div>
+                            <div class="ss-pipe"><div class="vertical-align" style="width:100%;text-align:center;color:black;">|</div></div>
+                            <div class="cValDemog"><div class="vertical-align" style="width:100%;text-align:left;"></div></div>
+                        </div>
+                    </div>
+                    <div class="ss-container" pos="4">
+                        <div class="ss-chart-area">
+                            <div class="ss-text textDemog"><div class="vertical-align" style="width:100%;top:90%;"></div></div>
+                            <div class="ss-chart">
+                                <object class="ss-bar-chart" data="../Images/Demog/P2P Dashboard elements_Diner Attitudes BarChart Bg.svg?v=23" type="image/svg+xml"> </object>
+
+                            </div>
+                        </div>
+                        <div class="ss-values">
+                            <div class="mValDemog"><div class="vertical-align" style="width:100%;text-align:right;"></div></div>
+                            <div class="ss-pipe"><div class="vertical-align" style="width:100%;text-align:center;color:black;">|</div></div>
+                            <div class="cValDemog"><div class="vertical-align" style="width:100%;text-align:left;"></div></div>
+                        </div>
+                    </div>
+                    <div class="ss-container" pos="5">
+                        <div class="ss-chart-area">
+                            <div class="ss-text textDemog"><div class="vertical-align" style="width:100%;top:90%;"></div></div>
+                            <div class="ss-chart">
+                                <object class="ss-bar-chart" data="../Images/Demog/P2P Dashboard elements_Diner Attitudes BarChart Bg.svg?v=23" type="image/svg+xml"> </object>
+
+                            </div>
+                        </div>
+                        <div class="ss-values">
+                            <div class="mValDemog"><div class="vertical-align" style="width:100%;text-align:right;"></div></div>
+                            <div class="ss-pipe"><div class="vertical-align" style="width:100%;text-align:center;color:black;">|</div></div>
+                            <div class="cValDemog"><div class="vertical-align" style="width:100%;text-align:left;"></div></div>
+                        </div>
+                    </div>
+                    <div class="ss-container" pos="6">
+                        <div class="ss-chart-area">
+                            <div class="ss-text textDemog"><div class="vertical-align" style="width:100%;top:90%;"></div></div>
+                            <div class="ss-chart">
+                                <object class="ss-bar-chart" data="../Images/Demog/P2P Dashboard elements_Diner Attitudes BarChart Bg.svg?v=23" type="image/svg+xml"> </object>
+
+                            </div>
+                        </div>
+                        <div class="ss-values">
+                            <div class="mValDemog"><div class="vertical-align" style="width:100%;text-align:right;"></div></div>
+                            <div class="ss-pipe"><div class="vertical-align" style="width:100%;text-align:center;color:black;">|</div></div>
+                            <div class="cValDemog"><div class="vertical-align" style="width:100%;text-align:left;"></div></div>
+                        </div>
+                    </div>
+                    <div class="ss-container" pos="7">
+                        <div class="ss-chart-area">
+                            <div class="ss-text textDemog"><div class="vertical-align" style="width:100%;top:90%;"></div></div>
+                            <div class="ss-chart">
+                                <object class="ss-bar-chart" data="../Images/Demog/P2P Dashboard elements_Diner Attitudes BarChart Bg.svg?v=23" type="image/svg+xml"> </object>
+
+                            </div>
+                        </div>
+                        <div class="ss-values">
+                            <div class="mValDemog"><div class="vertical-align" style="width:100%;text-align:right;"></div></div>
+                            <div class="ss-pipe"><div class="vertical-align" style="width:100%;text-align:center;color:black;">|</div></div>
+                            <div class="cValDemog"><div class="vertical-align" style="width:100%;text-align:left;"></div></div>
+                        </div>
+                    </div>
+                    <div class="ss-container" pos="8">
+                        <div class="ss-chart-area">
+                            <div class="ss-text textDemog"><div class="vertical-align" style="width:100%;top:90%;"></div></div>
+                            <div class="ss-chart">
+                                <object class="ss-bar-chart" data="../Images/Demog/P2P Dashboard elements_Diner Attitudes BarChart Bg.svg?v=23" type="image/svg+xml"> </object>
+
+                            </div>
+                        </div>
+                        <div class="ss-values">
+                            <div class="mValDemog"><div class="vertical-align" style="width:100%;text-align:right;"></div></div>
+                            <div class="ss-pipe"><div class="vertical-align" style="width:100%;text-align:center;color:black;">|</div></div>
+                            <div class="cValDemog"><div class="vertical-align" style="width:100%;text-align:left;"></div></div>
+                        </div>
+                    </div>
+                    <div class="ss-container" pos="9">
+                        <div class="ss-chart-area">
+                            <div class="ss-text textDemog"><div class="vertical-align" style="width:100%;top:90%;"></div></div>
+                            <div class="ss-chart">
+                                <object class="ss-bar-chart" data="../Images/Demog/P2P Dashboard elements_Diner Attitudes BarChart Bg.svg?v=23" type="image/svg+xml"> </object>
+
+                            </div>
+                        </div>
+                        <div class="ss-values">
+                            <div class="mValDemog"><div class="vertical-align" style="width:100%;text-align:right;"></div></div>
+                            <div class="ss-pipe"><div class="vertical-align" style="width:100%;text-align:center;color:black;">|</div></div>
+                            <div class="cValDemog"><div class="vertical-align" style="width:100%;text-align:left;"></div></div>
+                        </div>
+                    </div>
+                    <div class="ss-container" pos="10">
+                        <div class="ss-chart-area">
+                            <div class="ss-text textDemog"><div class="vertical-align" style="width:100%;top:90%;"></div></div>
+                            <div class="ss-chart">
+                                <object class="ss-bar-chart" data="../Images/Demog/P2P Dashboard elements_Diner Attitudes BarChart Bg.svg?v=23" type="image/svg+xml"> </object>
+
+                            </div>
+                        </div>
+                        <div class="ss-values">
+                            <div class="mValDemog"><div class="vertical-align" style="width:100%;text-align:right;"></div></div>
+                            <div class="ss-pipe"><div class="vertical-align" style="width:100%;text-align:center;color:black;">|</div></div>
+                            <div class="cValDemog"><div class="vertical-align" style="width:100%;text-align:left;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="demog-widget widget-amcv">
+            <div class="demog-widget-header">
+                <div class="demog-widget-heading"><div class="vertical-align">AVERAGE CHANNEL FREQUENCY</div></div>
+            </div>
+            <div class="demog-widget-container">
+                <div class="add-padd">
+                    <div class="amc-container">
+                        <div class="amc-sub-container">
+                            <div class="amc-block" pos="1">
+                                <div class="amc-text textDemog amc-text-1"><div class="vertical-align">Grocery</div></div>
+                                <div class="amc-values">
+                                    <div class="amc-val">
+                                        <div class="mValDemog"><div class="vertical-align" style="top:70%;">10</div></div>
+                                        <div class="cValDemog"><div class="vertical-align">0.0</div></div>
+                                    </div>
+                                    <div class="staticDemog textDemog"><div class="vertical-align">Per Month</div></div>
+                                </div>
+                            </div>
+                            <div class="amc-block" pos="2">
+                                <div class="amc-text textDemog amc-text-2"><div class="vertical-align">Conv.</div></div>
+                                <div class="amc-values">
+                                    <div class="amc-val">
+                                        <div class="mValDemog"><div class="vertical-align" style="top:70%;">10</div></div>
+                                        <div class="cValDemog"><div class="vertical-align">0.0</div></div>
+                                    </div>
+                                    <div class="staticDemog textDemog"><div class="vertical-align">Per Month</div></div>
+                                </div>
+                            </div>
+                            <div class="amc-block" pos="3">
+                                <div class="amc-text textDemog amc-text-3"><div class="vertical-align">Drug</div></div>
+                                <div class="amc-values">
+                                    <div class="amc-val">
+                                        <div class="mValDemog"><div class="vertical-align" style="top:70%;">10</div></div>
+                                        <div class="cValDemog"><div class="vertical-align">0.0</div></div>
+                                    </div>
+                                    <div class="staticDemog textDemog"><div class="vertical-align">Per Month</div></div>
+                                </div>
+                            </div>
+                            <div class="amc-block" pos="4">
+                                <div class="amc-text textDemog amc-text-4"><div class="vertical-align">Dollar</div></div>
+                                <div class="amc-values">
+                                    <div class="amc-val">
+                                        <div class="mValDemog"><div class="vertical-align" style="top:70%;">10</div></div>
+                                        <div class="cValDemog"><div class="vertical-align">0.0</div></div>
+                                    </div>
+                                    <div class="staticDemog textDemog"><div class="vertical-align">Per Month</div></div>
+                                </div>
+                            </div>
+                            <div class="amc-block" pos="5">
+                                <div class="amc-text textDemog amc-text-5"><div class="vertical-align">Club</div></div>
+                                <div class="amc-values">
+                                    <div class="amc-val">
+                                        <div class="mValDemog"><div class="vertical-align" style="top:70%;">10</div></div>
+                                        <div class="cValDemog"><div class="vertical-align">0.0</div></div>
+                                    </div>
+                                    <div class="staticDemog textDemog"><div class="vertical-align">Per Month</div></div>
+                                </div>
+                            </div>
+                            <div class="amc-block" pos="6">
+                                <div class="amc-text textDemog amc-text-6"><div class="vertical-align">Mass Merch</div></div>
+                                <div class="amc-values">
+                                    <div class="amc-val">
+                                        <div class="mValDemog"><div class="vertical-align" style="top:70%;">10</div></div>
+                                        <div class="cValDemog"><div class="vertical-align">0.0</div></div>
+                                    </div>
+                                    <div class="staticDemog textDemog"><div class="vertical-align">Per Month</div></div>
+                                </div>
+                            </div>
+                            <div class="amc-block" pos="7">
+                                <div class="amc-text textDemog amc-text-7"><div class="vertical-align">Super Centers</div></div>
+                                <div class="amc-values">
+                                    <div class="amc-val">
+                                        <div class="mValDemog"><div class="vertical-align" style="top:70%;">10</div></div>
+                                        <div class="cValDemog"><div class="vertical-align">0.0</div></div>
+                                    </div>
+                                    <div class="staticDemog textDemog"><div class="vertical-align">Per Month</div></div>
+                                </div>
+                            </div>
+                            <div class="amc-block-border" style="left:0%;"></div>
+                            <div class="amc-block-border" style="left:14.28%;"></div>
+                            <div class="amc-block-border" style="left:28.57%;"></div>
+                            <div class="amc-block-border" style="left:42.85%;"></div>
+                            <div class="amc-block-border" style="left:57.14%;"></div>
+                            <div class="amc-block-border" style="left:71.42%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="est-logo-container">
+        <div class="est-logo"></div>
+    </div>
+</div>
+
+<div class="p2p-dsbrd-BG-3rds" id="3rds"></div>
+@*for low sample size*@
+<div id="dashboard-popup" class="save-reportPopup popup_css" style="display:none;">
+    <div class="stat-topdiv"><div class="stat-topband topband"></div><div class="stat-closebtn" ng-click="closeSavePopup()"></div></div>
+    <div class="save-section">
+        <div class="report-selection">
+            <div class="stat-closediv popup_css_header">
+                <div class="stat-heading heading_text">Sample Size for the following selection is less than 30, Kindly change your selection.</div>
+            </div>
+        </div>
+        <div class="list-of-low-SS">
+            <div class="ind-item-retailer">RETAILER: 76</div>
+            <div class="ind-item-stattest">STAT TESTING BASE: 76</div>
+        </div>
+
+        <div class="save-popup-btn">
+            <div class="stat-submt save-proceed-btn proceedClick" onclick="proceedClick()" style="display: none;">PROCEED</div>
+            <div class="stat-submt cancel-proceed-btn closeSavePopup" onclick="closeSavePopup()">CANCEL</div>
+        </div>
+    </div>
+    @*end low sample soze*@
+</div>
+
+<div id="custombase-stattesting-popup" class="LowSample-popup" style="display: none; width: 600px; height: 300px;">
+    <div style="width:100%;" class="LowSample-topdiv">
+        <div style="width:100%;" class="LowSample-topband"></div>
+        <div class="LowSample-clsebtn"></div>
+    </div>
+    <div style="border-bottom: 1px dashed; height: 32px;" class="LowSample-closediv">
+        <div style="border:0;height:18px;font-size: 19.5px;color: #e8e8e8;" class="LowSample-heading">SELECT STAT TESTING BASE</div>
+        <div style="clear:both;font-size:11px;text-transform:none;">Select/Deselect to change Custom Base Stat Testing</div>
+    </div>
+    <div style="height: 189px; display: flex; justify-content: center; margin-top: 1px; border-bottom: 1px solid #666466; width: 98%; margin-left: 1%;" class="LowSample-content">
+        @*custom base retailer filter*@
+        <div class="custom-base-filter">
+            <div class="custom-base-title">
+                <ul>
+                    <li>RETAILER</li>
+                </ul>
+            </div>
+            <div class="filter-content">
+                <div class="stat-custdiv"><div class="stat-cust-dot" style="width: 10%;display:block;"></div><div id="custom-base-ratailer" style="width: 86%;border:0;cursor:auto;" class="stat-cust-estabmt"></div></div>
+            </div>
+            <ul>
+                <li class="custom-base-link"><a id="Custom-Base-Retailer-Popup">Change Retailer/Channel></a></li>
+            </ul>
+        </div>
+
+        @*custom base add filters*@
+        <div class="custom-base-filter">
+            <div class="custom-base-title">
+                <ul>
+                    <li>FILTERS</li>
+                </ul>
+            </div>
+            <div id="custom-base-add-filters" class="filter-content">
+                <ul></ul>
+            </div>
+            <ul>
+                <li class="custom-base-link"><a id="Custom-Base-Add-Filter-Popup" update-geography="true" filter-name="Shopper Groups" search-params="Custom-Base-Filter-Type|Search-Custom-Base-Group-Type|Group-Type-Custom-Base-Search-Content">Change Filters></a></li>
+            </ul>
+        </div>
+    </div>
+    <div style="width: 100%;" class="LowSample-submtdiv">
+        <div id="custom-base-onsubmit-btn" style="margin-right:30px;" class="LowSample-submt">Submit</div>
+        <div class="LowSample-cancel">Cancel</div>
+    </div>
+</div>
+
+@{
+    iSHOPNew.DAL.PathToPurchaseParams pathToPurchaseParams = ViewData["user-selection"] as iSHOPNew.DAL.PathToPurchaseParams;
+}
+
+<input id="default-custom-base" type="hidden" value="@pathToPurchaseParams.CustomBase_UniqueId" />
+<input id="default-retailer" type="hidden" value="@pathToPurchaseParams.Comparison_UniqueIds" />
+<input id="default-time-period" type="hidden" value="@pathToPurchaseParams.TimePeriod_UniqueId" />
+<input id="default-shopper-segment" type="hidden" value="@pathToPurchaseParams.ShopperSegment_UniqueId" />
+<input id="default-shopper-frequency" type="hidden" value="@pathToPurchaseParams.ShopperFrequency_UniqueId" />
+<input id="default-sigtype" type="hidden" value="@pathToPurchaseParams.Sigtype_UniqueId" />
+<input id="default-sort" type="hidden" value="@pathToPurchaseParams.Sort" />
+<input id="default-tabtype" type="hidden" value="@pathToPurchaseParams.TabType" />

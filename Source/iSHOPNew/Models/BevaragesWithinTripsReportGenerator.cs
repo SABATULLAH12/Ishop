@@ -1,0 +1,916 @@
+﻿using Aspose.Slides;
+using iSHOP.BLL;
+using iSHOPNew.DAL;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Web;
+
+namespace iSHOPNew.Models
+{
+    public class BevaragesWithinTripsReportGenerator : BaseBeverageReport, IBevaragesShopper, IBevaragesTrips
+    {
+        public void PrepareSlides()
+        {
+            try
+            {
+                reportparams = HttpContext.Current.Session["GenerateReportParams"] as ReportGeneratorParams;
+
+                profilerparams = new ProfilerChartParams()
+                {
+                    ChartType = "clustered column"
+                };
+
+                InitializeAsposePresentationFile(HttpContext.Current.Server.MapPath(@"~\Templates\ReportGenerator\ReportGeneratorPPTFilesBeverageWithin\Trips.pptx"));
+
+                Benchlist = reportparams.Benchmark.Replace("||", "|").Split('|');
+
+                filt = reportparams.Filters.Split('|');
+
+                ShopperSegment = Convert.ToString(reportparams.ShopperSegmentShortName);
+                List<string> list = new List<string>();
+                list = Convert.ToString(reportparams.Benchmark).Split('|').ToList();
+                if (list != null && list.Count > 0)
+                    ComparisonPointsBanner = commonfunctions.Get_ShortNames(list[0]);
+
+                ds = GetChartData();
+
+                if (ds != null && ds.Tables != null && ds.Tables[1].Rows.Count > 0)
+                    shopperBenchValue = (from r in ds.Tables[1].AsEnumerable() select Convert.ToDouble(r.Field<object>("Volume"))).FirstOrDefault();
+
+                //if (ds != null && ds.Tables != null && ds.Tables[2].Rows.Count > 0)
+                //    tripsBenchValue = (from r in ds.Tables[2].AsEnumerable() select Convert.ToDouble(r.Field<object>("Volume"))).FirstOrDefault();
+
+                if (ds != null && ds.Tables != null && ds.Tables[0].Rows.Count > 0)
+                {
+                    Benchlist1 = (from r in ds.Tables[0].AsEnumerable() select r.Field<string>("Objective")).FirstOrDefault();
+                    if (Benchlist1 != null && Benchlist1 != "")
+                    {
+                        benchMarkActualValue = Benchlist1.Trim();
+                        Benchlist = Benchlist1.Split('(');
+                        Benchlist1 = base.Get_ShortNames(Convert.ToString(Benchlist[0]).Trim());
+                    }
+
+                    sampleSizelist = (from r in ds.Tables[0].AsEnumerable() select (r.Field<object>("SampleSize"))).ToList();
+                    beveragelist = (from r in ds.Tables[0].AsEnumerable() select (r.Field<string>("Objective"))).Distinct().ToList();
+                }
+
+                List<string> Complist = new List<string>();
+                string[] SplitComplist;
+                List<string> _samplesize = new List<string>();
+                for (int i = 0; i < beveragelist.Count(); i++)
+                {
+                    SplitComplist = beveragelist[i].Split('(');
+                    samplesizeNames += Get_ShortNames(SplitComplist[0].Trim()) + " " + Convert.ToString(sampleSizelist[i]).FormateSampleSizeNumber() + " ";
+                    _samplesize.Add(Get_ShortNames(beveragelist[i]) + " " + Convert.ToString(sampleSizelist[i]).FormateSampleSizeNumber());
+                    if (i >= 1)
+                    {
+                        Complist.Add(Get_ShortNames(SplitComplist[0].Trim()));
+                    }
+                }
+                samplesizeNames = String.Join("; ", _samplesize);
+                if (Complist.Count > 1)
+                {
+                    complistNames = " and " + Complist[Complist.Count - 1];
+                    Complist.RemoveAt(Complist.Count - 1);
+                    complistNames = String.Join(", ", Complist) + complistNames;
+                }
+                else
+                {
+                    complistNames = String.Join(", ", Complist);
+                }
+
+                if (ds != null && ds.Tables.Count > 0)
+                {
+                    if (slds != null && slds.Count > 0)
+                    {
+                        foreach (ISlide slide in slds)
+                        {
+                            sld = slide;
+                            SlideNumber += 1;
+                            switch (SlideNumber)
+                            {
+                                case 1:
+                                    {
+                                        Slide_1(sld, ds);
+                                        break;
+                                    }
+                                case 2:
+                                    {
+                                        Slide_2(sld, ds);
+                                        break;
+                                    }
+                                case 3:
+                                    {
+                                        Slide_3(sld, ds);
+                                        break;
+                                    }
+                                case 4:
+                                    {
+                                        Slide_4(sld, ds);
+                                        break;
+                                    }
+                                case 5:
+                                    {
+                                        Slide_5(sld, ds);
+                                        break;
+                                    }
+                                case 6:
+                                    {
+                                        Slide_6(sld, ds);
+                                        break;
+                                    }
+                                case 7:
+                                    {
+                                        Slide_7(sld, ds);
+                                        break;
+                                    }
+                                case 8:
+                                    {
+                                        Slide_8(sld, ds);
+                                        break;
+                                    }
+                                case 9:
+                                    {
+                                        Slide_9(sld, ds);
+                                        break;
+                                    }
+
+                            }
+                        }
+                    }
+                }
+                filename = "iSHOP_ReportGenerator_" + GlobalVariables.GetRandomNumber;
+                pres.Save(HttpContext.Current.Server.MapPath("~/Downloads/" + filename + ".pptx"), Aspose.Slides.Export.SaveFormat.Pptx);
+                HttpContext.Current.Session[SessionVariables.BeveragePPT] = HttpContext.Current.Server.MapPath("~/Downloads/" + filename + ".pptx");
+            }
+            catch (Exception ex)
+            {
+                UserParams userparam = HttpContext.Current.Session[SessionVariables.USERID] as UserParams;
+                if (userparam == null)
+                {
+                    if (System.Configuration.ConfigurationManager.AppSettings["SSOUrl"].ToString() == "true")
+                    {
+                        HttpContext.Current.Response.Redirect(CommonFunctions.ReWriteHost(System.Configuration.ConfigurationManager.AppSettings["KIMainlink"]) + "Views/Home.aspx?signout=true");
+                    }
+                    else
+                    {
+                        HttpContext.Current.Response.Redirect(CommonFunctions.ReWriteHost(System.Configuration.ConfigurationManager.AppSettings["KIMainlink"]) + "Login.aspx?signout=true");
+                    }
+                }
+                //UserExportFileName = "~/iSHOPExplorer/ReportGeneratorPPTFiles/UserExportFiles/" + userparam.UserName;
+
+                //if (Directory.Exists(HttpContext.Current.Server.MapPath(UserExportFileName)))
+                //{
+                //    Directory.Delete(HttpContext.Current.Server.MapPath(UserExportFileName), true);
+                //}
+                if (ex.HResult != -2146233040)
+                    ErrorLog.LogError(ex.Message, ex.StackTrace);
+            }
+        }
+        public override void GenerateBeverageReport(string hdnyear, string hdnmonth, string hdndate, string hdnhours, string hdnminutes, string hdnseconds)
+        {
+            try
+            {
+                //reportparams = HttpContext.Current.Session["GenerateReportParams"] as ReportGeneratorParams;
+
+                //profilerparams = new  ProfilerChartParams()
+                //{
+                //    ChartType = "clustered column"
+                //};
+
+                //InitializeAsposePresentationFile(HttpContext.Current.Server.MapPath(@"~\Templates\ReportGenerator\ReportGeneratorPPTFilesBeverageWithin\Trips.pptx"));
+
+                //Benchlist = reportparams.Benchmark.Replace("||", "|").Split('|');
+
+                //filt = reportparams.Filters.Split('|');
+
+                //ShopperSegment = Convert.ToString(reportparams.ShopperSegmentShortName);
+                //List<string> list = new List<string>();
+                //list = Convert.ToString(reportparams.Benchmark).Split('|').ToList();
+                //if (list != null && list.Count > 0)
+                //    ComparisonPointsBanner = commonfunctions.Get_ShortNames(list[0]);
+
+                //ds = GetChartData();
+
+                //if (ds != null && ds.Tables != null && ds.Tables[1].Rows.Count > 0)
+                //    shopperBenchValue = (from r in ds.Tables[1].AsEnumerable() select Convert.ToDouble(r.Field<object>("Volume"))).FirstOrDefault();
+
+                //if (ds != null && ds.Tables != null && ds.Tables[2].Rows.Count > 0)
+                //    tripsBenchValue = (from r in ds.Tables[2].AsEnumerable() select Convert.ToDouble(r.Field<object>("Volume"))).FirstOrDefault();
+
+                //if (ds != null && ds.Tables != null && ds.Tables[0].Rows.Count > 0)
+                //{
+                //    Benchlist1 = (from r in ds.Tables[0].AsEnumerable() select r.Field<string>("Objective")).FirstOrDefault();
+                //    if (Benchlist1 != null && Benchlist1 != "")
+                //    {
+                //        benchMarkActualValue = Benchlist1.Trim();
+                //        Benchlist = Benchlist1.Split('(');
+                //        Benchlist1 = base.Get_ShortNames(Convert.ToString(Benchlist[0]).Trim());
+                //    }
+
+                //    sampleSizelist = (from r in ds.Tables[0].AsEnumerable() select (r.Field<object>("SampleSize"))).ToList();
+                //    beveragelist = (from r in ds.Tables[0].AsEnumerable() select (r.Field<string>("Objective"))).Distinct().ToList();
+                //}
+
+                //List<string> Complist = new List<string>();
+                //string[] SplitComplist;
+                //List<string> _samplesize = new List<string>();
+                //for (int i = 0; i < beveragelist.Count(); i++)
+                //{
+                //    SplitComplist = beveragelist[i].Split('(');
+                //    samplesizeNames += Get_ShortNames(SplitComplist[0].Trim()) + " " + Convert.ToString(sampleSizelist[i]).FormateSampleSizeNumber() + " ";
+                //    _samplesize.Add(Get_ShortNames(beveragelist[i]) + " " + Convert.ToString(sampleSizelist[i]).FormateSampleSizeNumber());
+                //    if (i >= 1)
+                //    {
+                //        Complist.Add(Get_ShortNames(SplitComplist[0].Trim()));
+                //    }
+                //}
+                //samplesizeNames = String.Join("; ", _samplesize);
+                //if (Complist.Count > 1)
+                //{
+                //    complistNames = " and " + Complist[Complist.Count - 1];
+                //    Complist.RemoveAt(Complist.Count - 1);
+                //    complistNames = String.Join(", ", Complist) + complistNames;
+                //}
+                //else
+                //{
+                //    complistNames = String.Join(", ", Complist);
+                //}
+
+                //if (ds != null && ds.Tables.Count > 0)
+                //{
+                //    if (slds != null && slds.Count > 0)
+                //    {
+                //        foreach (ISlide slide in slds)
+                //        {
+                //            sld = slide;
+                //            SlideNumber += 1;
+                //            switch (SlideNumber)
+                //            {
+                //                case 1:
+                //                    {
+                //                        Slide_1(sld, ds);
+                //                        break;
+                //                    }
+                //                case 2:
+                //                    {
+                //                        Slide_2(sld, ds);
+                //                        break;
+                //                    }
+                //                case 3:
+                //                    {
+                //                        Slide_3(sld, ds);
+                //                        break;
+                //                    }
+                //                case 4:
+                //                    {
+                //                        Slide_4(sld, ds);
+                //                        break;
+                //                    }
+                //                case 5:
+                //                    {
+                //                        Slide_5(sld, ds);
+                //                        break;
+                //                    }
+                //                case 6:
+                //                    {
+                //                        Slide_6(sld, ds);
+                //                        break;
+                //                    }
+                //                case 7:
+                //                    {
+                //                        Slide_7(sld, ds);
+                //                        break;
+                //                    }
+                //                case 8:
+                //                    {
+                //                        Slide_8(sld, ds);
+                //                        break;
+                //                    }
+
+                //            }
+                //        }
+                //    }
+                //}
+                //Presentation pre = HttpContext.Current.Session[SessionVariables.BeveragePPT] as Presentation;
+                filename = "iSHOP_ReportGenerator_" + hdnyear + "" + Convert.ToString(hdnmonth).FormateDateTime() + "" + Convert.ToString(hdndate).FormateDateTime() + "_" + Convert.ToString(hdnhours).FormateDateTime() + "" + Convert.ToString(hdnminutes).FormateDateTime() + Convert.ToString(hdnseconds).FormateDateTime();
+                //pre.Save(HttpContext.Current.Server.MapPath("~/Downloads/" + filename + ".pptx"), Aspose.Slides.Export.SaveFormat.Pptx);
+
+                FileStream fs1 = null;
+                fs1 = System.IO.File.Open(HttpContext.Current.Session[SessionVariables.BeveragePPT] as string, System.IO.FileMode.Open);
+
+                byte[] btFile = new byte[fs1.Length];
+                fs1.Read(btFile, 0, Convert.ToInt32(fs1.Length));
+                fs1.Close();
+
+                HttpContext.Current.Response.Clear();
+                HttpContext.Current.Response.Buffer = true;
+                HttpContext.Current.Response.AddHeader("Content-disposition", "attachment; filename=" + filename + ".pptx");
+
+                HttpContext.Current.Response.ContentType = "application/vnd.openxmlformats-officedocument.presentationml.presentation";
+                HttpContext.Current.Response.AddHeader("Content-Length", btFile.Length.ToString());
+                HttpContext.Current.Response.BinaryWrite(btFile);
+                HttpContext.Current.Response.Flush();
+                HttpContext.Current.Response.Close();
+
+            }
+            catch (Exception ex)
+            {
+                UserParams userparam = HttpContext.Current.Session[SessionVariables.USERID] as UserParams;
+                if (userparam == null)
+                {
+                    if (System.Configuration.ConfigurationManager.AppSettings["SSOUrl"].ToString() == "true")
+                    {
+                        HttpContext.Current.Response.Redirect(CommonFunctions.ReWriteHost(System.Configuration.ConfigurationManager.AppSettings["KIMainlink"]) + "Views/Home.aspx?signout=true");
+                    }
+                    else
+                    {
+                        HttpContext.Current.Response.Redirect(CommonFunctions.ReWriteHost(System.Configuration.ConfigurationManager.AppSettings["KIMainlink"]) + "Login.aspx?signout=true");
+                    }
+                }
+                //UserExportFileName = "~/iSHOPExplorer/ReportGeneratorPPTFiles/UserExportFiles/" + userparam.UserName;
+
+                //if (Directory.Exists(HttpContext.Current.Server.MapPath(UserExportFileName)))
+                //{
+                //    Directory.Delete(HttpContext.Current.Server.MapPath(UserExportFileName), true);
+                //}
+                if (ex.HResult != -2146233040)
+                    ErrorLog.LogError(ex.Message, ex.StackTrace);
+            }
+        }
+        public void Slide_1(ISlide slide, DataSet Ds)
+        {
+
+            //TextChanges 
+            ChannelRetailersVisited = string.Empty;
+            List<string> ShopperFrequencylist = new List<string>();
+            if (Convert.ToString(reportparams.ShopperFrequency).Equals("Total", StringComparison.OrdinalIgnoreCase))
+            {
+                ShopperFrequencylist.Add(reportparams.ShopperFrequency);
+            }
+            else
+            {
+                //if (reportparams.ShopperFrequency.IndexOf("channels") > -1 || reportparams.ShopperFrequency.IndexOf("retailers") > -1)
+                //{
+                string[] cr = reportparams.ShopperFrequency.Split(new String[] { "|", "|" },
+                               StringSplitOptions.RemoveEmptyEntries);
+
+                //for (int i = 1; i < cr.Length; i += 2)
+                //{
+                //    ShopperFrequencylist.Add(Get_ShortNames(cr[i]));
+                //}
+                for (int i = 0; i < cr.Length; i++)
+                {
+                    ShopperFrequencylist.Add(Get_ShortNames(cr[i]));
+                }
+                //}
+            }
+
+            if (ShopperFrequencylist.Count > 1)
+            {
+                ChannelRetailersVisited = " and " + ShopperFrequencylist[ShopperFrequencylist.Count - 1];
+                ShopperFrequencylist.RemoveAt(ShopperFrequencylist.Count - 1);
+                ChannelRetailersVisited = String.Join(", ", ShopperFrequencylist) + ChannelRetailersVisited;
+            }
+            else
+            {
+                ChannelRetailersVisited = String.Join(", ", ShopperFrequencylist);
+            }
+
+            texboxvalue = "Beverage: " + ShopperSegment + "\n" +
+                          "Comparison Points/Banner: " + ComparisonPointsBanner + "\n" +
+                           Benchlist1 + ", " + complistNames + "\n" +
+                          "Where Purchased: " + ChannelRetailersVisited + "\n" +
+                          "Advanced Filters: " + (String.IsNullOrEmpty(reportparams.FilterShortNames) ? "NONE" : reportparams.FilterShortNames) + "\n" +
+                         "Time period: " + Convert.ToString(reportparams.ShortTimePeriod);
+
+            base.Create_Label(slide, texboxvalue, Color.FromArgb(242, 242, 242), Color.FromArgb(255, 255, 255), (float)65.19, (float)267.87, (float)865.98, (float)217.70, (float)33.3);
+        }
+
+        public void Slide_2(ISlide slide, DataSet Ds)
+        {
+            //TextChanges 
+            string texboxvalue = "This report compares trips that included " + ShopperSegment + " by " + ComparisonPointsBanner + " " + Benchlist1 + " to the trips by " + ComparisonPointsBanner + " " + complistNames + " across the key metrics in the iSHOP survey.";
+
+            base.Create_TextBox(slide, texboxvalue, Color.FromArgb(242, 242, 242), Color.FromArgb(89, 89, 89), (float)22.32, (float)54.0, (float)921.6, (float)79.92, 11);
+
+            //texboxvalue = "% of trips that that included the beverage";
+            //base.Create_Label(slide, texboxvalue, Color.FromArgb(242, 242, 242), Color.FromArgb(89, 89, 89), 20, 280, 400, 40,12);
+
+            texboxvalue = "Read as: " + shopperBenchValue.ToString("0.0%") + "  of total trips by " + ComparisonPointsBanner + " " + Benchlist1 + " included " + ShopperSegment;
+            base.Create_Label(slide, texboxvalue, Color.FromArgb(242, 242, 242), Color.FromArgb(89, 89, 89), (float)576.72, (float)162.72, (float)329.04, (float)28.08, 9);
+
+            texboxvalue = ShopperSegment + " Trips";
+            base.Create_Title(slide, texboxvalue, Color.FromArgb(89, 89, 89), Color.FromArgb(89, 89, 89), (float)43.08, (float)132.94, (float)399.96, (float)39.96, 12, true);
+
+
+            WithinSourceStatSampleDynamicText(slide, reportparams, texboxvalue, samplesizeNames, Benchlist1);
+
+            //
+
+            if (ds != null && ds.Tables != null && ds.Tables[1].Rows.Count > 0)
+            {
+                //plot chart 1
+                chart_x_position = (float)48.24;
+                chart_y_position = (float)178.56;
+                chart_width = (float)856.8;
+                chart_height = (float)211.68;
+                base.Trips_Clustered_Chart_Slide2(slide, ds.Tables[1], chart_x_position, chart_y_position, chart_width, chart_height);
+                //
+
+                //plot textbox legends
+                objectivelist = GetLegendList(ds.Tables[1]);
+                fontcolor = Color.White;
+                chart_y_position = (float)389.52;
+
+                chart_x_position = 0;
+                float increamentx = 0;
+                if (objectivelist.Count == 1)
+                {
+                    chart_x_position = (float)420.09;
+                }
+                else if (objectivelist.Count == 2)
+                {
+                    chart_x_position = (float)259.93;
+                    increamentx = (float)307.39;
+                }
+                else if (objectivelist.Count == 3)
+                {
+                    chart_x_position = (float)188.50;
+                    increamentx = (float)223.95;
+                }
+                else if (objectivelist.Count == 4)
+                {
+                    chart_x_position = (float)146.83;
+                    increamentx = (float)178.58;
+                }
+                else if (objectivelist.Count == 5)
+                {
+                    chart_x_position = (float)119.33;
+                    increamentx = (float)146.55;
+                }
+
+                for (int i = 0; i < objectivelist.Count; i++)
+                {
+                    //if (i == 2)
+                    //{
+                    //    chart_x_position = 450;
+                    //    chart_y_position += 50;
+                    //}
+                    //else if (i == 4)
+                    //{
+                    //    chart_x_position = 500;
+                    //    chart_y_position += 50;
+                    //}
+                    //else if (i == 0)
+                    //{
+                    //    chart_x_position = 450;
+                    //}
+                    //else
+                    //{
+                    //    chart_x_position += 130;
+                    //}
+                    base.Create_Lagend(slide, objectivelist[i], GetSerirsColour(i), fontcolor, chart_x_position, chart_y_position, chart_legend_width, chart_legend_height);
+                    chart_x_position += increamentx;
+                }
+                //
+            }
+        }
+
+        public void Slide_3(ISlide slide, DataSet Ds)
+        {
+            string texboxvalue = string.Empty;
+
+            if (ds != null && ds.Tables != null && ds.Tables[2].Rows.Count > 0)
+                shopperBenchValue = (from r in ds.Tables[2].AsEnumerable() select Convert.ToDouble(r.Field<object>("Volume"))).FirstOrDefault();
+
+            //Text Changes
+
+            texboxvalue = "Read as: " + shopperBenchValue.ToString("0%") + " of " + ShopperSegment + " trips by " + ComparisonPointsBanner + " " + Benchlist1 + " include a chilled " + ShopperSegment;
+
+            base.Create_Label(slide, texboxvalue, Color.FromArgb(242, 242, 242), Color.FromArgb(89, 89, 89), (float)583.93, (float)87.02, (float)362.83, (float)13.60, 9);
+
+            //texboxvalue = "Chilled and room temperature proportions may aggregate to more than 100% due to more than one beverage being purchased on the trip";
+            //base.Create_Label(slide, texboxvalue, Color.FromArgb(242, 242, 242), Color.FromArgb(89, 89, 89), (float)445.1, (float)92.40, (float)243.9, (float)28.2, 7);
+
+            if (ds != null && ds.Tables != null && ds.Tables[3].Rows.Count > 0)
+                shopperBenchValue = (from r in ds.Tables[3].AsEnumerable() select Convert.ToDouble(r.Field<object>("Volume"))).FirstOrDefault();
+
+            texboxvalue = "Read as: " + shopperBenchValue.ToString("0%") + " of " + ShopperSegment + " trips by " + ComparisonPointsBanner + " " + Benchlist1 + " include " + ShopperSegment + " that was picked up in " + base.GetBeverageTemperatureMetricShortName(Convert.ToString(ds.Tables[3].Rows[0]["MetricItem"]));
+            base.Create_Label(slide, texboxvalue, Color.FromArgb(242, 242, 242), Color.FromArgb(89, 89, 89), (float)508.32, (float)296.64, (float)424.8, (float)28.08, 9);
+
+            //add title
+
+            texboxvalue = "Temperature and Location for " + ShopperSegment + " Trips";
+            base.Create_Title(slide, texboxvalue, Color.FromArgb(89, 89, 89), Color.FromArgb(228, 30, 43), (float)25.22, (float)0.85, (float)648, (float)52.72, 24, true);
+
+            texboxvalue = ShopperSegment + " Temperature";
+            base.Create_Title(slide, texboxvalue, Color.FromArgb(0, 0, 0), Color.FromArgb(89, 89, 89), (float)43.08, (float)55.27, (float)150.23, (float)21.82, 12, true);
+
+            texboxvalue = ShopperSegment + " Location";
+            base.Create_Title(slide, texboxvalue, Color.FromArgb(0, 0, 0), Color.FromArgb(89, 89, 89), (float)43.08, (float)265.32, (float)468, (float)21.82, 12, true);
+
+            //end
+
+            WithinSourceStatSampleDynamicText(slide, reportparams, texboxvalue, samplesizeNames, Benchlist1);
+
+            //
+
+            if (ds != null && ds.Tables != null && ds.Tables[2].Rows.Count > 0)
+            {
+                //plot chart 1
+                chart_x_position = (float)20.88;
+                chart_y_position = (float)91.44;
+                chart_width = (float)600.94;
+                chart_height = 170;
+                base.Clustered_Chart(slide, ds.Tables[2], chart_x_position, chart_y_position, chart_width, chart_height, true, 10, 10, true);
+                //
+            }
+
+            if (ds != null && ds.Tables != null && ds.Tables[3].Rows.Count > 0)
+            {
+                //plot chart 2
+                chart_x_position = (float)20.88;
+                chart_y_position = (float)292.32;
+                chart_width = (float)940.32;
+                chart_height = (float)157.32;
+                base.Clustered_Chart(slide, ds.Tables[3], chart_x_position, chart_y_position, chart_width, chart_height, false, 7, 8, true);
+                //
+
+                //plot textbox legends
+                objectivelist = GetLegendList(ds.Tables[3]);
+                fontcolor = Color.White;
+                chart_x_position = (float)624.18;
+                chart_y_position = (float)122.4;
+                for (int i = 0; i < objectivelist.Count; i++)
+                {
+                    if (i == 2)
+                    {
+                        chart_x_position = (float)624.18;
+                        chart_y_position = (float)181.98;
+                    }
+                    else if (i == 4)
+                    {
+                        chart_x_position = (float)706.67;
+                        chart_y_position = (float)240.37;
+                    }
+                    else if (i == 0)
+                    {
+                        chart_x_position = (float)624.18;
+                    }
+                    else
+                    {
+                        chart_x_position += (float)168.94;
+                    }
+                    base.Create_Lagend(slide, objectivelist[i], GetSerirsColour(i), fontcolor, chart_x_position, chart_y_position, chart_legend_width, chart_legend_height);
+                }
+            }
+            //
+        }
+
+        public void Slide_4(ISlide slide, DataSet Ds)
+        {
+            string texboxvalue = string.Empty;
+
+            if (ds != null && ds.Tables != null && ds.Tables[4].Rows.Count > 0)
+                shopperBenchValue = (from r in ds.Tables[4].AsEnumerable() select Convert.ToDouble(r.Field<object>("Volume"))).FirstOrDefault();
+
+            //Text Changes
+            texboxvalue = "Read as: " + shopperBenchValue.ToString("0%") + " of " + ShopperSegment + " purchases by " + ComparisonPointsBanner + " " + Benchlist1 + " were intended to be consumed fully or in part by the purchaser";
+            base.Create_Label(slide, texboxvalue, Color.FromArgb(242, 242, 242), Color.FromArgb(89, 89, 89), (float)391.68, (float)90.72, (float)372.24, (float)17.28, 9);
+
+            if (ds != null && ds.Tables != null && ds.Tables[5].Rows.Count > 0)
+                shopperBenchValue = (from r in ds.Tables[5].AsEnumerable() select Convert.ToDouble(r.Field<object>("Volume"))).FirstOrDefault();
+
+            texboxvalue = "Read as: " + shopperBenchValue.ToString("0%") + " of " + ShopperSegment + " purchases by " + ComparisonPointsBanner + " " + Benchlist1 + " were consumed fully or in part within 10 minutes of purchase";
+            base.Create_Label(slide, texboxvalue, Color.FromArgb(242, 242, 242), Color.FromArgb(89, 89, 89), (float)391.68, (float)296.64, (float)370.8, (float)28.08, 9);
+
+            //add title
+
+            texboxvalue = ShopperSegment + " Consumption in " + ShopperSegment + " Trips";
+            base.Create_Title(slide, texboxvalue, Color.FromArgb(89, 89, 89), Color.FromArgb(228, 30, 43), (float)25.22, (float)0.85, (float)648, (float)52.72, 24, true);
+
+            texboxvalue = ShopperSegment + " Intended Consumer";
+            base.Create_Title(slide, texboxvalue, Color.FromArgb(0, 0, 0), Color.FromArgb(89, 89, 89), (float)43.08, (float)61.22, (float)407.33, (float)21.82, 12, true);
+
+            texboxvalue = ShopperSegment + " Consumption Timing";
+            base.Create_Title(slide, texboxvalue, Color.FromArgb(0, 0, 0), Color.FromArgb(89, 89, 89), (float)43.08, (float)264.47, (float)468, (float)21.82, 12, true);
+
+            //end
+
+            WithinSourceStatSampleDynamicText(slide, reportparams, texboxvalue, samplesizeNames, Benchlist1);
+            //
+
+            if (ds != null && ds.Tables != null && ds.Tables[4].Rows.Count > 0)
+            {
+                //plot chart 1
+                chart_x_position = (float)20.16;
+                chart_y_position = (float)113.04;
+                chart_width = (float)726.48;
+                chart_height = (float)146.88;
+                base.Clustered_Chart(slide, ds.Tables[4], chart_x_position, chart_y_position, chart_width, chart_height, true, 10, 10, true);
+                //
+            }
+
+            if (ds != null && ds.Tables != null && ds.Tables[5].Rows.Count > 0)
+            {
+                //plot chart 2
+                chart_x_position = (float)20.16;
+                chart_y_position = (float)308.16;
+                chart_width = (float)726.48;
+                chart_height = (float)116.22;
+                base.Clustered_Chart(slide, ds.Tables[5], chart_x_position, chart_y_position, chart_width, chart_height, true, 10, 10, true);
+                //
+
+                //plot textbox legends
+                objectivelist = GetLegendList(ds.Tables[5]);
+                fontcolor = Color.White;
+                chart_x_position = (float)780.48;
+                chart_y_position = (float)-12.96;
+                for (int i = 0; i < objectivelist.Count; i++)
+                {
+                    chart_y_position += 90;
+                    base.Create_Lagend(slide, objectivelist[i], GetSerirsColour(i), fontcolor, chart_x_position, chart_y_position, chart_legend_width, chart_legend_height);
+                }
+                //
+            }
+        }
+
+        public void Slide_5(ISlide slide, DataSet Ds)
+        {
+            string texboxvalue = string.Empty;
+            List<string> _objectivelist = new List<string> { };
+
+            if (ds != null && ds.Tables != null && ds.Tables[6].Rows.Count > 0)
+                shopperBenchValue = (from r in ds.Tables[6].AsEnumerable() select Convert.ToDouble(r.Field<object>("Volume"))).FirstOrDefault();
+
+
+            WithinSourceStatSampleDynamicText(slide, reportparams, texboxvalue, samplesizeNames, Benchlist1);
+            //
+            if (ds != null && ds.Tables != null && ds.Tables[6].Rows.Count > 0)
+            {
+                _objectivelist = GetLegendList(ds.Tables[6]);
+                Create_Trips_Table(slide, objectivelist, "monthly+", ds.Tables[6]);
+            }
+            if (ds != null && ds.Tables != null && ds.Tables[7].Rows.Count > 0)
+            {
+                Get_Chart_MetricItemVolume(ds.Tables[7], ref chart_Top_MetriItem, ref chart_Top_MetriItemVolume, Benchlist1);
+
+                //Text Changes
+                texboxvalue = "Read as: " + ShopperSegment + " trips by " + ComparisonPointsBanner + " " + Benchlist1 + " contain " + (shopperBenchValue * 100).ToString("0.0") + " items on average and " + chart_Top_MetriItemVolume.ToString("0%") + " of these also include " + chart_Top_MetriItem;
+                base.Create_Label(slide, texboxvalue, Color.FromArgb(242, 242, 242), Color.FromArgb(89, 89, 89), (float)714.24, (float)466.56, (float)244.08, (float)28.08, 9);
+
+                //add title
+
+                texboxvalue = "Basket Size & Contents of " + ShopperSegment + " Trips";
+                base.Create_Title(slide, texboxvalue, Color.FromArgb(89, 89, 89), Color.FromArgb(228, 30, 43), (float)25.22, (float)0.85, (float)648, (float)52.72, 24, true);
+
+                //end
+
+                chart_y_position = (float)168.09;
+                chart_height = (float)297.07;
+                chart_x_position = (float)20.12;
+                float chart_x_Position = (table_width / objectivelist.Count);
+                chart_width = chart_x_Position - 3;
+                profilerparams = new  ProfilerChartParams()
+                {
+                    ChartType = "clustered bar"
+                };
+
+                System.Data.DataTable tbl = null;
+                chart_Min_Axis_Value = 0;
+                chart_Max_Axis_Value = 0;
+                Get_Chart_maxAndMinValue(ds.Tables[7], ref chart_Min_Axis_Value, ref chart_Max_Axis_Value);
+
+                for (int i = 0; i < _objectivelist.Count; i++)
+                {
+                    var query = (from row in ds.Tables[7].AsEnumerable()
+                                 where Convert.ToString(row.Field<object>("Objective")).Equals(_objectivelist[i], StringComparison.OrdinalIgnoreCase)
+                                 select row).Reverse();
+                    tbl = query.CopyToDataTable();
+
+
+
+                    base.Clustered_Bar_Chart(slide, tbl, i, chart_x_position, chart_y_position, chart_width, chart_height, chart_Max_Axis_Value, chart_Min_Axis_Value, 7, 8, false);
+                    chart_x_position += chart_x_Position;
+                }
+            }
+        }
+
+        public void Slide_6(ISlide slide, DataSet Ds)
+        {
+            List<string> _objectivelist = new List<string> { };
+            string texboxvalue = string.Empty;
+            string categoryName = string.Empty;
+
+            if (ds != null && ds.Tables != null && ds.Tables[8].Rows.Count > 0)
+                shopperBenchValue = (from r in ds.Tables[8].AsEnumerable() select Convert.ToDouble(r.Field<object>("Volume"))).FirstOrDefault();
+
+            if (ds != null && ds.Tables != null && ds.Tables[8].Rows.Count > 0)
+                categoryName = (from r in ds.Tables[8].AsEnumerable() select r.Field<string>("MetricItem")).FirstOrDefault();
+
+
+            //Text Changes
+            texboxvalue = "Read as: " + Convert.ToDouble(shopperBenchValue).ToString("0%") + " of " + ShopperSegment + " trips by " + ComparisonPointsBanner + " " + Benchlist1 + " have " + categoryName + " as the destination item; destination items are at the category level";
+            base.Create_Label(slide, texboxvalue, Color.FromArgb(242, 242, 242), Color.FromArgb(89, 89, 89), (float)672.2, (float)466.56, (float)285.12, (float)28.08, 9);
+
+            //add title
+
+            texboxvalue = "Destination Item – " + ShopperSegment + " Trips";
+            base.Create_Title(slide, texboxvalue, Color.FromArgb(89, 89, 89), Color.FromArgb(228, 30, 43), (float)25.22, (float)0.85, (float)648, (float)52.72, 24, true);
+
+            //end
+            WithinSourceStatSampleDynamicText(slide, reportparams, texboxvalue, samplesizeNames, Benchlist1);
+
+            //
+
+            if (ds != null && ds.Tables != null && ds.Tables[8].Rows.Count > 0)
+            {
+                _objectivelist = GetLegendList(ds.Tables[8]);
+                Create_Trips_Table1(slide, _objectivelist, "monthly+", ds.Tables[8]);
+            }
+
+            if (ds != null && ds.Tables != null && ds.Tables[9].Rows.Count > 0)
+            {
+                chart_y_position = (float)190.77;
+                chart_height = (float)262.20;
+                chart_x_position = (float)20.12;
+                float chart_x_Position = (table_width / objectivelist.Count);
+                chart_width = chart_x_Position - 3;
+                profilerparams = new  ProfilerChartParams()
+                {
+                    ChartType = "clustered bar"
+                };
+
+                System.Data.DataTable tbl = null;
+                chart_Min_Axis_Value = 0;
+                chart_Max_Axis_Value = 0;
+                Get_Chart_maxAndMinValue(ds.Tables[9], ref chart_Min_Axis_Value, ref chart_Max_Axis_Value);
+
+                for (int i = 0; i < _objectivelist.Count; i++)
+                {
+                    var query = (from row in ds.Tables[9].AsEnumerable()
+                                 where Convert.ToString(row.Field<object>("Objective")).Equals(_objectivelist[i], StringComparison.OrdinalIgnoreCase)
+                                 select row).Reverse();
+                    tbl = query.CopyToDataTable();
+
+                    base.Clustered_Bar_Chart(slide, tbl, i, chart_x_position, chart_y_position, chart_width, chart_height, chart_Max_Axis_Value, chart_Min_Axis_Value, 7, 8, false);
+                    chart_x_position += chart_x_Position;
+
+                }
+            }
+        }
+
+        public void Slide_7(ISlide slide, DataSet Ds)
+        {
+            string texboxvalue = string.Empty;
+
+            if (ds != null && ds.Tables != null && ds.Tables[10].Rows.Count > 0)
+                shopperBenchValue = (from r in ds.Tables[10].AsEnumerable() select Convert.ToDouble(r.Field<object>("Volume"))).FirstOrDefault();
+
+            //Text Changes
+            texboxvalue = "Read as: " + shopperBenchValue.ToString("0%") + " of " + ShopperSegment + " trips by " + ComparisonPointsBanner + " " + Benchlist1 + " are stock up trips";
+            base.Create_Label(slide, texboxvalue, Color.FromArgb(242, 242, 242), Color.FromArgb(89, 89, 89), (float)391.68, (float)90.72, (float)372.24, (float)17.28, 9);
+
+            //add title
+
+            texboxvalue = "Trip Details: Trip Mission for " + ShopperSegment + " Trips";
+            base.Create_Title(slide, texboxvalue, Color.FromArgb(89, 89, 89), Color.FromArgb(228, 30, 43), (float)25.22, (float)0.85, (float)648, (float)52.72, 24, true);
+
+            texboxvalue = ShopperSegment + " Trip Mission";
+            base.Create_Title(slide, texboxvalue, Color.FromArgb(0, 0, 0), Color.FromArgb(89, 89, 89), (float)43.08, (float)36.85, (float)407.33, (float)21.82, 12, true);
+
+            //end
+
+            WithinSourceStatSampleDynamicText(slide, reportparams, texboxvalue, samplesizeNames, Benchlist1);
+
+            //
+
+            if (ds != null && ds.Tables != null && ds.Tables[10].Rows.Count > 0)
+            {
+                profilerparams = new  ProfilerChartParams()
+                {
+                    ChartType = "clustered column"
+                };
+
+                //plot chart 1
+                chart_x_position = (float)15.12;
+                chart_y_position = (float)113.04;
+                chart_width = (float)747.36;
+                chart_height = (float)294.23;
+                base.Clustered_Chart(slide, ds.Tables[10], chart_x_position, chart_y_position, chart_width, chart_height, true, 9, 10, true);
+                //
+
+                //plot textbox legends
+                objectivelist = GetLegendList(ds.Tables[10]);
+                fontcolor = Color.White;
+                chart_x_position = (float)780.48;
+                chart_y_position = (float)-12.96;
+                for (int i = 0; i < objectivelist.Count; i++)
+                {
+                    chart_y_position += 90;
+                    base.Create_Lagend(slide, objectivelist[i], GetSerirsColour(i), fontcolor, chart_x_position, chart_y_position, chart_legend_width, chart_legend_height);
+                }
+                //
+            }
+
+
+        }
+
+        public void Slide_8(ISlide slide, DataSet Ds)
+        {
+            string texboxvalue = string.Empty;
+
+            if (ds != null && ds.Tables != null && ds.Tables[11].Rows.Count > 0)
+                shopperBenchValue = (from r in ds.Tables[11].AsEnumerable() select Convert.ToDouble(r.Field<object>("Volume"))).FirstOrDefault();
+
+            string met = "";
+
+            if (ds != null && ds.Tables != null && ds.Tables[11].Rows.Count > 0)
+                met = (from r in ds.Tables[11].AsEnumerable() select (r.Field<string>("MetricItem"))).FirstOrDefault();
+
+            //Text Changes
+            texboxvalue = "Read as: " + shopperBenchValue.ToString("0%") + " of " + ShopperSegment + " trips by " + ComparisonPointsBanner + " " + Benchlist1 + " are " + met;
+            base.Create_Label(slide, texboxvalue, Color.FromArgb(242, 242, 242), Color.FromArgb(89, 89, 89), (float)391.68, (float)90.72, (float)372.24, (float)17.28, 9);
+
+            //add title
+
+            texboxvalue = "Trip Details: Outlet Segment for " + ShopperSegment + " Trips";
+            base.Create_Title(slide, texboxvalue, Color.FromArgb(89, 89, 89), Color.FromArgb(228, 30, 43), (float)25.22, (float)0.85, (float)648, (float)52.72, 24, true);
+
+            texboxvalue = ShopperSegment + " Outlet Segment";
+            base.Create_Title(slide, texboxvalue, Color.FromArgb(0, 0, 0), Color.FromArgb(89, 89, 89), (float)43.08, (float)36.85, (float)407.33, (float)21.82, 12, true);
+
+            //end
+
+            WithinSourceStatSampleDynamicText(slide, reportparams, texboxvalue, samplesizeNames, Benchlist1);
+
+            //
+
+            if (ds != null && ds.Tables != null && ds.Tables[11].Rows.Count > 0)
+            {
+                profilerparams = new ProfilerChartParams()
+                {
+                    ChartType = "clustered column"
+                };
+
+                //plot chart 1
+                chart_x_position = (float)15.12;
+                chart_y_position = (float)113.04;
+                chart_width = (float)747.36;
+                chart_height = (float)337.23;
+                base.Clustered_Chart(slide, ds.Tables[11], chart_x_position, chart_y_position, chart_width, chart_height, true, 9, 10, true);
+                //
+
+                //plot textbox legends
+                objectivelist = GetLegendList(ds.Tables[11]);
+                fontcolor = Color.White;
+                chart_x_position = (float)780.48;
+                chart_y_position = (float)-12.96;
+                for (int i = 0; i < objectivelist.Count; i++)
+                {
+                    chart_y_position += 90;
+                    base.Create_Lagend(slide, objectivelist[i], GetSerirsColour(i), fontcolor, chart_x_position, chart_y_position, chart_legend_width, chart_legend_height);
+                }
+                //
+            }
+
+
+        }
+
+        public void Slide_9(ISlide slide, DataSet Ds)
+        {
+            string texboxvalue = string.Empty;
+
+            //Text Changes
+
+            if (ds != null && ds.Tables != null && ds.Tables[12].Rows.Count > 0)
+                shopperBenchValue = (from r in ds.Tables[12].AsEnumerable() select Convert.ToDouble(r.Field<object>("Volume"))).FirstOrDefault();
+
+            objectivelistTripSummary = GetTripSummarylist(ds.Tables[12], benchMarkActualValue);
+
+            texboxvalue = "Read as: On average, " + ShopperSegment + " trip by " + ComparisonPointsBanner + " " + Benchlist1 + " has a basket price of $" + (objectivelistTripSummary.ElementAtOrDefault(1) != null ? (objectivelistTripSummary[1] * 100).ToString("0") : string.Empty) + ", contains " + (objectivelistTripSummary.ElementAtOrDefault(0) != null ? (objectivelistTripSummary[0] * 100).ToString("0.0") : string.Empty) + " items and lasts " + (objectivelistTripSummary.ElementAtOrDefault(2) != null ? (objectivelistTripSummary[2] * 100).ToString("0") : string.Empty) + " minutes";
+            base.Create_Label(slide, texboxvalue, Color.FromArgb(242, 242, 242), Color.FromArgb(89, 89, 89), (float)672.09, (float)464.31, (float)240.66, (float)28.34, 9);
+
+            //add title
+
+            texboxvalue = "Trip Summary for " + ShopperSegment + " Trips";
+            base.Create_Title(slide, texboxvalue, Color.FromArgb(89, 89, 89), Color.FromArgb(228, 30, 43), (float)25.22, (float)0.85, (float)648, (float)52.72, 24, true);
+
+            //end
+
+            WithinSourceStatSampleDynamicText(slide, reportparams, texboxvalue, samplesizeNames, Benchlist1);
+
+            //
+            if (ds != null && ds.Tables != null && ds.Tables[12].Rows.Count > 0)
+            {
+                objectivelist = GetLegendList(ds.Tables[12]);
+                Create_Trip_Summary(slide, objectivelist, "monthly+", ds.Tables[12]);
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "iSHOP :: ADD’L CAPABILITIES";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*@Scripts.Render("~/Scripts/Analysis/CompareRetailer.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Styles.Render("~/Content/Analysis/Analysis.css?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Scripts.Render("~/Scripts/Analysis/Analysis-Common.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")*@
+
+@System.Web.Optimization.Styles.Render("~/bundle/styles/addlcapabilities")
+@System.Web.Optimization.Scripts.Render("~/bundle/scripts/addlcapabilities-Within_Shopper")
+
+<input type="hidden" id="hdn-page" name="hdn-Analysis-WithinShopper" />
+
+@*Right Filter Block*@
+@Html.Partial("_RightPanelFilter")
+@*End*@
+<div class="tbl-emptyrow"></div>
+<div class="Top_Header">
+    <div class="measure-text">CORRESPONDENCE ANALYSIS</div>
+    <div style="float:right;width:13%;height:100%;">
+    <div class="zoom">
+        <div class="zoom-out zoomout-correspondence classMouseHover dynpos1 zoomBtn"></div>
+        <div class="zoom-in zoomin-correspondence classMouseHover dynpos1 zoomBtn"></div>
+    </div>
+
+    <div class="selectiondetails" onchange="GenerateChart()">
+        <table style="background-color: transparent;">
+            <tbody>
+                <tr>
+                    <td>
+                        <div id="ShowChart" class="SelectionType CorrespondancechartImage-Others classMouseHover" view-type="Scatter Chart" style="background-position:-492px -407px;" />
+                    </td>
+                    <td>
+                        <div id="RTable" class="SelectionType CorrespondanceCordinate-Others classMouseHover" view-type="dimension Table" style="" />
+                    </td>
+                    <td>
+                        <div id="DataTable" class="SelectionType CorrespondanceTable-Others classMouseHover" view-type="Contingency Table" style="" />
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</div>
+<div class="ChartAreaNew">
+    <div id="guestFrqncy" style="display:none;" class="tbl-dta-rows"><div class="tbl-dta-freq"><div class="tbl-data-freqbdr"></div><div class="tbl-data-freqtxt">VISITS FREQUENCY</div></div></div>
+    <div id="Table-Content" style="height:91%;display:none;"></div>
+</div>
+@*<div class="d3_tooltip" style="opacity:0;"></div>*@
+<div id="ShowSampleSize"></div>
+
+
+

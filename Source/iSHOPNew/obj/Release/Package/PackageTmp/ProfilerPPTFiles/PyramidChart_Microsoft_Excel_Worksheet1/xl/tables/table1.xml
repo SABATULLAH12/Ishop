@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<table
+    xmlns = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+    id = "1"
+    name = "Table1"
+    displayName = "Table1"
+    ref = "A1:D6"
+    totalsRowShown = "0"
+    tableBorderDxfId = "3">
+    <tableColumns count = "4">
+        <tableColumn id = "1" name = "categories"/>
+        <tableColumn
+            id = "2"
+            name = "Series 1"
+            dataDxfId = "2">
+            <calculatedColumnFormula>(1-Table1[[#This Row],[Series 2]])/2</calculatedColumnFormula>
+        </tableColumn>
+        <tableColumn
+            id = "3"
+            name = "Series 2"
+            dataDxfId = "1"/>
+        <tableColumn
+            id = "4"
+            name = "Series 3"
+            dataDxfId = "0">
+            <calculatedColumnFormula>Table1[[#This Row],[Series 1]]</calculatedColumnFormula>
+        </tableColumn>
+    </tableColumns>
+    <tableStyleInfo
+        showFirstColumn = "0"
+        showLastColumn = "0"
+        showRowStripes = "1"
+        showColumnStripes = "0"/>
+</table>

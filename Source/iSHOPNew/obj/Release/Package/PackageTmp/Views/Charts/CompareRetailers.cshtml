@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "iSHOP :: Charts";
+}
+@*@Styles.Render("~/Content/Charts/Charts.css?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Scripts.Render("~/Scripts/Charts/Chart-Common.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Scripts.Render("~/Scripts/Charts/CompareRetailers.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")*@
+
+@System.Web.Optimization.Styles.Render("~/bundle/styles/chart")
+@System.Web.Optimization.Scripts.Render("~/bundle/scripts/chart-compare_retailers")
+
+@*Right Filter Block*@
+@Html.Partial("_RightPanelFilter")
+@*End*@
+<input type="hidden" id="hdn-page" name="hdn-chart-CompareRetailers" />
+<div id="ForLinks">
+    <div class="selectiondetails" onchange="GenerateChart()">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                       @* <input id="btnAddToExport" type="button" value="ADD TO EXPORT" onclick="AddToExport()">*@
+                        <div id="btnAddToExport" class="stat-submt chart-Export classMouseHover dynpos1">ADD TO EXPORT</div>
+                    </td>
+                    <td>
+                        @*<input id="btnViewSelections" type="button" value="SHOW EXPORT LIST" onclick="ShowExportList()">*@
+                        <div id="btnViewSelections" style="margin-left: 15px;" class="stat-cancel viewchart-Export classMouseHover dynpos1">SHOW EXPORT LIST</div>
+                    </td>
+                    <td>
+                       @* <input id="btnClearAll" type="button" value="CLEAR ALL" onclick="ClearExportList()">*@
+                         <div id="btnClearAll" style="margin-left: 15px;" class="stat-cancel clearchart-Export classMouseHover dynpos1">CLEAR ALL</div>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="LinkForCharts" class="classMouseHover charttype">
+        <div id="chart-list">
+
+        </div>
+        @*<div class="ExportToPPT Inactive" onclick="Export_To_PPT();"></div>*@
+    </div>
+</div>
+
+<div id="ToShowChart">
+    <div id="chart-title">
+
+    </div>
+    <div class="showChartMain">
+        <div class="trendChartMain" id="idtrendChartMain00"></div>
+        <div class="trendChartMain" id="idtrendChartMain11"></div>
+        <div class="trendChartMain" id="idtrendChartMain1">
+            <svg class="chart"></svg>
+        </div>
+        <div class="trendChartMain" id="idtrendChartMain2">
+            <svg class="chart"></svg>
+        </div>
+        <div class="trendChartMain" id="idtrendChartMain3">
+            <svg class="chart"></svg>
+        </div>
+        <div class="trendChartMain" id="idtrendChartMain4">
+            <svg class="chart"></svg>
+        </div>
+
+        <div class="trendChartMain" id="idtrendChartMain5">
+            <svg class="chart"></svg>
+        </div>
+       
+    </div>
+    <div id="guestFrqncy" style="display:none;" class="tbl-dta-rows"><div class="tbl-dta-freq"><div class="tbl-data-freqbdr"></div><div class="tbl-data-freqtxt">VISITS FREQUENCY</div></div></div>
+    <div class="ChartDivArea"></div>
+</div>
+
+@*<div class="exportchartlistpopup" style="display: none;">
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <div style="text-align: center;">Export Chart List</div>
+                </td>
+                <td align="right">
+                    <div style="float: right;">
+                        <span onclick="CloseExportSelectionPopup()" style="cursor: pointer;">X</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="ExportSelection">
+                        <div id="exportchartlist"></div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>*@
+
+<div id="spChartLegend">
+
+</div>

@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "iSHOP :: ADD’L CAPABILITIES";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*@Scripts.Render("~/Scripts/Analysis/Analysis.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Styles.Render("~/Content/Analysis/Analysis.css?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Scripts.Render("~/Scripts/Analysis/Analysis-Common.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")*@
+
+@System.Web.Optimization.Styles.Render("~/bundle/styles/addlcapabilities")
+@System.Web.Optimization.Scripts.Render("~/bundle/scripts/addlcapabilities-Cross_Retailer_Frequencies")
+<input type="hidden" id="hdn-page" name="hdn-Analysis-CrossRetailerFrequencies" />
+
+        <div id="GetCRCSData">
+            <div class="topHeaderCRCS">
+                <table>
+                    <tr>
+                        <td class="litopHeaderCRCS" style="width: 28.2%;" id="ShopperOf">Shopper Of</td>
+                        <td class="litopHeaderCRCS" style="width: 22%;">
+                            Weekly +
+                        </td>
+                        <td class="litopHeaderCRCS" style="width: 22%;">
+                            Monthly +
+                        </td>
+                        <td class="litopHeaderCRCS" style="width: 22%;margin-right:0;">
+                            Quarterly +
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="SampleSize" style="width: 28%;">
+                            Sample Size
+                        </td>
+                        <td class="SampleSize"></td>
+                        <td class="SampleSize"></td>
+                        <td class="SampleSize"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="dataCRCS">
+                <div class="WeeklyMonthlyQuarterly">
+                    Weekly +
+                </div>
+                <div class="WeeklyMonthlyQuarterly">
+                    Monthly +
+                </div>
+                <div class="WeeklyMonthlyQuarterly">
+                    Quarterly +
+                </div>
+            </div>
+        </div>
+
+@*<div id="Table-Content">
+
+</div>*@

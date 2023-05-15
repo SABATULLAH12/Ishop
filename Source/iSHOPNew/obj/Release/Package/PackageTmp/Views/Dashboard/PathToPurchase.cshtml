@@ -1,0 +1,1001 @@
+﻿@{
+    ViewBag.Title = "Path To Purchase";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*@Styles.Render("~/Content/Dashboard/PathToPurchase.css?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+    @Scripts.Render("~/Scripts/Dashboard/PathToPurchase.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")*@
+
+@System.Web.Optimization.Styles.Render("~/bundle/styles/dashboard-PathToPurchase")
+@System.Web.Optimization.Scripts.Render("~/bundle/scripts/dashboard-PathToPurchase")
+
+<input type="hidden" id="hdn-page" name="hdn-dashboard-pathtopurchase" />
+<div class="dashboard-content" style="visibility:hidden;">
+    <div id="p2p-dsbrd-BG" style="display:block;">
+        <object class="p2p-dsbrd-BG-4rds" style="background-color:#fff;" data="../Images/P2PDashboardImages/iSHOP Dashboard_Final BG.svg?v=35#svgView(preserveAspectRatio(none))" type="image/svg+xml"> </object>
+    </div>
+    @*<div class="pie_charts pie_roads_3_0"></div>
+        <div class="pie_charts pie_roads_3_1"></div>
+        <div class="pie_charts pie_roads_3_2"></div>*@
+    <div class="pie_charts pie_roads_4_0"></div>
+    <div class="pie_charts pie_roads_4_1"></div>
+    <div class="pie_charts pie_roads_4_2"></div>
+    <div class="pie_charts pie_roads_4_3"></div>
+    <div class="static_texts">
+        <div class="tod_container">
+            <div class="pre_visit_text all_static_head_text">PRE-SHOP</div>
+            <div class="pre_visit_text all_static_head_text" style="left:51%;top:37%">SHOP</div>
+        </div>
+    </div>
+    <div id="popup-icons">
+        <div class="p_weekday_or_weekend metric-head">
+            <div class="all_sub_head">WEEKDAY OR WEEKEND</div>
+            <div class="popup-icon-wraper">
+                <div class="popup-icons" data-val="Weekday Or Weekend" popup-type="chart" show-all="no" options="false"></div>
+            </div>
+        </div>
+        <div class="p_time_of_day metric-head">
+            <div class="all_sub_head">TIME OF DAY</div>
+        </div>
+        <div class="p_location metric-head">
+            <div class="all_sub_head">LOCATION PRIOR TO TRIP</div>
+            <div class="popup-icon-wraper">
+                <div class="popup-icons" data-val="LOCATION PRIOR TO TRIP" popup-type="chart" show-all="yes" options="true"></div>
+            </div>
+
+        </div>
+
+        <div class="p_planning metric-head">
+            <div class="all_sub_head">PLANNING</div>
+            <div class="popup-icon-wraper">
+                <div class="popup-icons" data-val="Planning" popup-type="chart" show-all="yes" options="true"></div>
+            </div>
+
+        </div>
+
+        @*<div class="p_shopping metric-head">
+                <div class="all_sub_head">MADE A SHOPPING LIST</div>
+                <div class="popup-icons" data-val="Made a Shopping List"></div>
+            </div>*@
+
+        <div class="p_consideration metric-head">
+            <div class="all_sub_head">CONSIDERATION</div>
+            <div class="popup-icon-wraper">
+                <div class="popup-icons" data-val="Consideration" popup-type="table" show-all="yes" options="false"></div>
+            </div>
+
+        </div>
+
+        <div class="p_who_with metric-head">
+            <div class="all_sub_head">WHO WITH</div>
+            <div class="popup-icon-wraper">
+                <div class="popup-icons" data-val="Who With" popup-type="chart" show-all="yes" options="true"></div>
+            </div>
+
+        </div>
+
+        <div class="p_reason_for_store_choice metric-head">
+            <div class="all_sub_head">REASON FOR STORE CHOICE</div>
+            <div class="popup-icon-wraper">
+                <div class="popup-icons" data-val="Reason For Store Choice" popup-type="table" show-all="yes" options="true"></div>
+            </div>
+
+        </div>
+
+        <div class="p_trip_mission metric-head">
+            <div class="all_sub_head">TRIP MISSION</div>
+            <div class="popup-icon-wraper">
+                <div class="popup-icons" data-val="Trip Mission" popup-type="chart" show-all="yes" options="false"></div>
+            </div>
+
+        </div>
+
+        <div class="p_destination_item metric-head">
+            <div class="all_sub_head">DESTINATION ITEM</div>
+            <div class="popup-icon-wraper">
+                <div class="popup-icons plu_icon_click table" data-val="Destination Item" data-val-secondary="Destination Item-Nets" popup-type="table" show-all="yes" options="true"></div>
+            </div>
+
+        </div>
+        <div class="p_satisfaction_drivers metric-head" style="width:10%;">
+            <div class="all_sub_head">SATISFACTION DRIVERS</div>
+        </div>
+        <div class="p_location_after_visit metric-head">
+            <div class="all_sub_head">LOCATION AFTER TRIP</div>
+            <div class="popup-icon-wraper">
+                <div class="popup-icons" data-val="Location After Trip" popup-type="chart" show-all="yes" options="true"></div>
+            </div>
+
+        </div>
+
+        <div class="p_overall_satisfaction metric-head">
+            <div class="all_sub_head">OVERALL SATISFACTION</div>
+            <div class="popup-icon-wraper">
+                <div class="popup-icons" data-val="Overall Satisfaction" popup-type="chart" show-all="yes" options="false"></div>
+            </div>
+
+        </div>
+
+        <div class="p_top_items metric-head Basket_Summary" style="top:40.7%;">
+            <div class="all_sub_head" style="text-transform:uppercase;">Basket Summary</div>
+        </div>
+
+        <div class="p_top_items metric-head">
+            <div class="all_sub_head">TOP ITEMS</div>
+            <div class="popup-icon-wraper">
+                <div class="popup-icons table" data-val="order summary" data-val-secondary="order summary-Nets" popup-type="table" show-all="yes" options="true"></div>
+            </div>
+
+        </div>
+
+        <div class="p_number_of_items metric-head">
+            <div class="all_sub_head">NUMBER OF ITEMS</div>
+            <div class="popup-icon-wraper">
+                <div class="popup-icons" data-val="NUMBER OF ITEMS" popup-type="table" show-all="yes" options="false"></div>
+            </div>
+
+        </div>
+
+        <div class="p_dollars_spent metric-head">
+            <div class="all_sub_head">DOLLARS SPENT</div>
+            <div class="popup-icon-wraper">
+                <div class="popup-icons" data-val="DOLLARS SPENT" popup-type="table" show-all="yes" options="false"></div>
+            </div>
+
+        </div>
+
+        <div class="p_purchased_nartd metric-head">
+            <div class="all_sub_head">PURCHASED NARTD</div>
+            @*<div class="popup-icon-wraper">
+                    <div class="popup-icons" data-val="PURCHASED NARTD" popup-type="chart" show-all="yes" options="true"></div>
+                </div>*@
+
+        </div>
+
+        <div class="p_immediate_consumption metric-head">
+            <div class="all_sub_head">IMMEDIATE CONSUMPTION </div>
+            <span class="sub-header2">(Consumed Within 1 hour)</span>
+            <div class="popup-icon-wraper">
+                <div class="popup-icons" data-val="IMMEDIATE CONSUMPTION" data-val-secondary="IMMEDIATE CONSUMPTION-Nets" popup-type="table" show-all="yes" options="false"></div>
+            </div>
+        </div>
+
+        <div class="p_Time_Spent metric-head">
+            <div class="all_sub_head">TIME SPENT</div>
+            <div class="popup-icon-wraper">
+                <div class="popup-icons" data-val="TIME SPENT" popup-type="chart" show-all="yes" options="true"></div>
+            </div>
+
+        </div>
+    </div>
+    <div id="dynamic-images">
+        <div data-val="Planning" class="dynamic-image  img-PlanningType Planning"></div>
+        <div data-val="Who With" class="dynamic-image img-WhoWith WhoWith"></div>
+    </div>
+    <div id="static-images">
+        <div class="img-post-shop">
+            <ul>
+                <li><div id="img-sun" data-val="Post Shop" class="static-image"></div></li>
+                <li><span class="all_static_head_text">POST-SHOP</span></li>
+            </ul>
+        </div>
+    </div>
+    @*weekday or weekend*@
+    <div id="weekday-or-weekend">
+        <div class="weekday-series week-day metric-item">
+            <ul>
+                <li><div class="legend"></div></li>
+                <li>
+                    <div class="number t_per all_meric_per">69%</div>
+                    <div class="metric all_sub_text">Weekdays</div>
+                </li>
+                <li><div class="sig_text sig_text1 all_sig_text">-0.0%</div></li>
+            </ul>
+        </div>
+
+        <div class="weekday-series week-end metric-item">
+            <ul>
+                <li><div class="legend"></div></li>
+                <li>
+                    <div class="number t_per all_meric_per">32%</div>
+                    <div class="metric all_sub_text">Weekend</div>
+                </li>
+                <li><div class="sig_text sig_text1 all_sig_text">-0.0%</div></li>
+            </ul>
+        </div>
+    </div>
+    @*end weekday or weekend*@
+    @*time-of-day*@
+    <div id="time-of-day">
+        <div class="time_of_day time_of_day1">
+            <div class="tod_container metric-item">
+                <ul>
+                    <li>
+                        <div class="per_text all_meric_per"><div class="vertical-align">13%</div></div>
+                        <div class="text all_sub_text">NIGHT</div>
+                        <div class="sig_text sig_text1 all_sig_text">-0.0%</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="time_of_day time_of_day2">
+            <div class="tod_container metric-item">
+                <ul>
+                    <li>
+                        <div class="per_text all_meric_per"><div class="vertical-align">13%</div></div>
+                        <div class="text all_sub_text">EVENINGS</div>
+                        <div class="sig_text sig_text2 all_sig_text">+0.1%</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="time_of_day time_of_day3">
+            <div class="tod_container metric-item">
+                <ul>
+                    <li>
+                        <div class="per_text all_meric_per"><div class="vertical-align">13%</div></div>
+                        <div class="text all_sub_text">AFTERNOON</div>
+                        <div class="sig_text sig_text3 all_sig_text">-2.5%</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="time_of_day time_of_day4">
+            <div class="tod_container metric-item">
+                <ul>
+                    <li>
+                        <div class="per_text all_meric_per"><div class="vertical-align">13%</div></div>
+                        <div class="text all_sub_text">MID-DAY</div>
+                        <div class="sig_text sig_text4 all_sig_text">+2.2%</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="time_of_day time_of_day5">
+            <div class="tod_container metric-item">
+                <ul>
+                    <li>
+                        <div class="per_text all_meric_per"><div class="vertical-align">13%</div></div>
+                        <div class="text all_sub_text">MORNING</div>
+                        <div class="sig_text sig_text5 all_sig_text">-1.1%</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    @*end-time-of-day*@
+    <div class="Location_Prior_Images">
+        <div class="tod_container">
+            <div class="LocationPriorToTrip t_img"></div>
+        </div>
+    </div>
+    <div id="Location_Prior" class="Location_Prior LocationPriorToTripBlock">
+        <div class="tod_container metric-item">
+            <ul>
+                <li>
+                    <div class="t_per all_meric_per LocationPriorToTripValue">11.1%</div>
+                    <div class="text all_sub_text LocationPriorToTripName">Average</div>
+                    <div class="t_sig_text all_sig_text sig_text LocationPriorToTripChange">-1.1%</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="Planning_Type" class="Planning_Type">
+        <div class="tod_container">
+            <div class="p_pieChart"></div>
+            <div class="planning-series series planned metric-item">
+                <ul>
+                    <li>
+                        <div class="number t_per all_meric_per PlanningValue">69%</div>
+                        <div class="sig_text sig_text1 all_sig_text PlanningChange">-0.0%</div>
+                    </li>
+                    <li><div class="metric all_sub_text PlanningName">Planned</div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="PreparationTypes" class="made_a_shopping_list">
+        <div class="tod_container">
+            <div class="made_a_shopping_list-series series made-a-shop metric-item">
+                <ul>
+                    <li>
+                        <div class="number t_per all_meric_per PreparationTypesValue">32%</div>
+                        <div class="sig_text sig_text1 all_sig_text PreparationTypesChange">-0.0%</div>
+                    </li>
+                    <li class="icon-block">
+                        <div class="metric all_sub_text PreparationTypesName">Made a Shopping List</div>
+                        <div class="popup-icons" data-val="Preparation Types" popup-type="chart" options="true"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="Who_With" class="Who_With">
+        <div class="tod_container series metric-item">
+            <ul>
+                <li>
+                    <div class="number t_per all_meric_per WhoWithValue">69%</div>
+                    <div class="sig_text sig_text1 all_sig_text WhoWithChange">-0.0%</div>
+                </li>
+                <li><div class="metric all_sub_text WhoWithName">Planned</div></li>
+            </ul>
+        </div>
+    </div>
+    <div id="Reason_For_Store_Choice" class="Reason_For_Store_Choice">
+        <div class="tod_container series metric-item">
+            <ul>
+                <li>
+                    <div class="ReasonForStoreChoiceValue number t_per all_meric_per">69%</div>
+                    <div class="ReasonForStoreChoiceChange sig_text sig_text1 all_sig_text">-0.0%</div>
+                </li>
+                <li><div class="ReasonForStoreChoiceName metric all_sub_text">Planned</div></li>
+            </ul>
+        </div>
+    </div>
+    <div id="Consideration" class="Consideration">
+        <div class="tod_container series metric-item">
+            <ul>
+                <li>
+                    <div class="number t_per all_meric_per">69%</div>
+                    <div class="sig_text sig_text1 all_sig_text">-0.0%</div>
+                </li>
+                <li><div class="metric all_sub_text">Planned</div></li>
+            </ul>
+        </div>
+    </div>
+    <div id="NumberOfItems" class="NumberOfItems">
+        <div class="tod_container series metric-item">
+            <ul>
+                <li>
+                    <div class="number t_per all_meric_per">69%</div>
+                    <div class="sig_text sig_text1 all_sig_text">-0.0%</div>
+                </li>
+                <li><div class="metric all_sub_text">Planned</div></li>
+            </ul>
+        </div>
+    </div>
+    <div id="Dollar_Spent" class="avg_dollar_spent">
+        <div class="tod_container metric-item">
+            <ul>
+                <li>
+                    <div class="avg_per all_meric_per">$34</div>
+                    <div class="text all_sub_text">Average</div>
+                    <div class="avg_sig_text all_sig_text sig_text"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="TripMission" class="TripMission">
+        <div class="TripMission-content">
+            <div class="tod_container series metric-item series1">
+                <ul class="series-content series-row1">
+                    <li class="img-content">
+                        <div class="img img1"></div>
+                    </li>
+                    <li><div class="metric all_sub_text TripMissionName">Planned</div></li>
+                </ul>
+                <ul class="series-content series-row2">
+                    <li>
+                        <div class="number t_per all_meric_per TripMissionValue">69%</div>
+                    </li>
+                    <li>
+                        <div class="sig_text sig_text1 all_sig_text TripMissionChange">-0.0%</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tod_container series metric-item series2">
+                <ul class="series-content series-row1">
+                    <li class="img-content">
+                        <div class="img img2"></div>
+                    </li>
+                    <li><div class="metric all_sub_text TripMissionName">Planned</div></li>
+                </ul>
+                <ul class="series-content series-row2">
+                    <li>
+                        <div class="number t_per all_meric_per TripMissionValue">69%</div>
+                    </li>
+                    <li>
+                        <div class="sig_text sig_text1 all_sig_text TripMissionChange">-0.0%</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tod_container series metric-item series3">
+                <ul class="series-content series-row1">
+                    <li class="img-content">
+                        <div class="img img3"></div>
+                    </li>
+                    <li><div class="metric all_sub_text TripMissionName">Planned</div></li>
+                </ul>
+                <ul class="series-content series-row2">
+                    <li>
+                        <div class="number t_per all_meric_per TripMissionValue">69%</div>
+                    </li>
+                    <li>
+                        <div class="sig_text sig_text1 all_sig_text TripMissionChange">-0.0%</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tod_container series metric-item series4">
+                <ul class="series-content series-row1">
+                    <li class="img-content">
+                        <div class="img img4"></div>
+                    </li>
+                    <li><div class="metric all_sub_text TripMissionName">Planned</div></li>
+                </ul>
+                <ul class="series-content series-row2">
+                    <li>
+                        <div class="number t_per all_meric_per TripMissionValue">69%</div>
+                    </li>
+                    <li>
+                        <div class="sig_text sig_text1 all_sig_text TripMissionChange">-0.0%</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="Satisfaction_Drivers" class="Satisfaction_Drivers">
+        <div class="tod_container series metric-item">
+            <ul>
+                <li><div class="img_satisfaction_drivers"></div></li>
+                <li><div class="metric all_sub_text">Planned</div></li>
+                <li>
+                    <div class="number t_per all_meric_per">69%</div>
+                </li>
+                <li>
+                    <div class="sig_text sig_text1 all_sig_text">-0.0%</div>
+                </li>
+            </ul>
+        </div>
+        <div class="tod_container series metric-item">
+            <ul>
+                <li><div class="img_satisfaction_drivers"></div></li>
+                <li><div class="metric all_sub_text">Planned</div></li>
+                <li>
+                    <div class="number t_per all_meric_per">69%</div>
+                </li>
+                <li>
+                    <div class="sig_text sig_text1 all_sig_text">-0.0%</div>
+                </li>
+            </ul>
+        </div>
+        <div class="tod_container series metric-item">
+            <ul>
+                <li><div class="img_satisfaction_drivers"></div></li>
+                <li><div class="metric all_sub_text">Planned</div></li>
+                <li>
+                    <div class="number t_per all_meric_per">69%</div>
+                </li>
+                <li>
+                    <div class="sig_text sig_text1 all_sig_text">-0.0%</div>
+                </li>
+            </ul>
+        </div>
+        <div class="tod_container series metric-item">
+            <ul>
+                <li><div class="img_satisfaction_drivers"></div></li>
+                <li><div class="metric all_sub_text">Planned</div></li>
+                <li>
+                    <div class="number t_per all_meric_per">69%</div>
+                </li>
+                <li>
+                    <div class="sig_text sig_text1 all_sig_text">-0.0%</div>
+                </li>
+            </ul>
+        </div>
+        <div class="tod_container series metric-item">
+            <ul>
+                <li><div class="img_satisfaction_drivers"></div></li>
+                <li><div class="metric all_sub_text">Planned</div></li>
+                <li>
+                    <div class="number t_per all_meric_per">69%</div>
+                </li>
+                <li>
+                    <div class="sig_text sig_text1 all_sig_text">-0.0%</div>
+                </li>
+            </ul>
+        </div>
+        <div class="tod_container series metric-item">
+            <ul>
+                <li><div class="img_satisfaction_drivers"></div></li>
+                <li><div class="metric all_sub_text">Planned</div></li>
+                <li>
+                    <div class="number t_per all_meric_per">69%</div>
+                </li>
+                <li>
+                    <div class="sig_text sig_text1 all_sig_text">-0.0%</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="Mode_of_Transport">
+        <div class="tod_container">
+            @*<div class="t_text all_sub_text">TRANSPORTATION</div>*@
+            @*<div class="p_plusicon plus_icon_click" data-val="Mode of Transport"></div>*@
+            <div class="p_vehicle_icon"></div>
+            <div class="t_per all_meric_per"></div>
+            <div class="text all_sub_text"></div>
+            <div class="t_sig_text all_sig_text"></div>
+        </div>
+    </div>
+    @*<div class="Average_Distance_Travelled">
+            <div class="tod_container">
+                <div class="t_text all_sub_text">AVERAGE DISTANCE TRAVELLED OUT OF WAY</div>
+                <div class="t_per"></div>
+                <div class="text all_meric_per"><div class="vertical-align"></div></div>
+                <div class="miles_text"><div class="vertical-align">Miles</div></div>
+                <div class="t_sig_text all_sig_text"></div>
+            </div>
+        </div>*@
+    @*<div class="Distance_Travelled">
+            <div class="tod_container">
+                <div class="t_text all_sub_text">TRAVELLED OUT OF THE WAY</div>
+                <div class="t_per all_meric_per"></div>
+                <div class="p_plusicon plus_icon_click" data-val="Distance Travelled" staticValue="yes"></div>
+                <div class="t_sig_text all_sig_text"></div>
+            </div>
+        </div>*@
+    <div class="PURCHASED_NARTD_CHRT"></div>
+    <div id="Purchased_NARTD" class="Purchased_NARTD">
+        <div class="tod_container series metric-item">
+            <ul>
+                <li>
+                    <div class="number t_per all_meric_per">69%</div>
+                    <div class="sig_text sig_text1 all_sig_text">-0.0%</div>
+                </li>
+                <li><div class="metric all_sub_text"></div></li>
+            </ul>
+        </div>
+    </div>
+    <div class="IMMEDIATE_CONSUMPTION_CHRT"></div>
+    <div id="Immediate_Consumption" class="Immediate_Consumption">
+        <div class="tod_container series metric-item">
+            <ul>
+                <li>
+                    <div class="number t_per all_meric_per">69%</div>
+                    <div class="sig_text sig_text1 all_sig_text">-0.0%</div>
+                </li>
+                <li><div class="metric all_sub_text">Planned</div></li>
+            </ul>
+        </div>
+    </div>
+    <div id="Time_Spent" class="Time_Spent">
+        <div class="tod_container metric-item">
+            <ul>
+                <li>
+                    <div class="t_per all_meric_per TimeSpentValue">11.1%</div>
+                    <div class="text all_sub_text TimeSpentName">16 – 20 Minutes</div>
+                    <div class="t_sig_text all_sig_text sig_text TimeSpentChange">-1.1%</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    @*<div class="FB_Consumed FB_Consumed1">
+            <div class="tod_container">
+                <div class="img img1"></div>
+                <div class="per_text all_meric_per">0.0%</div>
+                <div class="text text1 all_sub_text">Beverage ONLY</div>
+                <div class="sig_text all_sig_text">0.0</div>
+            </div>
+        </div>
+        <div class="FB_Consumed FB_Consumed2">
+            <div class="tod_container">
+                <div class="img img2"></div>
+                <div class="per_text all_meric_per">0.0%</div>
+                <div class="text text2 all_sub_text">Food ONLY</div>
+                <div class="sig_text all_sig_text">0.0</div>
+            </div>
+        </div>
+        <div class="FB_Consumed FB_Consumed3">
+            <div class="tod_container">
+                <div class="img img3"></div>
+                <div class="per_text all_meric_per">0.0%</div>
+                <div class="text text3 all_sub_text">Food & Beverage</div>
+                <div class="sig_text all_sig_text">0.0</div>
+            </div>
+        </div>*@
+    <div id="TopItems" class="top-items TopItems">
+        <div class="tod_container">
+            <div class="series metric-item">
+                <ul>
+                    <li class="img-content"><div class="img img1"></div></li>
+                    <li>
+                        <div class="number t_per all_meric_per TopItemsValue1">69%</div>
+                        <div class="metric all_sub_text TopItemsName1" style="width:110px;">Planned</div>
+                    </li>
+                    <li><div class="sig_text sig_text1 all_sig_text TopItemsChange1">-0.0%</div></li>
+                </ul>
+            </div>
+            <div class="series metric-item">
+                <ul>
+                    <li class="img-content"><div class="img img2"></div></li>
+                    <li>
+                        <div class="number t_per all_meric_per TopItemsValue2">69%</div>
+                        <div class="metric all_sub_text TopItemsName2" style="width:110px;">Planned</div>
+                    </li>
+                    <li><div class="sig_text sig_text1 all_sig_text TopItemsChange2">-0.0%</div></li>
+                </ul>
+            </div>
+            <div class="series metric-item">
+                <ul>
+                    <li class="img-content"><div class="img img3"></div></li>
+                    <li>
+                        <div class="number t_per all_meric_per TopItemsValue3">69%</div>
+                        <div class="metric all_sub_text TopItemsName3" style="width:110px;">Planned</div>
+                    </li>
+                    <li><div class="sig_text sig_text1 all_sig_text TopItemsChange3">-0.0%</div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="Overall_Satisfaction" class="Overall_Satisfaction">
+        <div class="tod_container series metric-item">
+            <ul>
+                <li>
+                    <div class="t_per all_meric_per OverallSatisfactionValue">0.0%</div>
+                    <div class="text"><div class="sat all_sub_text OverallSatisfactionName">Satisfied</div><div class="t2b">(Top 2 Box)</div></div>
+                    <div class="t_sig_text all_sig_text sig_text OverallSatisfactionChange">0.0</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    @*<div class="Trip_Activity">
+            <div class="tod_container">
+                <div class="t_text all_sub_text">OTHER ACTIVITIES</div>
+                <div class="t_per all_meric_per">0.0%</div>
+                <div class="p_plusicon plus_icon_click" data-val="Trip Activities" staticValue="yes"></div>
+                <div class="text all_sub_text">Primarily To Visit</div>
+                <div class="t_sig_text all_sig_text">0.0</div>
+            </div>
+        </div>*@
+    <div id="DestinationItems" class="destination-items DestinationItem">
+        <div class="tod_container">
+            <div class="series metric-item">
+                <ul>
+                    <li class="img-content"><div class="img img1"></div></li>
+                    <li>
+                        <div class="number t_per all_meric_per DestinationItemValue1">69%</div>
+                        <div class="metric all_sub_text DestinationItemName1" style="width:99px">Planned</div>
+                    </li>
+                    <li><div class="sig_text sig_text1 all_sig_text DestinationItemChange1">-0.0%</div></li>
+                </ul>
+            </div>
+            <div class="series metric-item">
+                <ul>
+                    <li class="img-content"><div class="img img2"></div></li>
+                    <li>
+                        <div class="number t_per all_meric_per DestinationItemValue2">69%</div>
+                        <div class="metric all_sub_text DestinationItemName2" style="width:99px">Planned</div>
+                    </li>
+                    <li><div class="sig_text sig_text1 all_sig_text DestinationItemChange2">-0.0%</div></li>
+                </ul>
+            </div>
+            <div class="series metric-item">
+                <ul>
+                    <li class="img-content"><div class="img img3"></div></li>
+                    <li>
+                        <div class="number t_per all_meric_per DestinationItemValue3">69%</div>
+                        <div class="metric all_sub_text DestinationItemName3" style="width:99px">Planned</div>
+                    </li>
+                    <li><div class="sig_text sig_text1 all_sig_text DestinationItemChange3">-0.0%</div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ballon-chart-main">
+        <div class="ballon-chart-main-div">
+            <div class="bln-pie_chart-section">
+            </div>
+            <div class="bln-data-icon-sectn">
+                <div class="data-icondiv">
+                    <div class="data-icon"></div>
+                    <div class="data-text all_sub_text"></div>
+                </div>
+                <div class="dataval-sgnidiv">
+                    <div class="data-val all_meric_per">
+                    </div>
+                    <div class="data-sgnif all_sig_text"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @*<div class="meal-maindiv">
+            <div class="meal-sectin meal-type0">
+                <div class="meal-type-val all_meric_per"><div class="vertical-align"></div></div>
+                <div class="meal-type-txt-chge">
+                    <div class="meal-type-txt all_sub_text"></div>
+                    <div class="meal-type-chge all_sig_text"></div>
+                </div>
+            </div>
+            <div class="meal-sectin meal-type1">
+                <div class="meal-type-val all_meric_per"><div class="vertical-align"></div></div>
+                <div class="meal-type-txt-chge">
+                    <div class="meal-type-txt all_sub_text"></div>
+                    <div class="meal-type-chge all_sig_text"></div>
+                </div>
+            </div>
+            <div class="meal-sectin meal-type2">
+                <div class="meal-type-val all_meric_per"><div class="vertical-align"></div></div>
+                <div class="meal-type-txt-chge">
+                    <div class="meal-type-txt all_sub_text"></div>
+                    <div class="meal-type-chge all_sig_text"></div>
+                </div>
+            </div>
+            <div class="meal-sectin meal-type3">
+                <div class="meal-type-val all_meric_per"><div class="vertical-align"></div></div>
+                <div class="meal-type-txt-chge">
+                    <div class="meal-type-txt all_sub_text"></div>
+                    <div class="meal-type-chge all_sig_text"></div>
+                </div>
+            </div>
+            <div class="meal-sectin meal-type4">
+                <div class="meal-type-val all_meric_per"><div class="vertical-align"></div></div>
+                <div class="meal-type-txt-chge">
+                    <div class="meal-type-txt all_sub_text"></div>
+                    <div class="meal-type-chge all_sig_text"></div>
+                </div>
+            </div>
+        </div>*@
+
+
+
+    @*<div class="satifctn-drvrs">
+            <div class="satifctn-drvrs-hding all_sub_text"></div>
+            <div class="satifctn-drvrs-contnt">
+                <div class="content0">
+                    <div class="satifctn-drvr_img"><div class="content_img img_0"></div></div>
+                    <div class="satifctn-drvrs-text all_sub_text"></div>
+                    <div class="satifctn-drvrs-val all_meric_per"></div>
+                    <div class="satifctn-drvrs-change all_sig_text"></div>
+                </div>
+                <div class="content1">
+                    <div class="satifctn-drvr_img"><div class="content_img img_1"></div></div>
+                    <div class="satifctn-drvrs-text all_sub_text"></div>
+                    <div class="satifctn-drvrs-val all_meric_per"></div>
+                    <div class="satifctn-drvrs-change all_sig_text"></div>
+                </div>
+                <div class="content2">
+                    <div class="satifctn-drvr_img"><div class="content_img img_2"></div></div>
+                    <div class="satifctn-drvrs-text all_sub_text"></div>
+                    <div class="satifctn-drvrs-val all_meric_per"></div>
+                    <div class="satifctn-drvrs-change all_sig_text"></div>
+                </div>
+                <div class="content3">
+                    <div class="satifctn-drvr_img"><div class="content_img img_3"></div></div>
+                    <div class="satifctn-drvrs-text all_sub_text"></div>
+                    <div class="satifctn-drvrs-val all_meric_per"></div>
+                    <div class="satifctn-drvrs-change all_sig_text"></div>
+                </div>
+                <div class="content4">
+                    <div class="satifctn-drvr_img"><div class="content_img img_4"></div></div>
+                    <div class="satifctn-drvrs-text all_sub_text"></div>
+                    <div class="satifctn-drvrs-val all_meric_per"></div>
+                    <div class="satifctn-drvrs-change all_sig_text"></div>
+                </div>
+                <div class="content5">
+                    <div class="satifctn-drvr_img"><div class="content_img img_5"></div></div>
+                    <div class="satifctn-drvrs-text all_sub_text"></div>
+                    <div class="satifctn-drvrs-val all_meric_per"></div>
+                    <div class="satifctn-drvrs-change all_sig_text"></div>
+                </div>
+            </div>
+        </div>*@
+
+
+
+    <div class="establishmt_img_div" style="display:block;">
+        <div id="establishmt_img" class="establishmt_img"></div>
+    </div>
+
+
+    <div class="OVERALL_SATISFACTION_CHRT"></div>
+    <div class="OTHER_ACTIVITIES_CHRT"></div>
+    <div class="TRAVELLED-OUT-OF-THE-WAY"></div>
+
+    <div class="POST_VISIT"><div id="post_visit_icon" class="post_visit_icon LocationAfterTrip"></div></div>
+    @*<div class="POST_VISIT_UPPER_TEXT"><div class="post_visit_text1 all_sub_text">DESTINATION AFTER VISIT</div>*@
+    @*<div class="plus_icon plus_icon_click" data-val="Destination after Visit"></div>*@
+    <div id="Location_After_Visit" class="POST_VISIT_LOWER_TEXT">
+        <div class="tod_container metric-item">
+            <ul>
+                <li>
+                    <div class="post_visit_text2">
+                        <div class="post_visit_percent all_meric_per LocationAfterTripValue">80%</div>
+                        <div class="post_visit_value all_sig_text sig_text LocationAfterTripChange">0.0%</div>
+                    </div>
+                    <div class="post_visit_text2 location-aftr-dyn-txt">
+                        <div class="post-visit-txt-dyn-txt all_sub_text LocationAfterTripName">Home</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="plus_popup" class="popup1">
+    <div class="popup-content">
+
+        <div class="popup-header-div">
+            <div class="popup-header-emptydiv"></div>
+            <div class="popup-hdrtxt">
+                <div class="metric-type-name">LOCATION PRIOR VISIT</div>
+                <div class="popup-band"></div>
+            </div>
+            <div class="popup-hdrpdf">
+                <div class="popup-imagepdf"></div>
+            </div>
+            <div class="popup-ppt">
+                <div class="popup-imageppt"></div>
+            </div>
+
+            <div class="popup-hdrclse">
+                <div class="popup-imageclse"></div>
+            </div>
+        </div>
+        <div class="popup-hdr-shdwdiv">
+            <div class="popup-hdr-shdw"></div>
+        </div>
+        <div class="popup-hdr-stat-textdiv" style="display:none">
+            <div class="popup-hdr-stat-text">SHOW ON DASHBOARD</div>
+        </div>
+        <div class="popup-body">
+            <div class="bar-content-header">
+                <div class="bar-content-main-div">
+                    <div class="bar-content-main-divleft">
+                        <div class="bar-cntnt-radiodivleft">
+                            <div id="radio-click" class="bar-cntnt-radioimg"></div>
+                        </div>
+                        <div class="bar-cntnt-metric-brdr"></div>
+                        <div class="bar-cntnt-metric-name">
+                            Ran errands or went shopping
+                        </div>
+                        <div class="bar-cntnt-metric-val">91.20%</div>
+                        <div class="bar-cntnt-brder"> </div>
+                        <div class="bar-cntnt-change-val">-3.5</div>
+
+                    </div>
+                    <div class="bar-content-main-divright">
+                        <div class="bar-cntnt-radio-divright">
+                            <div id="radio-click" class="bar-cntnt-radioimg"></div>
+                        </div>
+                        <div class="bar-cntnt-metric-brdr"></div>
+                        <div class="bar-cntnt-metric-name">
+                            Commuted to or from work/school
+                        </div>
+                        <div class="bar-cntnt-metric-val">91.20%</div>
+                        <div class="bar-cntnt-brder"> </div>
+                        <div class="bar-cntnt-change-val">-3.5</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="submit_popup_div">
+            <div class="submit_popup"><span class="inner_submit">Submit</span></div>
+            <div class="clear_all" style="display:none;"><span onclick="clearAll();" class="inner_clear">Clear All</span></div>
+        </div>
+    </div>
+</div>
+<div class="popup-vertcl-brdrdiv" style="display:none">
+    <div class="popup-vertcl-brdr"></div>
+</div>
+
+@*<div class="food-n-bevge-main">
+        <div class="food-n-bevge-text">
+            <div class="txt all_sub_text">TOP FOOD & BEVERAGE ITEM</div>
+        </div>
+        <div class="food-n-bevge-content">
+            <div class="bevge-content">
+                <div class="bevg-img-plusicon">
+                    <div id="bevg-img" class="bevg-img">
+                        <div id="bevg-imgdiv" class="bevg-img"></div>
+                    </div>
+                    <div class="bevg-plusicon plus_icon_click" data-val="Beverage Item"></div>
+                </div>
+                <div class="bevg-metricval all_meric_per"></div>
+                <div class="bevg-change-sign all_sig_text"></div>
+                <div class="bevg-name all_sub_text"></div>
+            </div>
+            <div class="food-content">
+                <div class="food-img-plusicon">
+                    <div id="food-img" class="food-img">
+                        <div id="food-imgdiv" class="food-img"></div>
+                    </div>
+                    <div class="food-plusicon plus_icon_click" data-val="Food Item"></div>
+                </div>
+                <div class="food-metricval all_meric_per"></div>
+                <div class="food-change-sign all_sig_text"></div>
+                <div class="food-name all_sub_text"></div>
+            </div>
+        </div>
+    </div>*@
+<div class="p2p-dsbrd-BG-3rds" id="3rds"></div>
+@*for low sample size*@
+<div id="dashboard-popup" class="save-reportPopup popup_css" style="display:none;">
+    <div class="stat-topdiv"><div class="stat-topband topband"></div><div class="stat-closebtn" ng-click="closeSavePopup()"></div></div>
+    <div class="save-section">
+        <div class="report-selection">
+            <div class="stat-closediv popup_css_header">
+                <div class="stat-heading heading_text">Sample Size for the following selection is less than 30, Kindly change your selection.</div>
+            </div>
+        </div>
+        <div class="list-of-low-SS">
+            <div class="ind-item-retailer">RETAILER: 76</div>
+            <div class="ind-item-stattest">STAT TESTING BASE: 76</div>
+        </div>
+
+        <div class="save-popup-btn">
+            <div class="stat-submt save-proceed-btn proceedClick" onclick="proceedClick()" style="display: none;">PROCEED</div>
+            <div class="stat-submt cancel-proceed-btn closeSavePopup" onclick="closeSavePopup()">CANCEL</div>
+        </div>
+    </div>
+    @*end low sample soze*@
+</div>
+
+<div id="custombase-stattesting-popup" class="LowSample-popup" style="display: none; width: 600px; height: 300px;">
+    <div style="width:100%;" class="LowSample-topdiv">
+        <div style="width:100%;" class="LowSample-topband"></div>
+        <div class="LowSample-clsebtn"></div>
+    </div>
+    <div style="border-bottom: 1px dashed; height: 32px;" class="LowSample-closediv">
+        <div style="border:0;height:18px;font-size: 19.5px;color: #e8e8e8;" class="LowSample-heading">SELECT STAT TESTING BASE</div>
+        <div style="clear:both;font-size:11px;text-transform:none;">Select/Deselect to change Custom Base Stat Testing</div>
+    </div>
+    <div style="height: 189px; display: flex; justify-content: center; margin-top: 1px; border-bottom: 1px solid #666466; width: 98%; margin-left: 1%;" class="LowSample-content">
+        @*custom base retailer filter*@
+        <div class="custom-base-filter">
+            <div class="custom-base-title">
+                <ul>
+                    <li>RETAILER</li>
+                </ul>
+            </div>
+            <div class="filter-content">
+                <div class="stat-custdiv"><div class="stat-cust-dot" style="width: 10%;display:block;"></div><div id="custom-base-ratailer" style="width: 86%;border:0;cursor:auto;" class="stat-cust-estabmt"></div></div>
+            </div>
+            <ul>
+                <li class="custom-base-link"><a id="Custom-Base-Retailer-Popup">Change Retailer/Channel></a></li>
+            </ul>
+        </div>
+
+        @*custom base add filters*@
+        <div class="custom-base-filter">
+            <div class="custom-base-title">
+                <ul>
+                    <li>FILTERS</li>
+                </ul>
+            </div>
+            <div id="custom-base-add-filters" class="filter-content">
+                <ul></ul>
+            </div>
+            <ul>
+                <li class="custom-base-link"><a id="Custom-Base-Add-Filter-Popup" update-geography="true" filter-name="Shopper Groups" search-params="Custom-Base-Filter-Type|Search-Custom-Base-Group-Type|Group-Type-Custom-Base-Search-Content">Change Filters></a></li>
+            </ul>
+        </div>
+    </div>
+    <div style="width: 100%;" class="LowSample-submtdiv">
+        <div id="custom-base-onsubmit-btn" style="margin-right:30px;" class="LowSample-submt">Submit</div>
+        <div class="LowSample-cancel">Cancel</div>
+    </div>
+</div>
+
+@{
+    iSHOPNew.DAL.PathToPurchaseParams pathToPurchaseParams = ViewData["user-selection"] as iSHOPNew.DAL.PathToPurchaseParams;
+}
+
+<input id="default-custom-base" type="hidden" value="@pathToPurchaseParams.CustomBase_UniqueId" />
+<input id="default-retailer" type="hidden" value="@pathToPurchaseParams.Comparison_UniqueIds" />
+<input id="default-time-period" type="hidden" value="@pathToPurchaseParams.TimePeriod_UniqueId" />
+
+<input id="default-shopper-segment" type="hidden" value="@pathToPurchaseParams.ShopperSegment" />
+<input id="default-shopper-segment_uniqueid" type="hidden" value="@pathToPurchaseParams.ShopperSegment_UniqueId" />
+
+<input id="default-shopper-frequency" type="hidden" value="@pathToPurchaseParams.ShopperFrequency_UniqueId" />
+<input id="default-sigtype" type="hidden" value="@pathToPurchaseParams.Sigtype_UniqueId" />
+<input id="default-sort" type="hidden" value="@pathToPurchaseParams.Sort" />
+
+<input id="default-custom-base-dual-filters" type="hidden" value="@pathToPurchaseParams.CustomBaseAdvancedFilters" />
+<input id="default-custom-base-dual-filters_UniqueId" type="hidden" value="@pathToPurchaseParams.CustomBaseAdvancedFilters_UniqueId" />
+
+<input id="default-custom-base-dual-shopperfrequency" type="hidden" value="@pathToPurchaseParams.CustomBaseShopperFrequency" />
+<input id="default-custom-base-dual-ShopperFrequency_UniqueId" type="hidden" value="@pathToPurchaseParams.CustomBaseShopperFrequency_UniqueId" />
+

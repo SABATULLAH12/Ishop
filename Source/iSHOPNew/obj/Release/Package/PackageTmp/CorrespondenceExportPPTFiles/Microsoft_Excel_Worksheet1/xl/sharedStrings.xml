@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sst xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" count="14" uniqueCount="14">
+  <si>
+    <t>X-Values</t>
+  </si>
+  <si>
+    <t>Y-Values</t>
+  </si>
+  <si>
+    <t>Pleasure Shoppers</t>
+  </si>
+  <si>
+    <t>Payday Shoppers</t>
+  </si>
+  <si>
+    <t>Quality Comparers</t>
+  </si>
+  <si>
+    <t>Social Shoppers</t>
+  </si>
+  <si>
+    <t>Technology Embracers</t>
+  </si>
+  <si>
+    <t>Advance Planners</t>
+  </si>
+  <si>
+    <t>Brand Buyers</t>
+  </si>
+  <si>
+    <t>Price Seekers</t>
+  </si>
+  <si>
+    <t>Errand Runners</t>
+  </si>
+  <si>
+    <t>Convenience</t>
+  </si>
+  <si>
+    <t>Dollar</t>
+  </si>
+  <si>
+    <t>Supermarket / Grocery</t>
+  </si>
+</sst>

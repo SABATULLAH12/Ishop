@@ -1,0 +1,164 @@
+[
+  {
+    "Tab": "Demographics",
+    "TabLevelData": [
+      {
+        "Metric": "Total",
+        "Text": "_objective"
+      },
+      {
+        "Metric": "KOHORTS",
+        "Text": "_objective"
+      },
+      {
+        "Metric": "Gender",
+        "Text": "_objective"
+      },
+      {
+        "Metric": "Age",
+        "Text": "_objective Year Olds"
+      },
+      {
+        "Metric": "Age/Gender",
+        "Text": "_objective Year Olds"
+      },
+      {
+        "Metric": "Ethnicity",
+        "Text": "_objective"
+      },
+      {
+        "Metric": "Gender/Ethnicity",
+        "Text": "_objective"
+      },
+      {
+        "Metric": "Age/Ethnicity",
+        "Text": "_objective"
+      },
+      {
+        "Metric": "Education",
+        "Text": "_objective"
+      },
+      {
+        "Metric": "Employment Status",
+        "Text": "_objective"
+      },
+      {
+        "Metric": "Marital Status",
+        "Text": "_objective"
+      },
+      {
+        "Metric": "HH Income",
+        "Text": "_objective HH Income"
+      },
+      {
+        "Metric": "HH Size - Total",
+        "Text": "_objective Members"
+      },
+      {
+        "Metric": "HH Size - Adults in HH",
+        "Text": "_objective"
+      },
+      {
+        "Metric": "HH Size - Children in HH",
+        "Text": "_objective"
+      },
+      {
+        "Metric": "Socio Economic",
+        "Text": "_objective"
+      },
+      {
+        "Metric": "Trade Areas",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "GEOGRAPHY",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "Density",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "Census Regions",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "Census Divisions",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "CCNA Regions",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "Bottler Regions",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "DMA Regions",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "Trade Areas",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "Albertson's/Safeway Trade Areas",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "Circle K Trade Areas",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "HEB Trade Areas",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "Kroger Trade Areas",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "Publix Trade Areas",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "States",
+        "Text": "From _objective"
+      },
+      {
+        "Metric": "FCL Ops OU",
+        "Text": "From _objective"
+      }
+    ]
+  },
+  {
+    "Tab": "Shopper Frequency",
+    "TabLevelData": [
+      {
+        "Metric": "WEEKLY +",
+        "Text": ""
+      },
+      {
+        "Metric": "MONTHLY +",
+        "Text": ""
+      },
+      {
+        "Metric": "QUARTERLY +",
+        "Text": ""
+      },
+      {
+        "Metric": "ANNUALLY +",
+        "Text": ""
+      },
+      {
+        "Metric": "STORE IN TRADE AREA",
+        "Text": ""
+      },
+      {
+        "Metric": "MAIN STORE/FAVORITE STORE",
+        "Text": ""
+      }
+    ]
+  }  
+]

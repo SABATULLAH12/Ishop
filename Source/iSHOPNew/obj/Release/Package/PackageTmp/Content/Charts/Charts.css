@@ -1,0 +1,497 @@
+﻿body {
+}
+
+#spChartLegend {
+width: 100%;
+/*height: 35px;*/
+/*background-color: white;*/
+margin-left:0;
+padding-top: 17px;
+margin-top: 53px;
+margin-bottom: 7px;
+text-transform: uppercase;
+height: 6%;
+}
+#ForLinks{width:auto;float:right;height:25px;margin-right: 2%;margin-top: 3px;}
+.selectiondetails {
+height:auto;
+float:left;
+margin-right:4px;
+}
+.ChartDivArea{
+overflow:hidden;
+font-size: 12px;
+text-transform: uppercase;
+display:none;
+}
+
+.selectiondetails > table >tbody>tr> td>input {
+padding-left: 5px;
+    padding-right: 5px;
+    /* width: 30%; */
+    height: 22px;
+    background: #BEBEBE;
+     font-size: .9vw; 
+    text-align: center;
+    /* padding-top: 6px; */
+    float: left;
+    border-left: 6px solid #EB1F2A;/*#F29A0B solid 5px;*/
+    font-weight: bold;
+    /* margin-top: .5%; */
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#spChartLegend > div {
+display:inline-block;
+text-align:left;
+cursor:pointer;
+}
+
+.spLegend,.spLegendTrend{
+width:auto;
+margin-right:20px;
+
+}
+
+.spIcon{
+width:18px;
+height:18px;
+margin-top:-4px;
+}
+
+.spLegend > div{
+float: left;
+}
+
+.spLegendTrend > div{
+float: left;
+}
+
+.spText, .spTextTrend {
+font-family: Arial;
+font-size: 12px;
+font-weight: bold;
+margin: 3px;
+margin-top: 0px;
+color: black;
+}
+
+#LinkForCharts {
+width: auto;
+height: 25px;
+float:right;
+/*border:1px solid black;*/
+/*background-color:white;*/
+/*margin-left: 904px;
+margin-top: -26px;*/
+}
+
+#GroupedBarChartOne,#GroupedBarChartTwo,#GroupedBarChartthree,#ColumnChartOne,#ColumnChartTwo ,#LineChartOne,#LineChartTwo,.chart-type{width: 25px;height: 26px;/*border: 1px solid grey;*/float: left;/* margin: 3px 3px 3px 8px; */left: 0;cursor: pointer;/*background-color: rgb(189, 16, 30);*/border-radius: 5px;color:  rgb(255,255,255);}
+
+.ExportToPPT
+{
+width: 12%;
+height: 21px;
+/*border: 1px solid grey;*/
+float: left;
+margin: 3px 3px 3px 8px;
+left: 0;
+cursor: pointer;
+/*background-color: rgb(189, 16, 30);*/
+border-radius: 5px;
+color:  rgb(255,255,255);
+background-image: url('../../Images/Coke Dine_Sprite_7.svg');
+background-position:-811px -43px;
+}
+
+
+#TextForChart {
+font-family: Arial;
+font-size: 9px;
+font-weight: bold;
+margin: 3px;
+color: white;
+}
+
+#ToShowChart {
+width: 98%;
+height:65%;
+box-sizing:border-box;
+background-color: #fafafa;
+display: none;
+/*border:1px solid black;*/
+/*background-color: white;*/
+/*border-bottom: 1px solid grey;*/
+}
+
+/*@font-face {
+font-family: contentFontFamily;
+src: url('../Content/font/Oswald-Regular.ttf');
+}*/
+
+/*
+.bar text {
+fill: black;
+font: 11px contentFontFamily;
+text-anchor: middle;
+}*/
+
+/*.axis text {
+font: 11px contentFontFamily;
+}*/
+
+/*.axis path,
+.axis line {
+fill: none;
+stroke: #000;
+shape-rendering: crispEdges;
+}*/
+
+
+/*
+.dual {
+fill: url(#sampleGradient);
+}*/
+
+/*.legend {
+font: 12px contentFontFamily;
+}*/
+/*
+.dualInverse {
+fill: url(#sampleGradientNew);
+opacity:0.5;
+}
+*/
+/*
+.shadow {
+fill: url(#shadowGradient);
+    
+}*/
+
+/*.line {
+fill: none;
+stroke: steelblue;
+stroke-width: 1.5px;
+}
+*/
+/*body {
+font: 10px sans-serif;
+}*/
+
+#chart-title{width:100%;height:20px;clear:both;color: black;font-size: 16px;font-weight:bold;/* font-weight: bold; */padding-left: 18px;/*margin-left: 18px;*//*background-image: url('../../Images/Coke Dine_Sprite_7.svg');
+background-position:548px -457px;*/float: left;width: 50%;height: 7%;margin-left: 25%;text-align: center;margin-top: 5px;background-image: url(../../images/Sprite-Shadow_Vertical_fliped.svg);background-position: 155px 20px;background-repeat: no-repeat;}
+
+.showChartMain {height: 96%;width: 99%;/*float: left;*/overflow:auto;margin:0 auto;text-transform:uppercase;/*border:1px solid lightgrey;*//*margin-left: 2%;*//*overflow-y:auto;
+overflow-x:auto;*//* margin-right: 0%; */margin-left: 1.5%;}
+.trendChartMain {
+    /*height: 100% !important;*/
+    height: 100%;
+    width: 100% !important;
+    float: left;
+    display: none;
+}
+.tooltip {
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+position: absolute;
+display: block;
+width: auto;
+height: auto;
+background: none repeat scroll 0 0 white;
+border: 0 none;
+border-radius: 8px 8px 8px 8px;
+box-shadow: -3px 3px 15px #888888;
+color: black;
+font: 12px sans-serif;
+padding: 5px;
+text-align: center;
+background:lightsteelblue;
+}
+/*tooltip*/
+.d3_tooltip {
+    position: fixed;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    /*color: #f00;*/
+    color: black;
+    font-weight: bolder;
+    font: 10px sans-serif;
+    background: #eee;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.57);
+}
+    .d3_tooltip:before {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 45%;
+        bottom: -5px;
+        border: 5px solid;
+        border-style: solid;
+        border-width: 5px 5px 0 5px;
+        border-color: #eee transparent transparent transparent;
+    }
+/*tooltip*/
+.clsPointer
+{
+background-color:red;
+}
+.dual
+{
+background-color:yellow;
+}
+.toolimg1 {
+             
+width: 8px;
+height: 7px;
+display: inline-block;
+}
+.toolimg2 {
+ 
+width: 8px;
+height: 7px;
+display: inline-block;
+}
+.exportchartlistpopup {
+border-top:4px solid #c34f4f;
+background-color: #393539;
+color: #FFFFFF;
+display: none;
+left: 0;
+padding: 0px;
+position: fixed;
+top: 0;
+bottom:0;
+right:0;
+width: 550px;
+height:300px;
+z-index: 10000;
+min-width:400px;
+margin:auto;
+}
+
+.ExportSelection {
+    color: white;
+    height: 234px;
+    padding: 5px;
+    width: 96%;
+    overflow: auto;
+    margin-left: 18px;
+}
+#exportchartlist table td {
+    border-bottom: 1px solid #666466;
+    min-height: 24px;
+    display: flex;
+    float: left;
+    align-items: center;
+    color:white;
+}
+.tableheader {
+    table-layout:fixed;
+    border-collapse:separate;
+    border-spacing: 2px 0px;
+}
+    .tableheader td {
+        /*border:1px solid #e6e6e6;*/
+        text-align: center;
+        color: black;
+        background-color: #ededee;
+        font-family: 'Chivo', sans-serif;
+        letter-spacing: 0.3px;
+        font-size: 12px;
+        border-bottom: 0.5px dotted #c0c0c0;
+        height:20px;
+    }
+.tablebody {
+    table-layout:fixed;
+    border-collapse:collapse;
+}
+.tablebody td{
+  border:1px solid #e6e6e6;
+  text-align:center;
+}
+
+
+
+.leftheader, .rightheader {
+    background-color: #ededee;
+    box-sizing: border-box;
+    float: left;
+    /*height: 57.75px;*/
+    height:auto;
+}
+.leftheader, .leftbody {
+    box-sizing: border-box;
+      width: 35%;
+}
+.rightheader, .rightbody {
+    width: 64.3%;
+}
+.rightbody, .leftbody {
+    background-color: #ededee;
+    box-sizing: border-box;
+    float: left;
+    height: 85%;
+}
+.rightbody {
+    position: relative;
+}
+.leftheader .rowitem ul li, .leftbody .rowitem ul li {
+    box-sizing: border-box;
+    color: #000000;
+    float: left;
+    list-style: outside none none;
+     position:relative;
+}
+.rightheader .rowitem ul li, .rightbody .rowitem ul li {
+    box-shadow: 14px 0 0 0 #ebebeb;
+    box-sizing: border-box;
+    float: left;
+    list-style: outside none none;
+    margin-right: 10px;
+    /*min-width: 300px;*/
+    min-width: 150px;
+    width: 100%;
+     position:relative;
+}
+.rowitem ul li {
+    border-bottom: 0.5px dotted #c0c0c0;
+    box-sizing: border-box;
+    min-height: 25px;
+}
+#Table-Content {
+    height: 76%;
+    overflow: hidden;
+    text-transform: uppercase;
+    width: 100%;  
+    box-sizing:border-box;   
+    color:#000000;
+}
+.rowitem {
+    clear: both;
+    width: 100%;
+}
+.rowitem > ul {
+    background-color: #ededee;
+    display: flex;
+    height:100%;
+}
+.leftbody .rowitem ul > li:first-child, .leftheader .rowitem ul > li:first-child {
+    box-shadow: 14px 0 0 0 #ebebeb;
+    margin-right: 10px;
+    width: 100%;
+}
+.leftbody .rowitem ul > li:first-child + li, .leftheader .rowitem ul > li:first-child + li {
+    width: 20%;
+}
+.leftheader ul li, .rightheader ul li {
+    color: #000000;
+}
+.leftheader .rowitem:first-child ul li, .rightheader .rowitem:first-child ul li {
+   background-color: rgba(0,0,0,.1);
+    border-bottom: 1px solid #686868;
+    color: #000000;
+    font-weight: bold;
+    line-height: 24px;
+    /*height:100%;*/
+    height:auto;
+}
+.leftheader .rowitem:first-child + .rowitem ul li, .rightheader .rowitem:first-child + .rowitem ul li {
+    border: 0 none;
+}
+.leftbody ul li {
+    padding-left: 50px;
+}
+.leftbody .table-title li {
+    padding-left: 40px;
+}
+.leftbody .table-title ul li, .rightbody .table-title ul li {
+   position: relative;
+}
+.table-top-title-bottom-line {
+    background-color: #000000;
+    border-radius: 1px 10px 0 0;
+    bottom: 0;
+    display: block;
+    height: 4px;
+    left: 0;
+    position: absolute;
+    width: 25px;
+}
+.table-title-bottom-line {
+    background-color: #72aaff;
+    border-radius: 1px 10px 0 0;
+    bottom: 0;
+    display: block;
+    height: 4px;
+    left: 0;
+    position: absolute;
+    width: 25px;
+}
+.rowitem.table-title {
+    position: relative;
+    cursor:pointer;
+}
+.ShoppingFrequencyheader {
+    position: relative;
+}
+.leftbody span, .rightbody span, .leftheader span, .rightheader span {
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+    font-size:12.5px;
+    line-height:normal;
+    vertical-align: -webkit-baseline-middle;
+}
+.leftbody span, .rightbody span {
+   text-transform:uppercase;
+}
+
+.leftheader .rowitem:nth-child(2) span {
+    text-transform:uppercase;
+}
+
+.rowitem.table-title li {
+    border-top: 1px solid skyblue;
+}
+.no-data {
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+}
+.leftheader .rowitem, .rightheader .rowitem {
+    min-height: 29px;
+}
+.rightbody .rowitem ul li:after, .leftbody .rowitem ul li:after {
+    content: "";
+    width: 3px;
+    height: 2px;
+    background: #A8A8A8;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 2px;
+}
+.table-title ul li:after {
+    display:none;
+}
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 0%;/*60%;*/ /* aspect ratio */
+    vertical-align: top;
+    /*overflow: auto;*/
+}
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    /*top: 10px;*/
+    left: 0;
+} 

@@ -1,0 +1,12 @@
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew.DAL\bin\Debug\iSHOPNew.DAL.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew.DAL\bin\Debug\iSHOPNew.DAL.pdb
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew.DAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew.DAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew.DAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew.DAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew.DAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew.DAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew.DAL\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew.DAL\obj\Debug\iSHOPNew.DAL.csprojResolveAssemblyReference.cache
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew.DAL\obj\Debug\iSHOPNew.DAL.dll
+D:\KI_Project\ISHOP_CODE\Source\iSHOPNew.DAL\obj\Debug\iSHOPNew.DAL.pdb

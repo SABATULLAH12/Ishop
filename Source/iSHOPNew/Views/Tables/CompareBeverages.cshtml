@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "iSHOP :: Tables";
+}
+@*@Styles.Render("~/Content/Tables/Tables.css?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Scripts.Render("~/Scripts/Tables/CompareBeverages.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Scripts.Render("~/Scripts/Tables/Table-Common.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")*@
+
+@System.Web.Optimization.Styles.Render("~/bundle/styles/table")
+@System.Web.Optimization.Scripts.Render("~/bundle/scripts/table-compare_beverages")
+
+<input type="hidden" id="hdn-page" name="hdn-tbl-CompareBeverages" />
+@*Tabs Block*@
+<div class="advance-filters" style="height: 47px;background-color: transparent;display:none;">
+    <div class="adv-fltr-top" style="height: 68%;">
+        <div class="adv-fltr demo">
+            <div class="adv-fltr-option">
+                <div class="adv-fltr-label width-1" data-val="DEMOGRAPHIC PROFILING">
+                    <span tabindex="1" visit-id-mapping="true" guest-id-mapping="true" visit-spname="usp_AcrossBeverageTrip" guest-spname="usp_AcrossBeverageShopper" visit-samplesize-spname="sp_FactBookTripSampleSizeAcrossBeverageTripAcross" guest-samplesize-spname="sp_FactBookRespSampleSizeAcrossBeverageShopper">DEMOGRAPHICS</span>
+                </div>
+            </div>
+        </div>
+        <div id="adv-fltr visitsId" class="adv-fltr visits" style="width:68%;">
+            <div class ="filtercenterallign" style="margin-left: -3.5%;">
+            <div class="adv-fltr-label width-5" data-val="PRE-VISITS">
+                <span tabindex="2" id-mapping="true" spname="usp_AcrossBeverageTrip" samplesize-spname="sp_FactBookTripSampleSizeAcrossBeverageTripAcross">PRE SHOP</span>
+            </div>
+            <div class="adv-fltr-label width-5" data-val="IN-VISITS">
+                <span tabindex="3" id-mapping="true" spname="usp_AcrossBeverageTrip" samplesize-spname="sp_FactBookTripSampleSizeAcrossBeverageTripAcross">IN STORE</span>
+            </div>
+            <div class="adv-fltr-label width-5" data-val="BEVERAGE DETAILS1">
+                <span tabindex="5" id-mapping="true" spname="usp_AcrossBeverageTrip" samplesize-spname="sp_FactBookTripSampleSizeAcrossBeverageTripAcross">IN STORE - BEVERAGE DETAIL</span>
+            </div>
+            <div class="adv-fltr-label width-5" data-val="POST-VISITS">
+                <span tabindex="4" id-mapping="true" spname="usp_AcrossBeverageTrip" samplesize-spname="sp_FactBookTripSampleSizeAcrossBeverageTripAcross">POST SHOP/TRIP SUMMARY</span>
+            </div> 
+            </div>        
+        </div>
+        <div class="adv-fltr guests" style="width:12.2%;">
+            <div class="adv-fltr-option guesttabs">               
+                <div class="adv-fltr-label width-3" data-val="ESTABLISHMENT IMAGERY" style="width:110.7%;">
+                    <span tabindex="3" id-mapping="true" spname="usp_AcrossBeverageShopper" samplesize-spname="sp_FactBookRespSampleSizeAcrossBeverageShopper">STORE FREQUENCY</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*End*@
+@*Right Filter Block*@
+@Html.Partial("_RightPanelFilter")
+@*End*@
+<div id="guestFrqncy" style="display:none;" class="tbl-dta-rows"><div class="tbl-dta-freq"><div class="tbl-data-freqbdr"></div><div class="tbl-data-freqtxt">VISITS FREQUENCY</div></div></div>
+<div class="tbl-emptyrow"></div>
+<div id="Table-Content"></div>

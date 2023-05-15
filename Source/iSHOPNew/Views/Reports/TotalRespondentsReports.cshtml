@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "iSHOP :: Reports";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*@Styles.Render("~/Content/Reports/TotalRespondentsReport.css?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Scripts.Render("~/Scripts/Reports/TotalRespondentsReport.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Scripts.Render("~/Scripts/Reports/Reports-Common.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")*@
+
+@System.Web.Optimization.Styles.Render("~/bundle/styles/Total_Respondents_Reports")
+@System.Web.Optimization.Scripts.Render("~/bundle/scripts/reports-Total_Respondents_Reports")
+
+<input type="hidden" id="hdn-page" name="hdn-crossretailer-TotalRespondentsTripsReport" />
+@*<h2>TotalRespondentsReports</h2>*@
+<div id="divtotaltable" class="tableDiv" style="height: 93%;background-color: #ededee;display:none;width: 100%;"></div>

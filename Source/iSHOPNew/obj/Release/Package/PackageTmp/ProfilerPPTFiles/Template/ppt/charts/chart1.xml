@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<c:chartSpace xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
+  <c:date1904 val="0" />
+  <c:lang val="en-IN" />
+  <c:roundedCorners val="0" />
+  <mc:AlternateContent xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+    <mc:Choice Requires="c14" xmlns:c14="http://schemas.microsoft.com/office/drawing/2007/8/2/chart">
+      <c14:style val="102" />
+    </mc:Choice>
+    <mc:Fallback>
+      <c:style val="2" />
+    </mc:Fallback>
+  </mc:AlternateContent>
+  <c:chart>
+    <c:autoTitleDeleted val="0" />
+    <c:plotArea>
+      <c:layout>
+        <c:manualLayout>
+          <c:layoutTarget val="inner" />
+          <c:xMode val="edge" />
+          <c:yMode val="edge" />
+          <c:x val="0.15088383838383837" />
+          <c:y val="3.4375000000000003E-2" />
+          <c:w val="0.78261436543916862" />
+          <c:h val="0.93125000000000002" />
+        </c:manualLayout>
+      </c:layout>
+      <c:barChart>
+        <c:barDir val="bar" />
+        <c:grouping val="percentStacked" />
+        <c:varyColors val="0" />
+        <c:ser>
+          <c:idx val="0" />
+          <c:order val="0" />
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$B$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1" />
+                <c:pt idx="0">
+                  <c:v>Series 1</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:noFill />
+          </c:spPr>
+          <c:invertIfNegative val="0" />
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$6</c:f>
+              <c:strCache>
+                <c:ptCount val="5" />
+                <c:pt idx="0">
+                  <c:v>7-Eleven</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>7-Eleven</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>7-Eleven</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>7-Eleven</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>7-Eleven</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$B$2:$B$6</c:f>
+              <c:numCache>
+                <c:formatCode>0%</c:formatCode>
+                <c:ptCount val="5" />
+                <c:pt idx="0">
+                  <c:v>0</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>0.063725</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>0.25443</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>0.49374</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>0.49798</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+          <c:smooth val="0" />
+        </c:ser>
+        <c:ser>
+          <c:idx val="1" />
+          <c:order val="1" />
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$C$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1" />
+                <c:pt idx="0">
+                  <c:v>Series 2</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:invertIfNegative val="0" />
+          <c:dLbls>
+            <c:numFmt formatCode="0.0%" sourceLinked="0" />
+            <c:txPr>
+              <a:bodyPr />
+              <a:lstStyle />
+              <a:p>
+                <a:pPr>
+                  <a:defRPr sz="1000" />
+                </a:pPr>
+                <a:endParaRPr lang="en-US" />
+              </a:p>
+            </c:txPr>
+            <c:dLblPos val="ctr" />
+            <c:showLegendKey val="0" />
+            <c:showVal val="1" />
+            <c:showCatName val="0" />
+            <c:showSerName val="0" />
+            <c:showPercent val="0" />
+            <c:showBubbleSize val="0" />
+            <c:showLeaderLines val="0" />
+          </c:dLbls>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$6</c:f>
+              <c:strCache>
+                <c:ptCount val="5" />
+                <c:pt idx="0">
+                  <c:v>7-Eleven</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>7-Eleven</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>7-Eleven</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>7-Eleven</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>7-Eleven</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$C$2:$C$6</c:f>
+              <c:numCache>
+                <c:formatCode>0%</c:formatCode>
+                <c:ptCount val="5" />
+                <c:pt idx="0">
+                  <c:v>1</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>0.87255</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>0.49114</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>0.01252</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>0.00404</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+          <c:smooth val="0" />
+        </c:ser>
+        <c:ser>
+          <c:idx val="2" />
+          <c:order val="2" />
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$D$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1" />
+                <c:pt idx="0">
+                  <c:v>Series 3</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:noFill />
+          </c:spPr>
+          <c:invertIfNegative val="0" />
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$6</c:f>
+              <c:strCache>
+                <c:ptCount val="5" />
+                <c:pt idx="0">
+                  <c:v>7-Eleven</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>7-Eleven</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>7-Eleven</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>7-Eleven</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>7-Eleven</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$D$2:$D$6</c:f>
+              <c:numCache>
+                <c:formatCode>0%</c:formatCode>
+                <c:ptCount val="5" />
+                <c:pt idx="0">
+                  <c:v>0</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>0.063725</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>0.25443</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>0.49374</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>0.49798</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+          <c:smooth val="0" />
+        </c:ser>
+        <c:dLbls>
+          <c:showLegendKey val="0" />
+          <c:showVal val="0" />
+          <c:showCatName val="0" />
+          <c:showSerName val="0" />
+          <c:showPercent val="0" />
+          <c:showBubbleSize val="0" />
+        </c:dLbls>
+        <c:gapWidth val="0" />
+        <c:overlap val="100" />
+        <c:axId val="31778688" />
+        <c:axId val="31780224" />
+      </c:barChart>
+      <c:catAx>
+        <c:axId val="31778688" />
+        <c:scaling>
+          <c:orientation val="minMax" />
+        </c:scaling>
+        <c:delete val="1" />
+        <c:axPos val="l" />
+        <c:majorTickMark val="out" />
+        <c:minorTickMark val="none" />
+        <c:tickLblPos val="nextTo" />
+        <c:crossAx val="31780224" />
+        <c:crosses val="autoZero" />
+        <c:auto val="1" />
+        <c:lblAlgn val="ctr" />
+        <c:lblOffset val="100" />
+        <c:noMultiLvlLbl val="0" />
+      </c:catAx>
+      <c:valAx>
+        <c:axId val="31780224" />
+        <c:scaling>
+          <c:orientation val="minMax" />
+        </c:scaling>
+        <c:delete val="1" />
+        <c:axPos val="b" />
+        <c:numFmt formatCode="0%" sourceLinked="1" />
+        <c:majorTickMark val="out" />
+        <c:minorTickMark val="none" />
+        <c:tickLblPos val="nextTo" />
+        <c:crossAx val="31778688" />
+        <c:crosses val="autoZero" />
+        <c:crossBetween val="between" />
+      </c:valAx>
+    </c:plotArea>
+    <c:plotVisOnly val="1" />
+    <c:dispBlanksAs val="gap" />
+    <c:showDLblsOverMax val="0" />
+  </c:chart>
+  <c:txPr>
+    <a:bodyPr />
+    <a:lstStyle />
+    <a:p>
+      <a:pPr>
+        <a:defRPr sz="1800" />
+      </a:pPr>
+      <a:endParaRPr lang="en-US" />
+    </a:p>
+  </c:txPr>
+  <c:externalData r:id="rId1">
+    <c:autoUpdate val="0" />
+  </c:externalData>
+</c:chartSpace>

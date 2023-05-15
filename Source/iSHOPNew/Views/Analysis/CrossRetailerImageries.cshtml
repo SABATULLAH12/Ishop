@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "iSHOP :: ADD’L CAPABILITIES";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*@Scripts.Render("~/Scripts/Analysis/CRImageries.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Styles.Render("~/Content/Analysis/Analysis.css?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Scripts.Render("~/Scripts/Analysis/Analysis-Common.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")*@
+
+@System.Web.Optimization.Styles.Render("~/bundle/styles/addlcapabilities")
+@System.Web.Optimization.Scripts.Render("~/bundle/scripts/addlcapabilities-Cross_Retailer_Imageries")
+
+<input type="hidden" id="hdn-page" name="hdn-Analysis-CrossRetailerImageries" />
+
+<div id="GetCRPData" style="width:100%;height:92.5%;text-transform: uppercase;">
+    <div id="PercepHeader">
+        <table style="width: 100%;">
+            @*<tr>
+                <td class="BenchComp">Shopping Frequency</td>
+                <td class="BenchComp">Benchmark</td>
+                <td class="CompHeader">Comaprison Areas</td>
+            </tr>*@
+            <tr>
+                <td style="width: 250px;background-color: #d5d6d6;border-bottom: 1px solid #686868; text-align: center; color: black;" id="SFLabel">Monthly +</td>
+                <td class="BenchComp" id="Benchmark"></td>
+                <td style="background-color: #d5d6d6;border-bottom: 1px solid #686868;" id="Comparison"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+@*<div id="Table-Content"></div>*@

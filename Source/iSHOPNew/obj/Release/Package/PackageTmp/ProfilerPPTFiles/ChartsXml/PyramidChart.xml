@@ -1,0 +1,1223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<c:chartSpace xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
+  <c:date1904 val="0"/>
+  <c:lang val="en-US"/>
+  <c:roundedCorners val="0"/>
+  <mc:AlternateContent xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+    <mc:Choice Requires="c14" xmlns:c14="http://schemas.microsoft.com/office/drawing/2007/8/2/chart">
+      <c14:style val="104"/>
+    </mc:Choice>
+    <mc:Fallback>
+      <c:style val="4"/>
+    </mc:Fallback>
+  </mc:AlternateContent>
+  <c:clrMapOvr bg1="lt1" tx1="dk1" bg2="lt2" tx2="dk2" accent1="accent1" accent2="accent2" accent3="accent3" accent4="accent4" accent5="accent5" accent6="accent6" hlink="hlink" folHlink="folHlink"/>
+  <c:chart>
+    <c:autoTitleDeleted val="1"/>
+    <c:plotArea>
+      <c:layout>
+        <c:manualLayout>
+          <c:layoutTarget val="inner"/>
+          <c:xMode val="edge"/>
+          <c:yMode val="edge"/>
+          <c:x val="0.1423987401574803"/>
+          <c:y val="4.2338612174443575E-2"/>
+          <c:w val="0.85693133858267712"/>
+          <c:h val="0.84602871679643676"/>
+        </c:manualLayout>
+      </c:layout>
+      <c:barChart>
+        <c:barDir val="bar"/>
+        <c:grouping val="stacked"/>
+        <c:varyColors val="0"/>
+        <c:ser>
+          <c:idx val="0"/>
+          <c:order val="0"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$B$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Column1</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:noFill/>
+          </c:spPr>
+          <c:invertIfNegative val="0"/>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$6</c:f>
+              <c:strCache>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>Shop</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Like</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Advocate</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Favorite</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Committed</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$B$2:$B$6</c:f>
+              <c:numCache>
+                <c:formatCode>0%</c:formatCode>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>0</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>9.9999999999999978E-2</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>0.2</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>0.4</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>0.47499999999999998</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+        </c:ser>
+        <c:ser>
+          <c:idx val="1"/>
+          <c:order val="1"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$C$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Benckmark</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:solidFill>
+              <a:srgbClr val="D78F8D"/>
+            </a:solidFill>
+          </c:spPr>
+          <c:invertIfNegative val="0"/>
+          <c:dLbls>
+            <c:spPr>
+              <a:noFill/>
+              <a:ln>
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+            <c:txPr>
+              <a:bodyPr/>
+              <a:lstStyle/>
+              <a:p>
+                <a:pPr>
+                  <a:defRPr sz="1200" b="0"/>
+                </a:pPr>
+                <a:endParaRPr lang="en-US"/>
+              </a:p>
+            </c:txPr>
+            <c:showLegendKey val="0"/>
+            <c:showVal val="1"/>
+            <c:showCatName val="0"/>
+            <c:showSerName val="0"/>
+            <c:showPercent val="0"/>
+            <c:showBubbleSize val="0"/>
+            <c:showLeaderLines val="0"/>
+            <c:extLst>
+              <c:ext uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}" xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart">
+                <c15:layout/>
+                <c15:showLeaderLines val="0"/>
+              </c:ext>
+            </c:extLst>
+          </c:dLbls>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$6</c:f>
+              <c:strCache>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>Shop</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Like</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Advocate</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Favorite</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Committed</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$C$2:$C$6</c:f>
+              <c:numCache>
+                <c:formatCode>0%</c:formatCode>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>1</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>0.8</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>0.6</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>0.2</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>0.05</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+        </c:ser>
+        <c:ser>
+          <c:idx val="2"/>
+          <c:order val="2"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$D$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Column3</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:noFill/>
+          </c:spPr>
+          <c:invertIfNegative val="0"/>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$6</c:f>
+              <c:strCache>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>Shop</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Like</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Advocate</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Favorite</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Committed</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$D$2:$D$6</c:f>
+              <c:numCache>
+                <c:formatCode>0%</c:formatCode>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>0</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>9.9999999999999978E-2</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>0.2</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>0.4</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>0.47499999999999998</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+        </c:ser>
+        <c:ser>
+          <c:idx val="3"/>
+          <c:order val="3"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$E$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Gap</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:noFill/>
+          </c:spPr>
+          <c:invertIfNegative val="0"/>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$6</c:f>
+              <c:strCache>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>Shop</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Like</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Advocate</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Favorite</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Committed</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$E$2:$E$6</c:f>
+              <c:numCache>
+                <c:formatCode>0%</c:formatCode>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>0.05</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>0.05</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>0.05</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>0.05</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>0.05</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+        </c:ser>
+        <c:ser>
+          <c:idx val="4"/>
+          <c:order val="4"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$F$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Column18</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:noFill/>
+          </c:spPr>
+          <c:invertIfNegative val="0"/>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$6</c:f>
+              <c:strCache>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>Shop</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Like</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Advocate</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Favorite</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Committed</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$F$2:$F$6</c:f>
+              <c:numCache>
+                <c:formatCode>0%</c:formatCode>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>0</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>0.15000000000000002</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>0.25</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>0.45</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>0.495</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+        </c:ser>
+        <c:ser>
+          <c:idx val="5"/>
+          <c:order val="5"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$G$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Comaparison1</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:solidFill>
+              <a:srgbClr val="D78F8D"/>
+            </a:solidFill>
+          </c:spPr>
+          <c:invertIfNegative val="0"/>
+          <c:dLbls>
+            <c:spPr>
+              <a:noFill/>
+              <a:ln>
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+            <c:txPr>
+              <a:bodyPr/>
+              <a:lstStyle/>
+              <a:p>
+                <a:pPr>
+                  <a:defRPr sz="1200" b="0"/>
+                </a:pPr>
+                <a:endParaRPr lang="en-US"/>
+              </a:p>
+            </c:txPr>
+            <c:showLegendKey val="0"/>
+            <c:showVal val="1"/>
+            <c:showCatName val="0"/>
+            <c:showSerName val="0"/>
+            <c:showPercent val="0"/>
+            <c:showBubbleSize val="0"/>
+            <c:showLeaderLines val="0"/>
+            <c:extLst>
+              <c:ext uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}" xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart">
+                <c15:layout/>
+                <c15:showLeaderLines val="0"/>
+              </c:ext>
+            </c:extLst>
+          </c:dLbls>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$6</c:f>
+              <c:strCache>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>Shop</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Like</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Advocate</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Favorite</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Committed</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$G$2:$G$6</c:f>
+              <c:numCache>
+                <c:formatCode>0%</c:formatCode>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>1</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>0.7</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>0.5</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>0.1</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>0.01</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+        </c:ser>
+        <c:ser>
+          <c:idx val="6"/>
+          <c:order val="6"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$H$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Column310</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:noFill/>
+          </c:spPr>
+          <c:invertIfNegative val="0"/>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$6</c:f>
+              <c:strCache>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>Shop</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Like</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Advocate</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Favorite</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Committed</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$H$2:$H$6</c:f>
+              <c:numCache>
+                <c:formatCode>0%</c:formatCode>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>0</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>0.15000000000000002</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>0.25</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>0.45</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>0.495</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+        </c:ser>
+        <c:ser>
+          <c:idx val="7"/>
+          <c:order val="7"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$I$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Gap2</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:noFill/>
+          </c:spPr>
+          <c:invertIfNegative val="0"/>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$6</c:f>
+              <c:strCache>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>Shop</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Like</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Advocate</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Favorite</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Committed</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$I$2:$I$6</c:f>
+              <c:numCache>
+                <c:formatCode>0%</c:formatCode>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>0.05</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>0.05</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>0.05</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>0.05</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>0.05</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+        </c:ser>
+        <c:ser>
+          <c:idx val="8"/>
+          <c:order val="8"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$J$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Column183</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:noFill/>
+          </c:spPr>
+          <c:invertIfNegative val="0"/>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$6</c:f>
+              <c:strCache>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>Shop</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Like</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Advocate</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Favorite</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Committed</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$J$2:$J$6</c:f>
+              <c:numCache>
+                <c:formatCode>0%</c:formatCode>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>0</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>0.15000000000000002</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>0.25</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>0.45</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>0.495</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+        </c:ser>
+        <c:ser>
+          <c:idx val="9"/>
+          <c:order val="9"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$K$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Comaparison14</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:solidFill>
+              <a:srgbClr val="D78F8D"/>
+            </a:solidFill>
+          </c:spPr>
+          <c:invertIfNegative val="0"/>
+          <c:dLbls>
+            <c:spPr>
+              <a:noFill/>
+              <a:ln>
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+            <c:txPr>
+              <a:bodyPr/>
+              <a:lstStyle/>
+              <a:p>
+                <a:pPr>
+                  <a:defRPr sz="1200" b="0"/>
+                </a:pPr>
+                <a:endParaRPr lang="en-US"/>
+              </a:p>
+            </c:txPr>
+            <c:showLegendKey val="0"/>
+            <c:showVal val="1"/>
+            <c:showCatName val="0"/>
+            <c:showSerName val="0"/>
+            <c:showPercent val="0"/>
+            <c:showBubbleSize val="0"/>
+            <c:showLeaderLines val="0"/>
+            <c:extLst>
+              <c:ext uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}" xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart">
+                <c15:layout/>
+                <c15:showLeaderLines val="0"/>
+              </c:ext>
+            </c:extLst>
+          </c:dLbls>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$6</c:f>
+              <c:strCache>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>Shop</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Like</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Advocate</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Favorite</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Committed</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$K$2:$K$6</c:f>
+              <c:numCache>
+                <c:formatCode>0%</c:formatCode>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>1</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>0.7</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>0.5</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>0.1</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>0.01</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+        </c:ser>
+        <c:ser>
+          <c:idx val="10"/>
+          <c:order val="10"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$L$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Column3105</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:noFill/>
+          </c:spPr>
+          <c:invertIfNegative val="0"/>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$6</c:f>
+              <c:strCache>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>Shop</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Like</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Advocate</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Favorite</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Committed</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$L$2:$L$6</c:f>
+              <c:numCache>
+                <c:formatCode>0%</c:formatCode>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>0</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>0.15000000000000002</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>0.25</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>0.45</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>0.495</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+        </c:ser>
+        <c:ser>
+          <c:idx val="11"/>
+          <c:order val="11"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$M$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Gap22</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:noFill/>
+          </c:spPr>
+          <c:invertIfNegative val="0"/>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$6</c:f>
+              <c:strCache>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>Shop</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Like</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Advocate</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Favorite</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Committed</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$M$2:$M$6</c:f>
+              <c:numCache>
+                <c:formatCode>0%</c:formatCode>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>0.05</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>0.05</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>0.05</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>0.05</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>0.05</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+        </c:ser>
+        <c:ser>
+          <c:idx val="12"/>
+          <c:order val="12"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$N$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Column1833</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:noFill/>
+          </c:spPr>
+          <c:invertIfNegative val="0"/>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$6</c:f>
+              <c:strCache>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>Shop</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Like</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Advocate</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Favorite</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Committed</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$N$2:$N$6</c:f>
+              <c:numCache>
+                <c:formatCode>0%</c:formatCode>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>0</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>0.15000000000000002</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>0.25</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>0.45</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>0.495</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+        </c:ser>
+        <c:ser>
+          <c:idx val="13"/>
+          <c:order val="13"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$O$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Comaparison144</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:solidFill>
+              <a:srgbClr val="D78F8D"/>
+            </a:solidFill>
+          </c:spPr>
+          <c:invertIfNegative val="0"/>
+          <c:dLbls>
+            <c:spPr>
+              <a:noFill/>
+              <a:ln>
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+            <c:txPr>
+              <a:bodyPr/>
+              <a:lstStyle/>
+              <a:p>
+                <a:pPr>
+                  <a:defRPr sz="1200" b="0"/>
+                </a:pPr>
+                <a:endParaRPr lang="en-US"/>
+              </a:p>
+            </c:txPr>
+            <c:showLegendKey val="0"/>
+            <c:showVal val="1"/>
+            <c:showCatName val="0"/>
+            <c:showSerName val="0"/>
+            <c:showPercent val="0"/>
+            <c:showBubbleSize val="0"/>
+            <c:showLeaderLines val="0"/>
+            <c:extLst>
+              <c:ext uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}" xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart">
+                <c15:layout/>
+                <c15:showLeaderLines val="0"/>
+              </c:ext>
+            </c:extLst>
+          </c:dLbls>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$6</c:f>
+              <c:strCache>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>Shop</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Like</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Advocate</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Favorite</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Committed</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$O$2:$O$6</c:f>
+              <c:numCache>
+                <c:formatCode>0%</c:formatCode>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>1</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>0.7</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>0.5</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>0.1</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>0.01</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+        </c:ser>
+        <c:ser>
+          <c:idx val="14"/>
+          <c:order val="14"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$P$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Column31055</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:noFill/>
+          </c:spPr>
+          <c:invertIfNegative val="0"/>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$6</c:f>
+              <c:strCache>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>Shop</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Like</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Advocate</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Favorite</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Committed</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$P$2:$P$6</c:f>
+              <c:numCache>
+                <c:formatCode>0%</c:formatCode>
+                <c:ptCount val="5"/>
+                <c:pt idx="0">
+                  <c:v>0</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>0.15000000000000002</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>0.25</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>0.45</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>0.495</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+        </c:ser>
+        <c:dLbls>
+          <c:showLegendKey val="0"/>
+          <c:showVal val="0"/>
+          <c:showCatName val="0"/>
+          <c:showSerName val="0"/>
+          <c:showPercent val="0"/>
+          <c:showBubbleSize val="0"/>
+        </c:dLbls>
+        <c:gapWidth val="0"/>
+        <c:overlap val="100"/>
+        <c:axId val="343727064"/>
+        <c:axId val="343724712"/>
+      </c:barChart>
+      <c:catAx>
+        <c:axId val="343727064"/>
+        <c:scaling>
+          <c:orientation val="minMax"/>
+        </c:scaling>
+        <c:delete val="1"/>
+        <c:axPos val="l"/>
+        <c:numFmt formatCode="General" sourceLinked="0"/>
+        <c:majorTickMark val="none"/>
+        <c:minorTickMark val="none"/>
+        <c:tickLblPos val="nextTo"/>
+        <c:crossAx val="343724712"/>
+        <c:crosses val="autoZero"/>
+        <c:auto val="1"/>
+        <c:lblAlgn val="ctr"/>
+        <c:lblOffset val="100"/>
+        <c:noMultiLvlLbl val="0"/>
+      </c:catAx>
+      <c:valAx>
+        <c:axId val="343724712"/>
+        <c:scaling>
+          <c:orientation val="minMax"/>
+        </c:scaling>
+        <c:delete val="1"/>
+        <c:axPos val="b"/>
+        <c:numFmt formatCode="0%" sourceLinked="1"/>
+        <c:majorTickMark val="none"/>
+        <c:minorTickMark val="none"/>
+        <c:tickLblPos val="nextTo"/>
+        <c:crossAx val="343727064"/>
+        <c:crosses val="autoZero"/>
+        <c:crossBetween val="between"/>
+      </c:valAx>
+    </c:plotArea>
+    <c:plotVisOnly val="1"/>
+    <c:dispBlanksAs val="gap"/>
+    <c:showDLblsOverMax val="0"/>
+  </c:chart>
+  <c:txPr>
+    <a:bodyPr/>
+    <a:lstStyle/>
+    <a:p>
+      <a:pPr>
+        <a:defRPr sz="1400" b="1"/>
+      </a:pPr>
+      <a:endParaRPr lang="en-US"/>
+    </a:p>
+  </c:txPr>
+  <c:externalData r:id="rId2">
+    <c:autoUpdate val="0"/>
+  </c:externalData>
+</c:chartSpace>

@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "iSHOP :: ADD’L CAPABILITIES";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*@Scripts.Render("~/Scripts/Analysis/BGM.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Scripts.Render("~/Scripts/Analysis/Analysis-Common.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+@Styles.Render("~/Content/Analysis/Analysis.css?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")*@
+
+@System.Web.Optimization.Styles.Render("~/bundle/styles/addlcapabilities")
+@System.Web.Optimization.Scripts.Render("~/bundle/scripts/addlcapabilities-across_shopper")
+<input type="hidden" id="hdn-page" name="hdn-Analysis-AcrossShopper" />
+
+<div class="timeperiod" style="padding-right: 176px; float: right;display:none;">
+    <table style="background-color: white;" class="classMouseHover BGM-Dropdown dynpos1">
+        <tbody @*style="background-color: lightgray;"*@>
+            <tr>
+                <td>
+                    <label id="lblBeverages" style="display: block;color: black;margin-right: 4px;margin-top: 1px;">Item : </label>
+                </td>
+                <td>
+
+                    <select id="ddlbeverageitems" onchange="" style="font-family: calibri; font-size: 14px; height: 20px; width: 350px;text-transform:uppercase;"></select>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div id="CrossTab4" class="ShowResultBlock" style="background-color: rgb(255, 255, 255); width: 100%; height: 91%;margin-bottom: 8px;display:none;">
+    <table style="clear: both; width: 100%;" id="bgmsamplesizeheadertable">
+        <tbody>
+            <tr style="background-color: #d5d6d6;border-bottom: 1px solid #686868;color: #000000;font-weight: bold;line-height: 24px;height: 25px;">
+                <td style="position:relative;"><a class="table-top-title-bottom-line"></a><span id="bgmretailer" style="font-size:12px;">Retailer</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+

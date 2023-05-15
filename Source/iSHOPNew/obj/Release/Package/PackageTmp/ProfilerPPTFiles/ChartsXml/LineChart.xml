@@ -1,0 +1,1890 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<c:chartSpace xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
+  <c:date1904 val="0"/>
+  <c:lang val="en-US"/>
+  <c:roundedCorners val="0"/>
+  <mc:AlternateContent xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+    <mc:Choice Requires="c14" xmlns:c14="http://schemas.microsoft.com/office/drawing/2007/8/2/chart">
+      <c14:style val="102"/>
+    </mc:Choice>
+    <mc:Fallback>
+      <c:style val="2"/>
+    </mc:Fallback>
+  </mc:AlternateContent>
+  <c:chart>
+    <c:title>
+      <c:tx>
+        <c:rich>
+          <a:bodyPr/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr>
+              <a:defRPr sz="1600" b="0"/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" sz="1600" b="0"/>
+              <a:t>Daily Drinkers - Age Intervals: Total - Selected Brands - Dec 12 12MMT to Apr 14 12MMT</a:t>
+            </a:r>
+          </a:p>
+        </c:rich>
+      </c:tx>
+      <c:layout/>
+      <c:overlay val="0"/>
+    </c:title>
+    <c:autoTitleDeleted val="0"/>
+    <c:plotArea>
+      <c:layout>
+        <c:manualLayout>
+          <c:layoutTarget val="inner"/>
+          <c:xMode val="edge"/>
+          <c:yMode val="edge"/>
+          <c:x val="5.8933613534280962E-2"/>
+          <c:y val="0.28862522921145239"/>
+          <c:w val="0.92512305297603381"/>
+          <c:h val="0.51268315081747151"/>
+        </c:manualLayout>
+      </c:layout>
+      <c:lineChart>
+        <c:grouping val="standard"/>
+        <c:varyColors val="0"/>
+        <c:ser>
+          <c:idx val="0"/>
+          <c:order val="0"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$B$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>7-Up</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:ln>
+              <a:solidFill>
+                <a:srgbClr val="92D050"/>
+              </a:solidFill>
+            </a:ln>
+          </c:spPr>
+          <c:marker>
+            <c:symbol val="diamond"/>
+            <c:size val="2"/>
+            <c:spPr>
+              <a:ln>
+                <a:solidFill>
+                  <a:srgbClr val="92D050"/>
+                </a:solidFill>
+              </a:ln>
+            </c:spPr>
+          </c:marker>
+          <c:dLbls>
+            <c:spPr>
+              <a:noFill/>
+              <a:ln>
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+            <c:dLblPos val="t"/>
+            <c:showLegendKey val="0"/>
+            <c:showVal val="1"/>
+            <c:showCatName val="0"/>
+            <c:showSerName val="0"/>
+            <c:showPercent val="0"/>
+            <c:showBubbleSize val="0"/>
+            <c:showLeaderLines val="0"/>
+            <c:extLst>
+              <c:ext uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}" xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart">
+                <c15:layout/>
+                <c15:showLeaderLines val="0"/>
+              </c:ext>
+            </c:extLst>
+          </c:dLbls>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$18</c:f>
+              <c:strCache>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>Dec 12 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Jan 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Feb 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Mar 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Apr 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>May 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>Jun 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>Jul 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>Aug 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>Sep 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>Oct 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>Nov 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>Dec 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>Jan 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>Feb 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>Mar 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>Apr 14 12MMT</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$B$2:$B$18</c:f>
+              <c:numCache>
+                <c:formatCode>0.0%</c:formatCode>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>1.06725330829963E-2</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>1.0816806959794201E-2</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>1.1039338939522801E-2</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>1.11921246518982E-2</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>1.13472584128876E-2</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>1.16476712481977E-2</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>1.21373663247921E-2</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>1.26709831081094E-2</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>1.31603848421288E-2</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>1.42676842571198E-2</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>1.4662614918970101E-2</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>1.4855006325064301E-2</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>1.5215667723645E-2</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>1.5302127501007101E-2</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>1.5514142446097201E-2</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>1.5708232858035E-2</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>1.60116647836979E-2</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+          <c:smooth val="0"/>
+        </c:ser>
+        <c:ser>
+          <c:idx val="1"/>
+          <c:order val="1"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$C$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Coca-Cola</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:ln>
+              <a:solidFill>
+                <a:srgbClr val="DC0029"/>
+              </a:solidFill>
+            </a:ln>
+          </c:spPr>
+          <c:marker>
+            <c:symbol val="diamond"/>
+            <c:size val="2"/>
+            <c:spPr>
+              <a:ln>
+                <a:solidFill>
+                  <a:srgbClr val="DC0029"/>
+                </a:solidFill>
+              </a:ln>
+            </c:spPr>
+          </c:marker>
+          <c:dLbls>
+            <c:spPr>
+              <a:noFill/>
+              <a:ln>
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+            <c:dLblPos val="t"/>
+            <c:showLegendKey val="0"/>
+            <c:showVal val="1"/>
+            <c:showCatName val="0"/>
+            <c:showSerName val="0"/>
+            <c:showPercent val="0"/>
+            <c:showBubbleSize val="0"/>
+            <c:showLeaderLines val="0"/>
+            <c:extLst>
+              <c:ext uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}" xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart">
+                <c15:layout/>
+                <c15:showLeaderLines val="0"/>
+              </c:ext>
+            </c:extLst>
+          </c:dLbls>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$18</c:f>
+              <c:strCache>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>Dec 12 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Jan 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Feb 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Mar 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Apr 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>May 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>Jun 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>Jul 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>Aug 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>Sep 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>Oct 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>Nov 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>Dec 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>Jan 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>Feb 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>Mar 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>Apr 14 12MMT</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$C$2:$C$18</c:f>
+              <c:numCache>
+                <c:formatCode>0.0%</c:formatCode>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>9.2440341945150606E-2</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>9.1808090722281493E-2</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>9.1549908160829405E-2</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>9.09300990547523E-2</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>8.9919815473650203E-2</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>8.9701105834021994E-2</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>8.9417805080997198E-2</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>8.95479387815942E-2</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>8.9720119520802E-2</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>8.9936213579425606E-2</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>8.9336533662287998E-2</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>9.0093825247345702E-2</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>9.1062856106777598E-2</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>9.0958837596630607E-2</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>9.1437247377954098E-2</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>9.2025701023097803E-2</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>9.27816080447946E-2</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+          <c:smooth val="0"/>
+        </c:ser>
+        <c:ser>
+          <c:idx val="2"/>
+          <c:order val="2"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$D$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Coca-Cola Zero</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:ln>
+              <a:solidFill>
+                <a:srgbClr val="2A2B29"/>
+              </a:solidFill>
+            </a:ln>
+          </c:spPr>
+          <c:marker>
+            <c:symbol val="diamond"/>
+            <c:size val="2"/>
+            <c:spPr>
+              <a:ln>
+                <a:solidFill>
+                  <a:srgbClr val="2A2B29"/>
+                </a:solidFill>
+              </a:ln>
+            </c:spPr>
+          </c:marker>
+          <c:dLbls>
+            <c:spPr>
+              <a:noFill/>
+              <a:ln>
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+            <c:dLblPos val="t"/>
+            <c:showLegendKey val="0"/>
+            <c:showVal val="1"/>
+            <c:showCatName val="0"/>
+            <c:showSerName val="0"/>
+            <c:showPercent val="0"/>
+            <c:showBubbleSize val="0"/>
+            <c:showLeaderLines val="0"/>
+            <c:extLst>
+              <c:ext uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}" xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart">
+                <c15:layout/>
+                <c15:showLeaderLines val="0"/>
+              </c:ext>
+            </c:extLst>
+          </c:dLbls>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$18</c:f>
+              <c:strCache>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>Dec 12 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Jan 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Feb 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Mar 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Apr 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>May 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>Jun 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>Jul 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>Aug 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>Sep 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>Oct 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>Nov 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>Dec 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>Jan 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>Feb 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>Mar 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>Apr 14 12MMT</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$D$2:$D$18</c:f>
+              <c:numCache>
+                <c:formatCode>0.0%</c:formatCode>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>2.8688767050505201E-2</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>2.85170740026107E-2</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>2.8266784541844E-2</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>2.79530754164229E-2</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>2.7791354143374102E-2</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>2.73954104493963E-2</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>2.7690605664839399E-2</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>2.7608026034504501E-2</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>2.7440927528649298E-2</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>2.7679432792392801E-2</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>2.7919234582769101E-2</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>2.8398647025995101E-2</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>2.86077630663353E-2</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>2.8675018200949299E-2</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>2.9172128075907001E-2</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>2.96050675746901E-2</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>2.9677865280645602E-2</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+          <c:smooth val="0"/>
+        </c:ser>
+        <c:ser>
+          <c:idx val="3"/>
+          <c:order val="3"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$E$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Diet Coke/CCL</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:ln>
+              <a:solidFill>
+                <a:srgbClr val="BFBFBF"/>
+              </a:solidFill>
+            </a:ln>
+          </c:spPr>
+          <c:marker>
+            <c:symbol val="diamond"/>
+            <c:size val="2"/>
+            <c:spPr>
+              <a:ln>
+                <a:solidFill>
+                  <a:srgbClr val="BFBFBF"/>
+                </a:solidFill>
+              </a:ln>
+            </c:spPr>
+          </c:marker>
+          <c:dLbls>
+            <c:spPr>
+              <a:noFill/>
+              <a:ln>
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+            <c:dLblPos val="t"/>
+            <c:showLegendKey val="0"/>
+            <c:showVal val="1"/>
+            <c:showCatName val="0"/>
+            <c:showSerName val="0"/>
+            <c:showPercent val="0"/>
+            <c:showBubbleSize val="0"/>
+            <c:showLeaderLines val="0"/>
+            <c:extLst>
+              <c:ext uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}" xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart">
+                <c15:layout/>
+                <c15:showLeaderLines val="0"/>
+              </c:ext>
+            </c:extLst>
+          </c:dLbls>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$18</c:f>
+              <c:strCache>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>Dec 12 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Jan 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Feb 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Mar 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Apr 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>May 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>Jun 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>Jul 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>Aug 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>Sep 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>Oct 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>Nov 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>Dec 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>Jan 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>Feb 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>Mar 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>Apr 14 12MMT</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$E$2:$E$18</c:f>
+              <c:numCache>
+                <c:formatCode>0.0%</c:formatCode>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>5.8654102468250001E-2</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>5.7800785290729101E-2</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>5.73636463400704E-2</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>5.68554404572406E-2</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>5.64310211781274E-2</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>5.5831362769907397E-2</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>5.5402311434788902E-2</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>5.5397323521084403E-2</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>5.5152063495183798E-2</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>5.4927350631966798E-2</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>5.4232178785231303E-2</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>5.4545146818944797E-2</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>5.4633334407547703E-2</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>5.3827373235636897E-2</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>5.3471248427412701E-2</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>5.3653893209225402E-2</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>5.3798831853033503E-2</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+          <c:smooth val="0"/>
+        </c:ser>
+        <c:ser>
+          <c:idx val="4"/>
+          <c:order val="4"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$F$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Dr Pepper</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:ln>
+              <a:solidFill>
+                <a:srgbClr val="DC0029"/>
+              </a:solidFill>
+            </a:ln>
+          </c:spPr>
+          <c:marker>
+            <c:symbol val="diamond"/>
+            <c:size val="2"/>
+            <c:spPr>
+              <a:ln>
+                <a:solidFill>
+                  <a:srgbClr val="DC0029"/>
+                </a:solidFill>
+              </a:ln>
+            </c:spPr>
+          </c:marker>
+          <c:dLbls>
+            <c:spPr>
+              <a:noFill/>
+              <a:ln>
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+            <c:dLblPos val="t"/>
+            <c:showLegendKey val="0"/>
+            <c:showVal val="1"/>
+            <c:showCatName val="0"/>
+            <c:showSerName val="0"/>
+            <c:showPercent val="0"/>
+            <c:showBubbleSize val="0"/>
+            <c:showLeaderLines val="0"/>
+            <c:extLst>
+              <c:ext uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}" xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart">
+                <c15:layout/>
+                <c15:showLeaderLines val="0"/>
+              </c:ext>
+            </c:extLst>
+          </c:dLbls>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$18</c:f>
+              <c:strCache>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>Dec 12 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Jan 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Feb 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Mar 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Apr 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>May 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>Jun 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>Jul 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>Aug 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>Sep 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>Oct 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>Nov 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>Dec 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>Jan 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>Feb 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>Mar 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>Apr 14 12MMT</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$F$2:$F$18</c:f>
+              <c:numCache>
+                <c:formatCode>0.0%</c:formatCode>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>4.5069319647689801E-2</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>4.48708385907566E-2</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>4.3792230428073703E-2</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>4.3301682435282499E-2</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>4.34925830079139E-2</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>4.34027892506701E-2</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>4.3660457540541799E-2</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>4.3616300455736397E-2</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>4.3495717956331899E-2</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>4.35638570066854E-2</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>4.3005697099058701E-2</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>4.3381002630273002E-2</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>4.41262840447708E-2</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>4.4231724269681499E-2</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>4.4379248560636797E-2</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>4.4230689800499101E-2</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>4.3571593402717101E-2</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+          <c:smooth val="0"/>
+        </c:ser>
+        <c:ser>
+          <c:idx val="5"/>
+          <c:order val="5"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$G$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Fanta</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:ln>
+              <a:solidFill>
+                <a:srgbClr val="FF9900"/>
+              </a:solidFill>
+            </a:ln>
+          </c:spPr>
+          <c:marker>
+            <c:symbol val="diamond"/>
+            <c:size val="2"/>
+            <c:spPr>
+              <a:ln>
+                <a:solidFill>
+                  <a:srgbClr val="FF9900"/>
+                </a:solidFill>
+              </a:ln>
+            </c:spPr>
+          </c:marker>
+          <c:dLbls>
+            <c:spPr>
+              <a:noFill/>
+              <a:ln>
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+            <c:dLblPos val="t"/>
+            <c:showLegendKey val="0"/>
+            <c:showVal val="1"/>
+            <c:showCatName val="0"/>
+            <c:showSerName val="0"/>
+            <c:showPercent val="0"/>
+            <c:showBubbleSize val="0"/>
+            <c:showLeaderLines val="0"/>
+            <c:extLst>
+              <c:ext uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}" xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart">
+                <c15:layout/>
+                <c15:showLeaderLines val="0"/>
+              </c:ext>
+            </c:extLst>
+          </c:dLbls>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$18</c:f>
+              <c:strCache>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>Dec 12 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Jan 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Feb 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Mar 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Apr 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>May 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>Jun 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>Jul 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>Aug 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>Sep 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>Oct 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>Nov 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>Dec 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>Jan 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>Feb 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>Mar 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>Apr 14 12MMT</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$G$2:$G$18</c:f>
+              <c:numCache>
+                <c:formatCode>0.0%</c:formatCode>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>1.42200781380194E-2</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>1.41413291461362E-2</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>1.3997854771864699E-2</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>1.37647538964901E-2</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>1.3846638574711001E-2</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>1.3863649309306E-2</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>1.3596910102231101E-2</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>1.34941967358959E-2</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>1.33535897292097E-2</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>1.36942087881416E-2</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>1.3389053699550599E-2</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>1.37346343408793E-2</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>1.45095093901538E-2</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>1.4755070164170599E-2</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>1.47411277803492E-2</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>1.5079527715874799E-2</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>1.5106133810663299E-2</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+          <c:smooth val="0"/>
+        </c:ser>
+        <c:ser>
+          <c:idx val="6"/>
+          <c:order val="6"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$H$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Mountain Dew</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:ln>
+              <a:solidFill>
+                <a:srgbClr val="66FF33"/>
+              </a:solidFill>
+            </a:ln>
+          </c:spPr>
+          <c:marker>
+            <c:symbol val="diamond"/>
+            <c:size val="2"/>
+            <c:spPr>
+              <a:ln>
+                <a:solidFill>
+                  <a:srgbClr val="66FF33"/>
+                </a:solidFill>
+              </a:ln>
+            </c:spPr>
+          </c:marker>
+          <c:dLbls>
+            <c:spPr>
+              <a:noFill/>
+              <a:ln>
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+            <c:dLblPos val="t"/>
+            <c:showLegendKey val="0"/>
+            <c:showVal val="1"/>
+            <c:showCatName val="0"/>
+            <c:showSerName val="0"/>
+            <c:showPercent val="0"/>
+            <c:showBubbleSize val="0"/>
+            <c:showLeaderLines val="0"/>
+            <c:extLst>
+              <c:ext uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}" xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart">
+                <c15:layout/>
+                <c15:showLeaderLines val="0"/>
+              </c:ext>
+            </c:extLst>
+          </c:dLbls>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$18</c:f>
+              <c:strCache>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>Dec 12 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Jan 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Feb 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Mar 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Apr 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>May 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>Jun 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>Jul 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>Aug 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>Sep 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>Oct 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>Nov 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>Dec 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>Jan 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>Feb 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>Mar 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>Apr 14 12MMT</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$H$2:$H$18</c:f>
+              <c:numCache>
+                <c:formatCode>0.0%</c:formatCode>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>4.3812582287754601E-2</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>4.3377384768690498E-2</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>4.3457961381187203E-2</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>4.3421690100068598E-2</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>4.2808261784929497E-2</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>4.32360190349994E-2</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>4.3307485432653801E-2</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>4.3315723094736698E-2</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>4.3248935704836601E-2</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>4.3256124704033699E-2</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>4.34459036243727E-2</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>4.3785176683816401E-2</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>4.4551262411569099E-2</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>4.4773984088018401E-2</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>4.4479027828930998E-2</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>4.4293930067236503E-2</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>4.4747423019464001E-2</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+          <c:smooth val="0"/>
+        </c:ser>
+        <c:ser>
+          <c:idx val="7"/>
+          <c:order val="7"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$I$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Pepsi Cola</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:ln>
+              <a:solidFill>
+                <a:srgbClr val="0070C0"/>
+              </a:solidFill>
+            </a:ln>
+          </c:spPr>
+          <c:marker>
+            <c:symbol val="diamond"/>
+            <c:size val="2"/>
+            <c:spPr>
+              <a:ln>
+                <a:solidFill>
+                  <a:srgbClr val="0070C0"/>
+                </a:solidFill>
+              </a:ln>
+            </c:spPr>
+          </c:marker>
+          <c:dLbls>
+            <c:spPr>
+              <a:noFill/>
+              <a:ln>
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+            <c:dLblPos val="t"/>
+            <c:showLegendKey val="0"/>
+            <c:showVal val="1"/>
+            <c:showCatName val="0"/>
+            <c:showSerName val="0"/>
+            <c:showPercent val="0"/>
+            <c:showBubbleSize val="0"/>
+            <c:showLeaderLines val="0"/>
+            <c:extLst>
+              <c:ext uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}" xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart">
+                <c15:layout/>
+                <c15:showLeaderLines val="0"/>
+              </c:ext>
+            </c:extLst>
+          </c:dLbls>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$18</c:f>
+              <c:strCache>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>Dec 12 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Jan 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Feb 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Mar 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Apr 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>May 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>Jun 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>Jul 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>Aug 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>Sep 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>Oct 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>Nov 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>Dec 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>Jan 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>Feb 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>Mar 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>Apr 14 12MMT</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$I$2:$I$18</c:f>
+              <c:numCache>
+                <c:formatCode>0.0%</c:formatCode>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>4.78841627356002E-2</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>4.7279917725529599E-2</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>4.6703866900106299E-2</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>4.6286789740218E-2</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>4.6122966451504002E-2</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>4.6570998805282801E-2</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>4.6624286001169302E-2</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>4.6158783681474198E-2</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>4.5986731230254901E-2</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>4.5703053492058603E-2</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>4.5263323671427998E-2</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>4.6332573992992399E-2</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>4.6804584956537498E-2</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>4.7360728269930097E-2</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>4.8469012086842497E-2</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>4.8488524568515198E-2</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>4.88563494018577E-2</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+          <c:smooth val="0"/>
+        </c:ser>
+        <c:ser>
+          <c:idx val="8"/>
+          <c:order val="8"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$J$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Pepsi Light/Diet Pepsi</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:ln>
+              <a:solidFill>
+                <a:srgbClr val="00B0F0"/>
+              </a:solidFill>
+            </a:ln>
+          </c:spPr>
+          <c:marker>
+            <c:symbol val="diamond"/>
+            <c:size val="2"/>
+            <c:spPr>
+              <a:ln>
+                <a:solidFill>
+                  <a:srgbClr val="00B0F0"/>
+                </a:solidFill>
+              </a:ln>
+            </c:spPr>
+          </c:marker>
+          <c:dLbls>
+            <c:spPr>
+              <a:noFill/>
+              <a:ln>
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+            <c:dLblPos val="t"/>
+            <c:showLegendKey val="0"/>
+            <c:showVal val="1"/>
+            <c:showCatName val="0"/>
+            <c:showSerName val="0"/>
+            <c:showPercent val="0"/>
+            <c:showBubbleSize val="0"/>
+            <c:showLeaderLines val="0"/>
+            <c:extLst>
+              <c:ext uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}" xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart">
+                <c15:layout/>
+                <c15:showLeaderLines val="0"/>
+              </c:ext>
+            </c:extLst>
+          </c:dLbls>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$18</c:f>
+              <c:strCache>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>Dec 12 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Jan 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Feb 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Mar 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Apr 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>May 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>Jun 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>Jul 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>Aug 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>Sep 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>Oct 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>Nov 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>Dec 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>Jan 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>Feb 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>Mar 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>Apr 14 12MMT</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$J$2:$J$18</c:f>
+              <c:numCache>
+                <c:formatCode>0.0%</c:formatCode>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>3.1743958191521697E-2</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>3.1790875862188699E-2</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>3.1324027346631499E-2</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>3.1123007589825599E-2</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>3.0849294327087801E-2</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>3.0921269783215001E-2</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>3.0790221844325699E-2</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>3.1029654523205101E-2</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>3.0936274136631501E-2</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>3.0664026550507199E-2</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>3.0461599090251399E-2</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>3.0707064506071999E-2</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>3.1671497979166997E-2</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>3.1609144540190599E-2</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>3.1388468645229303E-2</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>3.1128062116807201E-2</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>3.1223361290717299E-2</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+          <c:smooth val="0"/>
+        </c:ser>
+        <c:ser>
+          <c:idx val="9"/>
+          <c:order val="9"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Sheet1!$K$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Sprite</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:ln>
+              <a:solidFill>
+                <a:srgbClr val="00B050"/>
+              </a:solidFill>
+            </a:ln>
+          </c:spPr>
+          <c:marker>
+            <c:symbol val="diamond"/>
+            <c:size val="2"/>
+            <c:spPr>
+              <a:ln>
+                <a:solidFill>
+                  <a:srgbClr val="00B050"/>
+                </a:solidFill>
+              </a:ln>
+            </c:spPr>
+          </c:marker>
+          <c:dLbls>
+            <c:spPr>
+              <a:noFill/>
+              <a:ln>
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+            <c:dLblPos val="t"/>
+            <c:showLegendKey val="0"/>
+            <c:showVal val="1"/>
+            <c:showCatName val="0"/>
+            <c:showSerName val="0"/>
+            <c:showPercent val="0"/>
+            <c:showBubbleSize val="0"/>
+            <c:showLeaderLines val="0"/>
+            <c:extLst>
+              <c:ext uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}" xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart">
+                <c15:layout/>
+                <c15:showLeaderLines val="0"/>
+              </c:ext>
+            </c:extLst>
+          </c:dLbls>
+          <c:cat>
+            <c:strRef>
+              <c:f>Sheet1!$A$2:$A$18</c:f>
+              <c:strCache>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>Dec 12 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>Jan 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>Feb 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>Mar 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>Apr 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>May 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>Jun 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>Jul 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>Aug 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>Sep 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>Oct 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>Nov 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>Dec 13 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>Jan 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>Feb 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>Mar 14 12MMT</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>Apr 14 12MMT</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Sheet1!$K$2:$K$18</c:f>
+              <c:numCache>
+                <c:formatCode>0.0%</c:formatCode>
+                <c:ptCount val="17"/>
+                <c:pt idx="0">
+                  <c:v>2.9455505436815799E-2</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>2.9168387932120999E-2</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>2.8584558962793001E-2</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>2.8477565196444302E-2</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>2.82056287898911E-2</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>2.7700516667114001E-2</c:v>
+                </c:pt>
+                <c:pt idx="6">
+                  <c:v>2.74092438038109E-2</c:v>
+                </c:pt>
+                <c:pt idx="7">
+                  <c:v>2.72278719629057E-2</c:v>
+                </c:pt>
+                <c:pt idx="8">
+                  <c:v>2.6755859871473602E-2</c:v>
+                </c:pt>
+                <c:pt idx="9">
+                  <c:v>2.7001166830525801E-2</c:v>
+                </c:pt>
+                <c:pt idx="10">
+                  <c:v>2.7204187412713899E-2</c:v>
+                </c:pt>
+                <c:pt idx="11">
+                  <c:v>2.7463258069882701E-2</c:v>
+                </c:pt>
+                <c:pt idx="12">
+                  <c:v>2.7788983478607102E-2</c:v>
+                </c:pt>
+                <c:pt idx="13">
+                  <c:v>2.8349712335686599E-2</c:v>
+                </c:pt>
+                <c:pt idx="14">
+                  <c:v>2.83433030648182E-2</c:v>
+                </c:pt>
+                <c:pt idx="15">
+                  <c:v>2.88806171126226E-2</c:v>
+                </c:pt>
+                <c:pt idx="16">
+                  <c:v>2.9420890086774901E-2</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+          <c:smooth val="0"/>
+        </c:ser>
+        <c:dLbls>
+          <c:dLblPos val="t"/>
+          <c:showLegendKey val="0"/>
+          <c:showVal val="1"/>
+          <c:showCatName val="0"/>
+          <c:showSerName val="0"/>
+          <c:showPercent val="0"/>
+          <c:showBubbleSize val="0"/>
+        </c:dLbls>
+        <c:marker val="1"/>
+        <c:smooth val="0"/>
+        <c:axId val="233145200"/>
+        <c:axId val="233148336"/>
+      </c:lineChart>
+      <c:catAx>
+        <c:axId val="233145200"/>
+        <c:scaling>
+          <c:orientation val="minMax"/>
+        </c:scaling>
+        <c:delete val="0"/>
+        <c:axPos val="b"/>
+        <c:numFmt formatCode="General" sourceLinked="1"/>
+        <c:majorTickMark val="out"/>
+        <c:minorTickMark val="none"/>
+        <c:tickLblPos val="nextTo"/>
+        <c:txPr>
+          <a:bodyPr/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr>
+              <a:defRPr sz="1600"/>
+            </a:pPr>
+            <a:endParaRPr lang="en-US"/>
+          </a:p>
+        </c:txPr>
+        <c:crossAx val="233148336"/>
+        <c:crosses val="autoZero"/>
+        <c:auto val="1"/>
+        <c:lblAlgn val="ctr"/>
+        <c:lblOffset val="100"/>
+        <c:noMultiLvlLbl val="1"/>
+      </c:catAx>
+      <c:valAx>
+        <c:axId val="233148336"/>
+        <c:scaling>
+          <c:orientation val="minMax"/>
+        </c:scaling>
+        <c:delete val="1"/>
+        <c:axPos val="l"/>
+        <c:numFmt formatCode="0.0%" sourceLinked="1"/>
+        <c:majorTickMark val="out"/>
+        <c:minorTickMark val="none"/>
+        <c:tickLblPos val="nextTo"/>
+        <c:crossAx val="233145200"/>
+        <c:crosses val="autoZero"/>
+        <c:crossBetween val="between"/>
+      </c:valAx>
+    </c:plotArea>
+    <c:legend>
+      <c:legendPos val="b"/>
+      <c:layout/>
+      <c:overlay val="0"/>
+    </c:legend>
+    <c:plotVisOnly val="1"/>
+    <c:dispBlanksAs val="gap"/>
+    <c:showDLblsOverMax val="0"/>
+  </c:chart>
+  <c:txPr>
+    <a:bodyPr/>
+    <a:lstStyle/>
+    <a:p>
+      <a:pPr>
+        <a:defRPr sz="1000"/>
+      </a:pPr>
+      <a:endParaRPr lang="en-US"/>
+    </a:p>
+  </c:txPr>
+  <c:externalData r:id="rId2">
+    <c:autoUpdate val="0"/>
+  </c:externalData>
+</c:chartSpace>

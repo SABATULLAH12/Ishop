@@ -1,0 +1,203 @@
+﻿.clsReportDataTable {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    table-layout:fixed;
+    font-weight: bold;
+    overflow-y:auto;
+    /*overflow-x:hidden;*/
+}
+
+.clsMetricDataTitleRow1 {
+    width: 100%;
+    height: 51px;
+    background-color: #ededee;
+    /*padding: 3px;*/
+    padding-top: 0px;
+    text-align: center;
+    font-weight: bold;
+    /*border: 1px solid;*/
+    /*border-collapse: collapse;*/
+    table-layout:fixed;
+}
+
+.clsMetricDataItem1 {
+    width: 24%;
+    height: 50px;
+    background-color: #d5d6d6;
+    padding: 0px;
+    text-align: center;
+    border-bottom: 1px solid #686868;
+    border-collapse: collapse;
+    table-layout:fixed;
+    font-size:20px;
+    color: #000000;
+    border-right: 1px solid #686868;
+    /*vertical-align: top;*/
+}
+
+.clsMetricDataItem2 {
+    width: 38%;
+    height: 50px;
+    background-color: #d5d6d6;
+    padding: 3px;
+    text-align: center;
+      border-bottom: 1px solid #686868;
+    border-collapse: collapse;
+    table-layout:fixed;
+    font-size:20px;
+    color:#000000;
+    border-right: 1px solid #686868;
+    /*vertical-align: top;*/
+}
+.clsMetricDataItem3 {
+    width: 671px;
+    height: 50px;
+    background-color: #d5d6d6;
+    padding: 3px;
+    text-align: center;
+      border-bottom: 1px solid #686868;
+    border-collapse: collapse;
+    table-layout:fixed;
+    font-size:20px;
+    color:#000000;
+    /*vertical-align: top;*/
+}
+
+.clsReportData1 {
+    width: 24%;
+    height: 50px;
+    /*height: auto;*/
+    background-color: white;
+    padding: 3px;
+    text-align: center;
+    border: 1px solid;
+    border-collapse: collapse;
+    table-layout:fixed;
+    font-size:15px;
+    border-color: rgb(200, 200, 200);
+    background-color: rgb(235,235,235);
+    /*vertical-align: top;*/
+    color: grey;
+}
+
+.clsReportData2 {
+    width: 630px;
+    height: 50px;
+    /*height: auto;*/
+    background-color: rgb(235,235,235);
+    padding:12px 0px;
+    padding-left: 26px;
+    text-align: left;
+    border: 1px solid;
+    border-collapse: collapse;
+    table-layout:fixed;
+    font-size:12px;
+    border-color: rgb(200, 200, 200);
+    /*vertical-align: top;*/
+    color: grey;
+}
+
+.clsReportData3 {
+    /*width: 30%;*/
+    /*height: 70px;*/
+    background-color: white;
+    padding: 3px;
+    text-align: center;
+    border: 1px solid;
+    border-collapse: collapse;
+    table-layout:fixed;
+    font-size:15px;
+    border-color: rgb(200, 200, 200);
+    background-color: rgb(235,235,235);
+    /*vertical-align: top;*/
+    color: grey;
+}
+
+.clsReportData4 {
+    /*width: 60%;*/
+    /*height: 70px;*/
+    background-color: white;
+    padding: 12px 0px;
+    text-align: left;
+    border: 1px solid;
+    border-collapse: collapse;
+    table-layout:fixed;
+    font-size:12px;
+    padding-left:26px;
+    color:grey;
+    border-color: rgb(200, 200, 200);
+    background-color: rgb(235,235,235);
+    /*vertical-align: top;*/
+}
+
+.clsReportData5 {
+    /*width: 630px;*/
+    height: 12px;
+    background-color: white;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+    /*border: 1px solid;*/
+    /*border-collapse: collapse;*/
+    /*table-layout:fixed;*/
+    font-size:12px;
+    /*vertical-align: top;*/
+    padding-left:70px;
+    padding-bottom:0px;
+    border-color: rgb(200, 200, 200);
+    background-color: rgb(235,235,235);
+    color: grey;
+}
+
+.clsReportData6 {
+    /*width: 630px;*/
+    /*height: 70px;*/
+    background-color: white;
+    padding: 3px;
+    text-align: left;
+    /*border: 1px solid;*/
+    /*border-collapse: collapse;*/
+    /*table-layout:fixed;*/
+    font-size:10px;
+    border-color: rgb(200, 200, 200);
+    background-color: rgb(235,235,235);
+    /*vertical-align: top;*/
+}
+
+.clsReportData7 {
+    /*width: 630px;*/
+    list-style-type: circle;
+    /*height: 70px;*/
+    background-color: white;
+    /*padding: 3px;*/
+    text-align: left;
+    /*border: 1px solid;*/
+    /*border-collapse: collapse;*/
+    /*table-layout:fixed;*/
+    font-size:10px;
+    padding-left:105px;
+    border-color: rgb(200, 200, 200);
+    background-color: rgb(235,235,235);
+    /*vertical-align: top;*/
+    color: grey;
+}
+.ShowChartArea2 {
+    height: 85%;
+    overflow-y: auto;
+    width: 100%;
+    background-color: #fafafa;
+}
+.clsReportData2 ul li, .clsReportData4 ul li {
+    margin-top: 5px;
+}
+.retchannelmainheader {
+    font-size: 16px;
+    border-bottom: 1px solid #666466;
+    height: auto;
+    text-align: left;
+    justify-content: left;
+    margin-left: 19px;
+    line-height: 28px;
+    font-weight: bolder;
+}

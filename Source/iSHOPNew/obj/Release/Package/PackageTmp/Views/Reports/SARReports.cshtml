@@ -1,0 +1,180 @@
+﻿@{
+    ViewBag.Title = "iSHOP :: Reports";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*@Styles.Render("~/Content/Reports/TotalRespondentsReport.css?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+    @Scripts.Render("~/Scripts/Reports/TotalRespondentsReport.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+    @Scripts.Render("~/Scripts/Reports/Reports-Common.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")*@
+@*<link href="~/Content/Reports/ReportsSar.css" rel="stylesheet" />*@
+@System.Web.Optimization.Styles.Render("~/bundle/styles/ReportsSarCSS")
+@System.Web.Optimization.Scripts.Render("~/bundle/scripts/ReportsSarJS")
+<input type="hidden" id="hdn-page" name="hdn-crossretailer-sarreport" />
+@*<script src="~/Scripts/jscolor.js"></script>*@
+@*<script src="~/Scripts/Reports/SARReport.js"></script>*@
+
+<div>
+    <table class="clsMetricDataTitleRow1">
+        <tbody>
+            <tr>
+                <td colspan="3">
+                    <div>
+                        <table style="border-collapse: collapse; width: 100%;">
+                            <tbody>
+                                <tr>
+                                    <td class="clsMetricDataItem1" style="width: 24%;">
+                                        Section
+                                    </td>
+                                    <td class="clsMetricDataItem2">
+                                        Key Question Answered
+                                    </td>
+                                    <td class="clsMetricDataItem3">
+                                        Metrics Covered
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="ShowChartArea2">
+    <table class="clsReportDataTable" id="tbleContentListForAll">
+        <tbody>
+            <tr>
+                <td colspan="3">
+                    <div>
+                        <table>
+                            <tbody style="text-transform:none;">
+                                <tr>
+                                    <td class="clsReportData1">
+                                        CHANNEL PERFORMANCE & TRENDS
+                                    </td>
+                                    <td class="clsReportData2">
+                                        <ul>
+                                            <li>What share of trips are commanded by different retailer channels and outlets within the target channel?</li>
+                                            <li>How has the share changed from the past year?</li>
+                                        </ul>
+                                    </td>
+                                    <td class="clsReportData2">
+                                        <ul>
+                                            <li>Share of trips by reatiler channel and outlets.</li>
+                                            <li>share shift from previous year.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="clsReportData3">
+                                        WHO IS THE SHOPPER?
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <ul>
+                                            <li>What are the key Demographic characteristics of the Shopper?</li>
+                                            <li>What are the key attricute segments and kohorts the shopper belong to? Which attribute statements do they identify most closely with?</li>
+                                            <li>What other establishments/channels are frequented by this retailer's monthly+ shoppers?</li>
+                                        </ul>
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <ul>
+                                            <li>Gender, Age, Ethnicity, HH Income, Parental Identification, Employement Status, Device Ownership, Primary Shopper</li>
+                                            <li>Shopper Attitude Segments</li>
+                                            <li>What other establishments/channels are frequented by this retailer's monthly+ shoppers?</li>
+                                            <li>Top 2 Box Attitude Statements</li>
+                                            <li>Kohorts distribution</li>
+                                            <li>Cross Frequency for channels and top retailers in each channel.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="clsReportData3">
+                                        PATH TO PURCHASE AND TRIP DETAILS
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <ul>
+                                            <li>What is the Path to Purchase for trips to this retailer? What are the key characteristics of the trips?</li>
+                                        </ul>
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <ul>
+                                            <li>Snapshots of P2P Dashboard</li>
+                                            <li>Location Prior, Planning and Preparation, Trip Mission, Destination Items</li>
+                                            <li>Visit Motivations, Reason for Store Choice.</li>
+                                            <li>Items Purchased, Impulse Items, Expenditure, Checkout Method</li>
+                                            <li>Overall satisfaction and satisfaction with different Attributes.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="clsReportData3">
+                                        FREQUENCY SHARES
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <ul>
+                                            <li>How often do people visit this retailer?</li>
+                                        </ul>
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <ul>
+                                            <li>Frequency distribution of shopper with this retailer trade area comparision with average of selected competitor set.</li>
+                                            <li>Frequency distribution of Yearly+ shopper and Trips Comparision with average of selected competitor set.</li>
+                                            <li>What other establishments/channels are frequented by this retailer's monthly+ shoppers?</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="clsReportData3">
+                                        STRENGTHS AND OPPORTUNITIES
+                                    </td>
+                                    <td class="clsReportData4">
+                                       <ul>
+                                           <li>What are key shopper perceptions/imageries about this retailer? Which are the strong attributes of this retailer and which can be improved?</li>
+                                       </ul>
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <ul>
+                                            <li>Store Imageries for this establishment along with selected competitors</li>
+                                            <li>Strength and weakness measured among competitors.</li>
+                                            <li>Relative importance of different perceptions among frequent shopper.</li>
+                                            <li>Best in class outlet for each imagery statement among competitors. Gap with this establishment.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                                <tr id="idFrequentShopper">
+                                    <td class="clsReportData3">
+                                        BEVERAGE SECTION
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <ul>
+                                            <li>What are the key beverage, categories, brands, manufactures, ingredients consumed/purchased from this retailer?</li>
+                                        </ul>
+                                    </td>
+                                    <td class="clsReportData4">
+                                        <ul>
+                                            <li>Top Beverage Categories</li>
+                                            <li>Top Beverage brands consumed among key categories.</li>
+                                            <li>Beverage consumption bu manufacturers.</li>
+                                            <li>Beverage Ingredients Purchased.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+@*@System.Web.Optimization.Styles.Render("~/bundle/styles/Total_Respondents_Reports")
+@System.Web.Optimization.Scripts.Render("~/bundle/scripts/reports-Total_Respondents_Reports")*@
+
+

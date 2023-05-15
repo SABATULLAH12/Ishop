@@ -1,0 +1,1218 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Images/Dinefavicon.ico" rel="shortcut icon" type="image/x-icon">
+    @*@Scripts.Render("~/Scripts/jquery-1.8.2.min.js")*@
+    @*@Scripts.Render("~/Scripts/jquery-1.11.0.min.js")*@
+    @* @Scripts.Render("~/Scripts/jquery-1.12.4.js")*@
+    @*@Scripts.Render("~/Scripts/jquery-ui.min.js")
+        @Scripts.Render("~/Scripts/index.db.js")
+
+        @Scripts.Render("~/Scripts/StatTesting.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+        @Scripts.Render("~/Scripts/Layout/Common.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+        @Scripts.Render("~/Scripts/Layout/LeftPanel.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+        @Scripts.Render("~/Scripts/Layout/ECommerce.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+        @Scripts.Render("~/Scripts/Layout/ECommerceRightPanel.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+        @Styles.Render("~/Content/Layout/Layout.css?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")*@
+
+    @System.Web.Optimization.Styles.Render("~/bundle/styles/E-com-layout")
+    @System.Web.Optimization.Scripts.Render("~/bundle/scripts/E-com-top-layout")
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120460845-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-120460845-2');
+        gtag('set', { 'user_id': localStorage["Use_r_Id"] }); // Set the user ID using signed-in user_id.
+    </script>
+</head>
+<body>
+    <div id="TopHeader">
+        <div id="Logo">
+            <ul class="clsHeaderIcon"></ul>
+        </div>
+        <div id="MenuHeader">
+            <ul>
+                <li id="Dashboard" class="master_link classDashboard classMouseHover" style="">
+                    <div class="dashboard-logo">
+                    </div>
+                    <div class="module-name">
+                        <span class="master_link_a">DASHBOARD</span>
+                        <a style="display: none;" class="bottom-line"></a>
+                    </div>
+                </li>
+                <li id="Reports" class="master_link classReport classMouseHover">
+                    <div class="reports-logo"></div>
+                    <div class="module-name">
+                        <span class="master_link_a">REPORTS</span>
+                        <a style="display: none;" class="bottom-line"></a>
+                    </div>
+
+                </li>
+                <li id="Tables" class="master_link classTable classMouseHover">
+                    <div class="tables-logo"></div>
+                    <div class="module-name">
+                        <span class="master_link_a">TABLES</span>
+                        <a style="display: none;" class="bottom-line"></a>
+                    </div>
+
+                </li>
+                <li id="Charts" class="master_link classChart classMouseHover">
+                    <div class="charts-logo"></div>
+                    <div class="module-name">
+                        <span class="master_link_a">CHARTS</span>
+                        <a style="display: none;" class="bottom-line"></a>
+                    </div>
+                </li>
+                <li id="Analysis" class="master_link classAnalysis classMouseHover">
+                    <div class="analysis-logo">
+                    </div>
+                    <div class="module-name">
+                        <span class="master_link_a">ADD’L CAPABILITIES</span>
+                        <a style="display: none;" class="bottom-line"></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="HeaderIcons">
+            <ul>
+                <li>
+                    <a id="Home" @*title="Home"*@ class="home-logo home-Export classMouseHover dynpos" onclick="GoHome('@System.Configuration.ConfigurationManager.AppSettings["KIMainlink"].ToString()','@System.Configuration.ConfigurationManager.AppSettings["UserForm"]','@System.Configuration.ConfigurationManager.AppSettings["SSOUrl"]','@System.Configuration.ConfigurationManager.AppSettings["SSOLogoutPageUrl"]');"></a>
+                </li>
+                <li>
+                    <div id="Help" @*title="Help"*@ class="settings-logo help-Export classMouseHover dynpos"></div>
+                </li>
+                <li class="ExportToExcel">
+                    <div id="ExportToExcel" @*title="Export to excel"*@ class="exporttoexcel-logo excel-Export classMouseHover dynpos"></div>
+                </li>
+                <li class="ExportToPPT">
+                    <div id="ExportToPPT" @*title="Export to ppt"*@ class="exporttoppt-logo ppt-Export classMouseHover dynpos"></div>
+                </li>
+                <li>
+                    <div id="Stat-Test" @*title="Stat Setting"*@ class="stat-setting stat-Export classMouseHover dynpos"></div>
+                </li>
+                <li>
+                    <a id="Home" @*title="SignOut"*@ class="home-signout logout-Export classMouseHover dynpos" onclick="SignOut();"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="SubMenuHeader">
+        <div class="SubMenu" parent-menu="Dashboard" style="display: none;">
+            <ul>
+                <li class="SubItem">
+                    <ul id="tbl-menu-retailers" class="Menu" style="padding-left: 20%">
+                        <li class="MenuTitle"><span onclick="GoToDashboard('pathtopurchase');" id="dashboard-demo">PATH TO PURCHASE</span></li>
+                    </ul>
+                </li>
+                <li class="SubItem">
+                    <ul id="tbl-menu-retailers" class="Menu" style="padding-left: 25%">
+                        <li class="MenuTitle"><span onclick="GoToDashboard('demographic');" id="dashboard-demo">DEMOGRAPHICS</span></li>
+                    </ul>
+                </li>
+                @*<li class="SubItem">
+                        <ul id="tbl-menu-retailers" class="Menu" style="padding-left: 25%">
+                            <li class="MenuTitle"><span onclick="GoToDashboard('demographic');" id="dashboard-demo">DEMOGRAPHIC</span></li>
+                        </ul>
+                    </li>
+                    <li class="SubItem">
+                        <ul id="tbl-menu-beverage" class="Menu" style="padding-left: 30%">
+                            <li class="MenuTitle"><span onclick="GoToDashboard('brandhealth');" id="dashboard-brand">BRAND HEALTH</span></li>
+                        </ul>
+                    </li>
+                    <li class="SubItem">
+                        <ul id="tbl-menu-e-commerce" class="Menu" style="padding-left: 15%">
+                            <li class="MenuTitle"><span onclick="GoToDashboard('visits');" id="dashboard-visit">VISITS</span></li>
+                        </ul>
+                    </li>*@
+            </ul>
+        </div>
+
+        <div class="SubMenu" parent-menu="Tables" style="display: none;">
+            <ul>
+                <li class="SubItem">
+                    <ul id="tbl-menu-retailers" class="Menu Retailers-Table classMouseHover" style="padding-left: 25%">
+                        <li class="MenuTitle"><span id="tbl-retailers">RETAILER</span></li>
+                        <li class="MenuTitle" style="float: right">
+                            <div id="tbl-retailers-arrow" class="downarrw"></div>
+                        </li>
+                    </ul>
+                    <div class="Item" style="display: none;">
+                        <ul>
+                            <li link-name="hdn-tbl-compareretailers" class="SubMenuli CompareRetailer-Table classMouseHover">
+                                @Html.ActionLink("COMPARE RETAILERS", "CompareRetailers", "Tables")
+                            </li>
+                            <li link-name="hdn-tbl-retailerdeepdive" class="SubMenuli RetailerDeepDive-Table classMouseHover">
+                                @Html.ActionLink("RETAILER DEEP DIVE", "RetailerDeepDive", "Tables")
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="SubItem">
+                    <ul id="tbl-menu-beverage" class="Menu Beverage-Table classMouseHover" style="padding-left: 30%">
+                        <li class="MenuTitle"><span id="tbl-beverage">BEVERAGE</span></li>
+                        <li class="MenuTitle" style="float: right">
+                            <div id="tbl-beverage-arrow" class="downarrw"></div>
+                        </li>
+                    </ul>
+                    <div class="Item" style="display: none;">
+                        <ul>
+                            <li link-name="hdn-tbl-comparebeverages" class="SubMenuli CompareBeverage-Table classMouseHover">
+                                @Html.ActionLink("COMPARE BEVERAGES", "CompareBeverages", "Tables")
+                            </li>
+                            <li link-name="hdn-tbl-beveragedeepdive" class="SubMenuli BeverageDeepDive-Table classMouseHover">
+                                @Html.ActionLink("BEVERAGE DEEP DIVE", "BeverageDeepDive", "Tables")
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="SubItem" style="">
+                    <ul id="tbl-menu-e-commerce" class="Menu ecom-Table classMouseHover" style="padding-left: 15%">
+                        <li class="MenuTitle"><span id="e-commerce-tbl-sites">E-COMMERCE SITES</span></li>
+                        <li class="MenuTitle" style="float: right">
+                            <div id="e-commerce-tbl-sites-arrow" class="downarrw"></div>
+                        </li>
+                    </ul>
+                    <div class="Item" style="display: none;">
+                        <ul>
+                            <li link-name="hdn-e-commerce-tbl-comparesites" class="SubMenuli Compareecom-Table classMouseHover">
+                                @Html.ActionLink("COMPARE SITES", "CompareSites", "E_Commerce_Table")
+                            </li>
+                            <li link-name="hdn-e-commerce-tbl-sitedeepdive" class="SubMenuli ecomdeepdive-Table classMouseHover">
+                                @Html.ActionLink("SITE DEEP DIVE", "SiteDeepDive", "E_Commerce_Table")
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="SubMenu" parent-menu="Charts" style="display: none;">
+            <ul>
+                <li class="SubItem">
+                    <ul id="chart-menu-retailers" class="Menu Retailers-Chart classMouseHover" style="padding-left: 25%">
+                        <li class="MenuTitle"><span id="chart-retailers">RETAILER</span></li>
+                        <li class="MenuTitle" style="float: right">
+                            <div id="chart-retailers-arrow" class="downarrw"></div>
+                        </li>
+                    </ul>
+                    <div class="Item" style="display: none;">
+                        <ul>
+                            <li link-name="hdn-chart-compareretailers" class="SubMenuli CompareRetailer-Chart classMouseHover">
+                                @Html.ActionLink("COMPARE RETAILERS", "CompareRetailers", "Charts")
+                            </li>
+                            <li link-name="hdn-chart-retailerdeepdive" class="SubMenuli RetailerDeepDive-Chart classMouseHover">
+                                @Html.ActionLink("RETAILER DEEP DIVE", "RetailerDeepDive", "Charts")
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="SubItem">
+                    <ul id="chart-menu-beverage" class="Menu Beverage-Chart classMouseHover" style="padding-left: 30%">
+                        <li class="MenuTitle"><span id="chart-beverage">BEVERAGE</span></li>
+                        <li class="MenuTitle" style="float: right">
+                            <div id="chart-beverage-arrow" class="downarrw"></div>
+                        </li>
+                    </ul>
+                    <div class="Item" style="display: none;">
+                        <ul>
+                            <li link-name="hdn-chart-comparebeverages" class="SubMenuli CompareBeverage-Chart classMouseHover">
+                                @Html.ActionLink("COMPARE BEVERAGES", "CompareBeverages", "Charts")
+                            </li>
+                            <li link-name="hdn-chart-beveragedeepdive" class="SubMenuli BeverageDeepDive-Chart classMouseHover">
+                                @Html.ActionLink("BEVERAGE DEEP DIVE", "BeverageDeepDive", "Charts")
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                @*<li class="SubItem" style="">
+                    <ul class="Menu ecom-Chart classMouseHover" style="padding-left: 15%">
+                        <li class="MenuTitle"><span id="e-commerce-chart-sites">E-COMMERCE SITES</span></li>
+                        <li class="MenuTitle" style="float: right">
+                            <div class="downarrw"></div>
+                        </li>
+                    </ul>
+                    <div class="Item" style="display: none;">
+                        <ul>
+                            <li link-name="hdn-e-commerce-chart-comparesites" class="SubMenuli CompareSites-Chart classMouseHover">
+                                @Html.ActionLink("COMPARE SITES", "CompareSites", "E_Commerce_Chart")
+                            </li>
+                            <li link-name="hdn-e-commerce-chart-sitedeepdive" class="SubMenuli sitesDeepDive-Chart classMouseHover">
+                                @Html.ActionLink("SITE DEEP DIVE", "SiteDeepDive", "E_Commerce_Chart")
+                            </li>
+                        </ul>
+                    </div>
+                </li>*@
+            </ul>
+        </div>
+        <div class="SubMenu popup-menu reports-menu" parent-menu="Reports" style="display: none;">
+            <div class="report-menus">
+                <div class="report-submenu">
+                    <ul>
+                        <li class="view-title RetailerOverview-Reports classMouseHover">
+                            Retailer Overview Reports
+                        </li>
+                        <li id="reports-compare-retailers-shoppers" class="view-name">
+                            @Html.ActionLink("Compare Retailers’ Shoppers", "CompareRetailersShoppers", "Reports")
+                        </li>
+                        <li id="reports-retailers-shopper-deepdive" class="view-name">
+                            @Html.ActionLink(" Retailer’s Shopper Deep Dive", "RetailersShopperDeepDive", "Reports")
+                        </li>
+                        <li id="reports-compare-retailers-pathtopurchase" class="view-name">
+                            @Html.ActionLink("Compare Retailers’ Path To Purchase", "CompareRetailersPathToPurchase", "Reports")
+                        </li>
+                        <li id="reports-retailers-pathtopurchase-deepdive" class="view-name">
+                            @Html.ActionLink("Retailer’s Path To Purchase Deep Dive", "RetailersPathToPurchaseDeepDive", "Reports")
+                        </li>
+                    </ul>
+                </div>
+                <div class="report-submenu">
+                    <ul>
+                        <li class="view-title BeverageOverview-Reports classMouseHover" style="">
+                            Beverage Overview Reports
+                        </li>
+                        <li id="reports-compare-beverages-monthly-pluspurchasers" class="view-name">
+                            @Html.ActionLink("Compare Beverages’ Monthly+ Purchasers", "CompareBeveragesMonthlyPlusPurchasers", "Reports")
+                        </li>
+                        <li id="reports-beverage-monthly-pluspurchasers-deepdive" class="view-name">
+                            @Html.ActionLink("Beverage Monthly+ Purchaser’s Deep Dive", "BeverageMonthlyPlusPurchasersDeepDive", "Reports")
+                        </li>
+                        <li id="reports-compare-beverages-purchase-details" class="view-name">
+                            @Html.ActionLink("Compare Beverages’ Purchase Details", "CompareBeveragesPurchaseDetails", "Reports")
+                        </li>
+                        <li id="reports-beverages-purchase-details-deepdive" class="view-name">
+                            @Html.ActionLink("Beverage’s Purchase Details Deep Dive", "BeveragesPurchaseDetailsDeepDive", "Reports")
+                        </li>
+                    </ul>
+                </div>
+                <div class="report-submenu">
+                    <ul>
+                        <li class="view-title TotalOverview-Reports classMouseHover" style="">
+                            Total Respondents/Trips Reports
+                        </li>
+                        <li id="reports-crossRetailer-TotalRespondentsTrips" class="view-name">
+                            @Html.ActionLink("Total Respondents/Trips Reports", "TotalRespondentsReports", "Reports")
+                        </li>
+                    </ul>
+                </div>
+                <div class="report-submenu" style="margin-right:0px">
+                    <ul>
+                        <li class="view-title SarReport classMouseHover" style="">
+                            Custom Reports
+                        </li>
+                        <li id="reports-crossRetailer-SarReport" class="view-name">
+                            @Html.ActionLink("Briefing Book – Situation Assessment", "SARReports", "Reports")
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="submodule-border-bottom"></div>
+        </div>
+
+        <div class="SubMenu popup-menu reports-menu" parent-menu="Analysis" style="display: none;">
+            <div class="report-menus">
+                <div class="report-submenu">
+                    <ul>
+                        <li class="view-title CBP-Others classMouseHover">
+                            CBP Frameworks
+                        </li>
+                        <li id="others-bgm" class="view-name bgm-Others classMouseHover">
+                            @*@Html.ActionLink("BGM (Business Growth Model)", "AcrossShopper", "Analysis")*@
+                            @Html.ActionLink("Shopper Metrics", "AcrossShopper", "Analysis")
+                        </li>
+                        <li id="others-soap" class="view-name soap-Others classMouseHover">
+                            @Html.ActionLink("SOAP (Shopper On A Page)", "AcrossTrips", "Analysis")
+                        </li>
+                    </ul>
+                </div>
+                <div class="report-submenu">
+                    <ul>
+                        <li class="view-title Correnspondence-Others classMouseHover" style="">
+                            Correspondence Maps
+                        </li>
+                        <li id="others-compare-retailers" class="view-name Compareretailer-Others classMouseHover">
+                            @Html.ActionLink("Compare Retailers", "WithinShopper", "Analysis")
+                        </li>
+                        <li id="others-retailer-deep-dive" class="view-name retailerdeepdive-Others classMouseHover">
+                            @Html.ActionLink("Retailer Deep Dive", "WithinTrips", "Analysis")
+                        </li>
+                    </ul>
+                </div>
+                <div class="report-submenu">
+                    <ul>
+                        <li class="view-title RetailerCross-Others classMouseHover" style="">
+                            Retailer Cross Shopping Analysis
+                        </li>
+                        <li id="others-cross-retailer-frequencies" class="view-name frequencies-Others classMouseHover">
+                            @Html.ActionLink("Cross Retailer Frequencies", "CrossRetailerFrequencies", "Analysis")
+                        </li>
+                        <li id="others-cross-retailer-imageries" class="view-name imageries-Others classMouseHover">
+                            @Html.ActionLink("Cross Retailer Imageries", "CrossRetailerImageries", "Analysis")
+                        </li>
+                    </ul>
+                </div>
+                <div class="report-submenu">
+                    <ul>
+                        <li class="view-title Annualised-Others classMouseHover" style="">
+                            Annualized Projections
+                        </li>
+                        <li id="others-establishment-deepdeive" class="view-name EstablishmentDeepDive-Others classMouseHover">
+                            @Html.ActionLink("Trip decomposition", "EstablishmentDeepDive", "Analysis")
+                        </li>
+                    </ul>
+                </div>  
+            </div>
+            <div class="submodule-border-bottom"></div>
+        </div>
+    </div>
+    <div id="LeftPanel" style="display: none;">
+        @*Pit/Trend Toggle*@
+        <div id="PIT-TREND" class="FilterMenu PitTrendToggle classMouseHover" style="display: none; height: 80px;">
+            <div class="lft-ctrl-toggle">
+                @*<div class="lft-popup-tp-smnu lft-popup-tp-smnu-active" data-val="pit"></div>
+                    <div class="lft-popup-tp-smnu" data-val="trend"></div>*@
+                <div id="lft-fltr-pit" name="pit" class="lft-ctrl-toggle-text pit Active">POINT IN TIME</div>
+                <label class="pit-trend-switch">
+                    <input type="checkbox" id="pit-toggle" data-val="pit">
+                    <div class="pit-trend-slider round"></div>
+                </label>
+                <div id="lft-fltr-trend" name="trend" class="lft-ctrl-toggle-text trend">TREND</div>
+            </div>
+        </div>
+        @*End*@
+        @*Time Period*@
+        <div id="TimePeriod" class="FilterMenu TimePeriod classMouseHover">
+            <div class="FilterBlock InactiveSelection">
+                <ul class="FilterBlockList">
+                    <li class="FilteriCon">
+                        <div class="timeperiod_img">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @*End*@
+        @*Retailers*@
+        <div id="Retailers" class="FilterMenu Retailers classMouseHover" style="display:none;">
+            <div class="FilterBlock InactiveSelection">
+                <ul class="FilterBlockList">
+                    <li class="FilteriCon">
+                        <div class="retailer_img">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @*End*@
+        @*Site Filters*@
+        <div id="SiteFilters" class="FilterMenu Sites-Ecom classMouseHover" filter-name="E-Com Sites" search-params="Sites|Search-Site-AdvancedFilters|AdvancedFilter-Site-Search-Content">
+            <div class="FilterBlock InactiveSelection">
+                <ul class="FilterBlockList">
+                    <li class="FilteriCon">
+                        <div class="sites_img">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @*End*@
+        @*Beverages*@
+        <div id="Beverages" class="FilterMenu Beverages classMouseHover" style="display: none;">
+            <div class="FilterBlock InactiveSelection">
+                <ul class="FilterBlockList">
+                    <li class="FilteriCon">
+                        <div class="establishment_img">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @*End*@
+        @*Geography Filters*@
+        <div id="GeographyFilters" class="FilterMenu" style="display: none;" onclick="DisplaySecondaryGeoFilter($('#PrimaryGeographyFilterList ul li div'));">
+            <div class="FilterBlock InactiveSelection">
+                <ul class="FilterBlockList">
+                    <li class="FilteriCon">
+                        <div class="Geo_img">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @*End*@
+        @*Group Type*@
+        <div id="GroupType" class="FilterMenu Group classMouseHover" style="display: none;" filter-name="E-Com Groups" search-params="Type|Search-Group-Type|Group-Type-Search-Content">
+            <div class="FilterBlock InactiveSelection">
+                <ul class="FilterBlockList">
+                    <li class="FilteriCon">
+                        <div class="grouptype_img">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @*End*@
+        @*Measure Type*@
+        <div id="MeasureType" class="FilterMenu Measure-Charts classMouseHover" style="display: none;" filter-name="E-Com Measure" search-params="Measure|Search-Measure-Type|Measure-Type-Search-Content">
+            <div class="FilterBlock InactiveSelection">
+                <ul class="FilterBlockList">
+                    <li class="FilteriCon">
+                        <div class="measure_img">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @*End*@
+        @*Time Frequency*@
+        <div id="Left-Frequency" class="FilterMenu LeftFrequncy-Others classMouseHover" style="display: none;">
+            <div class="FilterBlock InactiveSelection">
+                <ul class="FilterBlockList">
+                    <li class="FilteriCon">
+                        <div class="measure_img">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @*End*@
+        @*Channel Visited*@
+        <div id="Left-Channel-Visited" class="FilterMenu" style="display: none;">
+            <div class="FilterBlock InactiveSelection">
+                <ul class="FilterBlockList">
+                    <li class="FilteriCon">
+                        <div class="measure_img">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @*End*@
+        @*Advanced Analytics Select Variable Visited*@
+        <div id="Advanced-Analytics-Select-Variable" class="FilterMenu CorrespondanceMeasureVariable-Others classMouseHover" style="display: none;">
+            <div class="FilterBlock InactiveSelection">
+                <ul class="FilterBlockList">
+                    <li class="FilteriCon">
+                        <div class="measure_img">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @*End*@
+        @*Advanced Filters*@
+        <div id="AdvancedFilters" class="FilterMenu Demographics classMouseHover" update-geography="true" filter-name="Demographic" search-params="DemographicFilters|Search-AdvancedFilters|AdvancedFilter-Search-Content">
+            <div class="FilterBlock InactiveSelection">
+                <ul class="FilterBlockList">
+                    <li class="FilteriCon">
+                        <div class="demograhicFitr_img">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @*End*@
+        @*Submit Button*@
+        <div id="submitButton" class="master-lft-ctrl submt">
+            <div class="master-btn lft-ctrl2" id="master-btn" onclick="prepareContentArea();">@*<span>Submit</span>*@</div>
+        </div>
+        @*End*@
+    </div>
+    <div id="RightPanel">
+        <div id="filter-content">
+            <div id="FilterHeader" style="display: none;">
+                <div id="Page-Lavel"></div>
+                <div id="SelectedFilters">
+                    <div id="textLength" style="display: none"></div>
+                    <div id="scrollableselection"></div>
+                    <div class="arrow_popup">
+                        <div class="arrw breadcrumb-open arrw_dwn classMouseHover dynpos1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @RenderBody()
+        @*Stat test*@
+        <div class="LowerRightContent" style="background-color: #CACACA; height: auto; position: absolute; margin: 0; bottom: 1px; width: 96%; font-size: 11px; display: none;">
+            <div id="stat-test-content">
+                <div id="div_stattest">
+                    <ul>
+                        <li>
+                            <div id="samplesize" style="">
+                                <ul style="margin: 0; padding: 0">
+                                    <li id="hideStatTestVsText" class="classMouseHover StattestingText dynpos1 up">
+                                        <div style="font-weight: bold; padding: 2px 0px;">
+                                            <span>STAT TESTING VS:</span>
+                                        </div>
+                                    </li>
+                                    <li id="stattest_totaltime" class="stattestselection Stat-totaltime classMouseHover dynpos1 up">
+                                        <div class="stattest">
+                                            <span sigtype-id="2">TOTAL TIME</span>
+                                        </div>
+                                    </li>
+                                    <li id="stattest_previousyear" class="stattestselection Stat-prevyear classMouseHover dynpos1 up">
+                                        <div class="stattest">
+                                            <span sigtype-id="4">PREVIOUS YEAR</span>
+                                        </div>
+                                    </li>
+                                    <li id="stattest_previousperiod" class="stattestselection Stat-prevperiod classMouseHover dynpos1 up">
+                                        <div class="stattest">
+                                            <span sigtype-id="3">PREVIOUS PERIOD</span>
+                                        </div>
+                                    </li>
+
+                                    <li id="stattest_base" class="stattestselection Stat-base classMouseHover dynpos1 up">
+                                        <div class="stattest">
+                                            <span sigtype-id="5">BASE</span>
+                                        </div>
+                                    </li>
+                                    <li id="stattest_benchmark" class="stattestselection Stat-custombase classMouseHover dynpos1 up">
+                                        <div class="stattest">
+                                            <span sigtype-id="1">CUSTOM BASE</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="NoteSample" style="float: left;">
+                                <span style="font-weight: bold;">Note:</span> Grey font = Low Sample (30-99), Blank = Sample < 30; NA = Not Applicable <span id="chartNote" style="float: right; display: none">IF BENCHMARK SAMPLE SIZE < 30, CHART IS NOT SHOWN.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stattest-sign">
+                                <ul>
+                                    <li class="stattestpercentage">
+                                        @*<div class="table-stat-sigfncegrenimg"></div>*@
+                                        <div class="outer_Signi">
+                                            <div class="inner_Signi_Green">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="stattestpercentage">
+                                        <div id="Green_Value">
+                                            Significantly Higher
+                                        </div>
+                                    </li>
+                                    <li class="stattestpercentage">
+                                        @*<div class="table-stat-sigfnceredimg"></div>*@
+                                        <div class="outer_Signi">
+                                            <div class="inner_Signi_Red">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="stattestpercentage">
+                                        <div id="Red_Value">Significantly Lower</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="bgmnote" style="font-size: 10px; display: none;">
+                                <span>
+                                    *MONTHLY+ PURCHASER IS ONLY AVAILABLE FOR THE FOLLOWING CATEGORIES: CSD, RTD COFFEE, RTD TEA,
+                                    PROTEIN DRINKS, RTD SMOOTHIES, JUICE/JUICE DRINKS, PACKAGED WATER, SPOTS DRINKS, ENERGY SHOTS/DRINKS
+                                    AND LIQUID FLAVOR ENHANCERS.
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="ShowStatDetails" style="display: none;">
+            <ul>
+                <li>
+
+                    @*<div class="table-stat-sigfncegrenimg"></div>*@
+                    <div class="outer_Signi" style="margin: 0;">
+                        <div class="inner_Signi_Green" style="margin: 0; display: block;">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        Significantly Positive with <span id="GreenValue"></span>confidence interval
+                    </div>
+
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    @*<div class="table-stat-sigfnceredimg"></div>*@
+                    <div class="outer_Signi" style="margin: 0;">
+                        <div class="inner_Signi_Red" style="margin: 0; display: block;">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        Significantly Negative with <span id="RedValue"></span>confidence interval
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+        @*End*@
+    </div>
+    <div id="PopupBlock">
+        @*TimePeriod*@
+        <div class="FilterPopup TimePeriod" style="display: none; height: 250px; width: 405px; padding-top: 4px;">
+            <div class="Title lft-popup-col-selected-text" style="width: auto; margin-top: 0; border-bottom: 1px dashed #eaeaea; color: white;">Time Period</div>
+            <div class="selectionText TimePeriodSelectionText" style="width: 100%; height: 8px; margin-bottom: 2px;">You can select from 2 to 25 Time Period</div>
+            <div id="TimeBlock">
+                <ul>
+                    <li name="TOTAL TIME" onclick="SelectTimePeriod(this);">Total Time</li>
+                    <li name="YEAR" onclick="SelectTimePeriod(this);">Year</li>
+                    <li name="YTD" onclick="SelectTimePeriod(this);">YTD</li>
+
+                </ul>
+                <ul>
+                    <li name="QUARTER" onclick="SelectTimePeriod(this);">Quater</li>
+                    <li name="12MMT" onclick="SelectTimePeriod(this);">12 MMT</li>
+                    <li name="3MMT" onclick="SelectTimePeriod(this);">3MMT</li>
+                </ul>
+            </div>
+            <div id="SliderContent">
+                <div class="slider"></div>
+            </div>
+        </div>
+        @*End TimePeriod*@
+
+        @*Retailers*@
+        @*<div class="FilterPopup Retailers" style="display: none; height: 432px; width: auto;">*@
+
+        <div class="FilterPopup Retailers" style="display: none; height: 375px; width: auto;">
+            <div class="AdvancedFiltersDemoHeading">
+                <div id="retailerHeadingLevel1" class="lft-popup-col-selected-text" style="width: 287px; float: left;">Retailers</div>
+                <div id="retailerHeadingLevel2" class="lft-popup-col-selected-text" style="width: 287px; float: left; display: none;">Retailers</div>
+                <div id="retailerHeadingLevel3" class="lft-popup-col-selected-text" style="width: 287px; float: left; display: none;">Retailers</div>
+            </div>
+            <div id="Retailer-Search-Content" class="Search-Filter">
+                <div class="Search">
+                    <input type="text" id="Search-Retailers" class="txt-search" name="Channel-Retailer-Search-Content" placeholder="Search.." />
+                    <div class="img-search">
+                    </div>
+                </div>
+            </div>
+            <div id="ChannelOrCategoryContent" class="Lavel" style="width: 252px;"></div>
+        </div>
+        @*End Retailers*@
+
+        @*Beverages*@
+        @*<div class="FilterPopup Retailers" style="display: none; height: 432px; width: auto;">*@
+
+        <div class="FilterPopup Beverages" style="display: none; height: 375px; width: auto;">
+            <div class="AdvancedFiltersDemoHeading">
+                <div id="beverageHeadingLevel0" class="lft-popup-col-selected-text" style="width: 287px; float: left;">Beverages</div>
+                <div id="beverageHeadingLevel1" class="lft-popup-col-selected-text" style="width: 287px; float: left;">Beverages</div>
+                <div id="beverageHeadingLevel2" class="lft-popup-col-selected-text" style="width: 287px; float: left; display: none;">Beverages</div>
+                <div id="beverageHeadingLevel3" class="lft-popup-col-selected-text" style="width: 287px; float: left; display: none;">Beverages</div>
+            </div>
+            <div id="Beverage-Search-Content" class="Search-Filter">
+                <div class="Search">
+                    <input type="text" id="Search-Beverages" class="txt-search" name="Channel-Retailer-Search-Content" placeholder="Search.." />
+                    <div class="img-search">
+                    </div>
+                </div>
+            </div>
+            <div id="BGMBeverage_NonBevarageDiv" class="Lavel" style="width: 252px; display: none;">
+                <ul>
+                    <li>
+                        <div id="1" name="BEVERAGE ITEMS" onclick="Displaybevnonbevdivs(this);"><span style="width: 90%;" class="Comparison">BEVERAGE ITEMS</span><span class="sidearrw"></span></div>
+                    </li>
+                    <li>
+                        <div id="2" name="NON-BEVERAGE ITEMS" onclick="Displaybevnonbevdivs(this);"><span style="width: 90%;" class="Comparison">NON-BEVERAGE ITEMS</span><span class="sidearrw"></span></div>
+                    </li>
+                </ul>
+            </div>
+            <div id="BGMNonBeverageDiv" class="Lavel" style="width: 252px; display: none;"></div>
+            <div id="BeverageOrCategoryContent" class="Lavel" style="width: 252px;"></div>
+        </div>
+        @*End Beverages*@
+        @*AdvancedFilters*@
+        <div class="FilterPopup GeographyFilters" style="display: none; height: 250px; width: auto;">
+            <div class="AdvancedFiltersDemoHeading">
+                <div id="GeographyHeadingLevel1" class="lft-popup-col-selected-text" style="width: 287px; float: left;">Geography Filters</div>
+                <div id="GeographyHeadingLevel2" class="lft-popup-col-selected-text" style="width: 287px; float: left; display: none;">Geography Filters</div>
+                <div id="GeographyHeadingLevel3" class="lft-popup-col-selected-text" style="width: 287px; float: left; display: none;">Geography Filters</div>
+            </div>
+            <div id="GeographyFilter-Search-Content" class="Search-Filter">
+                <div class="Search">
+                    <input type="text" id="Search-GeographyFilters" class="txt-search" name="Channel-Retailer-Search-Content" placeholder="Search.." />
+                    <div class="img-search">
+                    </div>
+                </div>
+            </div>
+            <div id="PrimaryGeographyFilterContent" class="DemoLevel Lavel Lavel1" style="width: 236px; height: 180px; overflow-y: auto;">
+                <div id="PrimaryGeographyFilterList" class="clsPrimaryDemoFilterList" style="height: auto; overflow: hidden;"></div>
+            </div>
+            <div id="SecondaryGeographyFilterContent" class="DemoLevel DemoLevel2 Lavel2 Sub-Lavel" style="display: none; height: 84%; width: 250px;">
+                <div id="SecondaryGeographyFilterList" class="clsSecondaryDemoFilterList"></div>
+            </div>
+            <div id="ThirdLevelGeographyFilterContent" class="DemoLevel DemoLevel3 Lavel2 Sub-Lavel" style="display: none;">
+                <div id="ThirdGeographyFilterList" class="clsThirdDemoFilterList"></div>
+            </div>
+        </div>
+        @*End AdvancedFilters*@
+        @*Group Type*@
+        <div class="FilterPopup GroupType" style="display: none; width: auto;">
+            <div id="Group-Type-Search-Content" class="Search-Filter">
+                <div class="Search">
+                    <input type="text" id="Search-Group-Type" class="txt-search" name="Channel-Retailer-Search-Content" placeholder="Search.." />
+                    <div class="img-search">
+                    </div>
+                </div>
+            </div>
+            <div class="selectionText GroupSelectionText">You can select from 2 to 11 Groups</div>
+            <div class="AdvancedFiltersDemoHeading HeaderLevel">
+                <div id="grouptypeHeadingLevel1" class="lft-popup-col-selected-text Headerlevel1" style="width: 287px; float: left;">Metric Comparison</div>
+                <div id="grouptypeHeadingLevel2" class="lft-popup-col-selected-text Headerlevel2" style="width: 287px; float: left; display: none;">Groups</div>
+                <div id="grouptypeHeadingLevel3" class="lft-popup-col-selected-text Headerlevel3" style="width: 287px; float: left; display: none;">Groups</div>
+                <div id="grouptypeHeadingLevel4" class="lft-popup-col-selected-text Headerlevel4" style="width: 287px; float: left; display: none;">Groups</div>
+            </div>
+
+
+            <div id="groupDivId" class="groupDiv">
+                <div id="PrimeGroupTypeHeaderContent" class="Lavel" style="height: 95%;"></div>
+                @* <div id="GroupTypeHeaderContent" class="Lavel" style="height:95%;display:none;"></div>
+                    <div id="GroupTypeContent" class="Lavel Sub-Lavel"></div>
+                    <div id="GroupTypeContentSub" class="Lavel Sub-Lavel"></div>*@
+                <div id="GroupTypeGeoContentSub" class="Lavel Sub-Lavel"></div>
+            </div>
+        </div>
+        @*End Group Type*@
+        @*Measure Type*@
+        <div class="FilterPopup MeasureType" style="display: none; width: auto; overflow-y: hidden; overflow-x: hidden;">
+            <div id="MeasureContainerDivId" class="MeasureContainerDiv" style="width: auto; height: 100%;">
+                <div id="MeasureScrollDivId" class="MeasureScrollDiv">
+                    <div id="Measure-Type-Search-Content" class="Search-Filter">
+                        <div class="Search">
+                            <input type="text" id="Search-Measure-Type" class="txt-search" name="Channel-Retailer-Search-Content" placeholder="Search.." />
+                            <div class="img-search">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="selectionText MeasureSelectionText">You can select Either 1 or up to 11 Measures</div>
+                    <div class="AdvancedFiltersDemoHeading HeaderLevel">
+                        <div id="MeasuresHeadingLevel" class="lft-popup-col-selected-text Headerlevel0" style="width: 287px; float: left;">Measures</div>
+                        <div id="MeasuresHeadingLevel1" class="lft-popup-col-selected-text Headerlevel1" style="width: 287px; float: left; display: none;">Measures</div>
+                        <div id="MeasuresHeadingLevel2" class="lft-popup-col-selected-text Headerlevel2" style="width: 287px; float: left; display: none;">Measures</div>
+                        <div id="MeasuresHeadingLevel4" class="lft-popup-col-selected-text Headerlevel3" style="width: 287px; float: left;">Measures</div>
+                        <div id="MeasuresHeadingLevel3" class="lft-popup-col-selected-text Headerlevel4" style="width: 287px; float: left; display: none;">Measures</div>
+                    </div>
+                    <div class="FilterContent">
+                        <div id="MeasureTypeShopperTripHeader" class="Lavel" style="height: 95%; display: none;"></div>
+                        <div id="retailer-measure" class="trip" style="display: flex;">
+                            <div id="MeasureTypeHeaderMainTrip" class="Lavel Sub-Lavel" style="height: 95%; display: block;"></div>
+                            <div id="MeasureTypeHeaderContentTrip" class="Lavel Sub-Lavel" style="height: 95%;"></div>
+                            <div id="MeasureTypeHeaderContentSubLevelTrip" class="Lavel Sub-Lavel" style="height: 95%;"></div>
+                            <div id="MeasureTypeContentTrip" class="Lavel Sub-Lavel" style="height: 95%;"></div>
+                        </div>
+                        <div class="Shopper" style="display: none;">
+                            <div id="MeasureTypeHeaderMainShopper" class="Lavel Sub-Lavel" style="height: 95%; display: none;"></div>
+                            <div id="MeasureTypeHeaderContentShopper" class="Lavel Sub-Lavel" style="height: 95%; display: none;"></div>
+                            <div id="MeasureTypeHeaderContentSubLevelShopper" class="Lavel Sub-Lavel" style="height: 95%; display: none;"></div>
+                            <div id="MeasureTypeContentShopper" class="Lavel Sub-Lavel" style="height: 95%; display: none;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*End Measure Type*@
+        @*Frequency*@
+        <div class="FilterPopup Left-Frequency" style="display: none; height: 281px; width: auto;">
+            <div class="AdvancedFiltersDemoHeading">
+                <div id="frequencyHeadingLevel1" class="lft-popup-col-selected-text" style="width: 287px; float: left;">Frequency</div>
+                <div id="frequencyHeadingLevel2" class="lft-popup-col-selected-text" style="width: 287px; float: left; display: none;">Frequency</div>
+                <div id="frequencyrHeadingLevel3" class="lft-popup-col-selected-text" style="width: 287px; float: left; display: none;">Frequency</div>
+            </div>
+            <div id="FreqFilter-Left-Search-Content" class="Search-Filter">
+                <div class="Search">
+                    <input type="text" id="Search-Left-Panel-FrequencyFilters" class="txt-search" name="Channel-Retailer-Search-Content" placeholder="Search.." />
+                    <div class="img-search">
+                    </div>
+                </div>
+            </div>
+            <div id="left-panel-frequency" class="Lavel" style="width: 252px;"></div>
+
+        </div>
+        @*End Measure Type*@
+        @*Advanced Analytics*@
+
+        <div class="FilterPopup Advanced-Analytics-Select-Variable" style="display: none; height: 281px; width: auto;">
+            <div class="AdvancedFiltersDemoHeading HeaderLevel">
+                <div id="advancedanalyticsHeadingLevel0" class="lft-popup-col-selected-text Headerlevel0" style="width: 270px; float: left;">Measure</div>
+                <div id="advancedanalyticsHeadingLevel1" class="lft-popup-col-selected-text Headerlevel1" style="width: 270px; float: left;">Shopper-Variables</div>
+                <div id="advancedanalyticsHeadingLevel2" class="lft-popup-col-selected-text Headerlevel2" style="width: 245px; float: left; display: none;">>Shopper-Variables</div>
+                <div id="advancedanalyticsHeadingLevel3" class="lft-popup-col-selected-text Headerlevel3" style="width: 287px; float: left; display: none;">>Shopper-Variables</div>
+            </div>
+            <div id="Advanced-AnalyticsFilter-Left-Search-Content" class="Search-Filter">
+                <div class="Search">
+                    <input type="text" id="Search-Left-Advanced-AnalyticsFilters" class="txt-search" name="Channel-Retailer-Search-Content" placeholder="Search.." />
+                    <div class="img-search">
+                    </div>
+                </div>
+            </div>
+            <div id="ToShowShooperAndTrips" class="Lavel rgt-cntrl-advanced-analytics-Conatiner" style="top: -1.25px; left: 0px; height: 281px; width: auto; float: left">
+                <div id="ToShowShopper" class="lft-popup-ele-label" style="width: 252px; float: left; border-bottom: 1px solid grey; cursor: pointer">SHOPPER MEASURES<span class="lft-popup-ele-next sidearrw" style="float: right; cursor: pointer"></span></div>
+                <div id="ToShowTrip" class="lft-popup-ele-label" style="width: 252px; float: left; border-bottom: 1px solid grey; cursor: pointer">TRIP MEASURES<span class="lft-popup-ele-next sidearrw" style="float: right; cursor: pointer"></span></div>
+            </div>
+            <div id="advanced-analytics-Channel-Shopper" class="Lavel rgt-cntrl-advanced-analytics-Conatiner" style="width: 252px; display: none;"></div>
+            <div id="advanced-analytics-Retailer-Shopper" class="Lavel rgt-cntrl-advanced-analytics-Conatiner" style="width: 252px; display: none;"></div>
+            <div id="advanced-analytics-Channel-Trips" class="Lavel rgt-cntrl-advanced-analytics-Conatiner" style="width: 252px; display: none;"></div>
+            <div id="advanced-analytics-Retailer-Trips" class="Lavel rgt-cntrl-advanced-analytics-Conatiner" style="width: 252px; display: none;"></div>
+            <div class="rgt-cntrl-advanced-analytics-Conatier-SubLevel1 DemoLevel2 Lavel Lavel2" style="width: 240px; height: 100%; float: left; display: none; overflow: hidden; outline: none; max-width: 277px; min-width: 239px; padding-left: 0px; height: 218px;" tabindex="3"></div>
+        </div>
+        @*End Advanced Analytics*@
+        @*End Measure Type*@
+        @*AdvancedFilters*@
+        <div class="FilterPopup AdvancedFilters" style="display: none; width: auto;">
+            <div id="AdvancedFilter-Search-Content" class="Search-Filter">
+                <div class="Search">
+                    <input type="text" id="Search-AdvancedFilters" class="txt-search" name="Channel-Retailer-Search-Content" placeholder="Search.." />
+                    <div class="img-search">
+                    </div>
+                </div>
+            </div>
+            <div class="AdvancedFiltersDemoHeading HeaderLevel">
+                <div id="DemoHeadingLevel0" class="lft-popup-col-selected-text Headerlevel0" style="width: 287px; float: left; display: none;">Additional Filters</div>
+                <div id="DemoHeadingLevel1" class="lft-popup-col-selected-text Headerlevel1" style="width: 287px; float: left; display: none;">Demographic Filters</div>
+                <div id="DemoHeadingLevel2" class="lft-popup-col-selected-text Headerlevel2" style="width: 287px; float: left; display: none;">Demographic Filters</div>
+                <div id="DemoHeadingLevel3" class="lft-popup-col-selected-text Headerlevel3" style="width: 287px; float: left; display: none;">Demographic Filters</div>
+                <div id="DemoHeadingLevel4" class="lft-popup-col-selected-text Headerlevel4" style="width: 287px; float: left; display: none;">Demographic Filters</div>
+            </div>
+
+            <div id="AdvFilterDivId" class="AdvFilterDiv">
+                <div id="ToShowDemoAndAdvFilters" class="Lavel rgt-cntrl-Demo-Advanced-Conatiner" style="top: -1.25px; left: 0px; height: 95%; float: left; display: none;">
+                    <div id="ToShowDemo" onclick="DisplayDemoOrVisitsFilters('ToShowDemo');" class="lft-popup-ele-label lft-popup-ele FilterStringContainerdiv" style="width: 100%; margin-top: 7%; left; border-bottom: 1px solid grey; cursor: pointer; height: auto;" name="DEMOGRAPHY FILTERS">
+                        Demographic Filters<div class="ArrowContainerdiv" style="left: 53%;"><span class="lft-popup-ele-next sidearrw" style="float: right; cursor: pointer"></span></div>
+                    </div>
+                    <div id="ToShowadvanced" onclick="DisplayDemoOrVisitsFilters('ToShowadvanced');" class="lft-popup-ele-label lft-popup-ele FilterStringContainerdiv" style="width: 100%; float: left; border-bottom: 1px solid grey; cursor: pointer; height: auto;" name="ADDITIONAL FILTERS">
+                        Additional Filters<div class="ArrowContainerdiv" style="left: 59.5%;"><span class="lft-popup-ele-next sidearrw" style="float: right; cursor: pointer"></span></div>
+                    </div>
+                </div>
+                <div id="PrimaryAdvancedFilterContent" class="DemoLevel Lavel Lavel1" style="overflow-y: auto; display: none; height: 95%;">
+                    <div id="PrimaryDemoFilterList" class="clsPrimaryDemoFilterList" style="height: auto; overflow: hidden;"></div>
+                </div>
+                <div id="SecondaryAdvancedFilterContent" class="DemoMeasureTypeHeaderMainLevel DemoLevel2 Lavel2 Sub-Lavel" style="display: none">
+                    <div id="SecondaryDemoFilterList" class="clsSecondaryDemoFilterList"></div>
+                </div>
+                <div id="ThirdLevelAdvancedFilterContent" class="DemoLevel DemoLevel2 Lavel2 Sub-Lavel" style="display: none;">
+                    <div id="ThirdDemoFilterList" class="clsThirdDemoFilterList"></div>
+                </div>
+                <div id="FourthLevelAdvancedFilterContent" class="DemoLevel DemoLevel2 Lavel2 Sub-Lavel" style="display: none;">
+                    <div id="FourthDemoFilterList" class="clsFourthDemoFilterList"></div>
+                </div>
+            </div>
+        </div>
+        @*End AdvancedFilters*@
+        @*SiteFilters*@
+        <div class="FilterPopup SiteFilters" style="display: none; width: auto;">
+            <div id="AdvancedFilter-Site-Search-Content" class="Search-Filter">
+                <div class="Search">
+                    <input type="text" id="Search-Site-AdvancedFilters" class="txt-search" name="Channel-Retailer-Search-Content" placeholder="Search.." />
+                    <div class="img-search">
+                    </div>
+                </div>
+            </div>
+            <div class="selectionText SiteSelectionText">You can select from 2 to 11 Sites</div>
+            <div class="AdvancedFiltersDemoHeading HeaderLevel">
+                <div id="SiteHeadingLevel1" class="lft-popup-col-selected-text Headerlevel1" style="width: 287px; float: left;">Shopping Sites</div>
+                <div id="SiteHeadingLevel2" class="lft-popup-col-selected-text Headerlevel2" style="width: 287px; float: left; display: none;">Demographic Filters</div>
+                <div id="SiteHeadingLevel3" class="lft-popup-col-selected-text Headerlevel3" style="width: 287px; float: left; display: none;">Demographic Filters</div>
+            </div>
+            <div id="e-com-sites"></div>
+            @* <div id="PrimarySiteFilterContent" class="DemoLevel Lavel Lavel1" style="height:84%;overflow-y:auto;">
+                    <div id="PrimarySiteFilterList" class="clsPrimaryDemoFilterList" style="height:auto;overflow:hidden;"></div>
+                </div>
+                <div id="SecondarSiteFilterContent" class="DemoMeasureTypeHeaderMainLevel DemoLevel2 Lavel2 Sub-Lavel" style="display: none;height:84%;">
+                    <div id="SecondarySiteFilterList" class="clsSecondaryDemoFilterList"></div>
+                </div>*@
+            @* <div id="ThirdLevelSiteFilterContent" class="DemoLevel DemoLevel3 Lavel2 Sub-Lavel" style="display: none;">
+                    <div id="ThirdSiteFilterList" class="clsThirdDemoFilterList"></div>
+                </div>*@
+        </div>
+        @*End SiteFilters*@
+    </div>
+    <div id="Translucent" class="TranslucentDiv" style="display: none;"></div>
+    <div id="Loader" style="display: none;">
+        <img src="~/Images/ishop-loader.gif?id5" width="200" height="90">
+    </div>
+    <input type="hidden" class="timeType" />
+    <input type="hidden" class="totime" />
+    <div id="Channel-Retailer-Search-Content" style="display: none;">
+    </div>
+    <div id="MouseHoverBigDiv" style="display: none;">
+        <div class="ContainerClass">
+            <div class="HeadingText">
+                <div class="mouseOverImageTitleBottom"></div>
+            </div>
+
+            <div class="TextContainer"></div>
+        </div>
+    </div>
+    <div id="MouseHoverSmallDiv" style="display: none;">
+        <div class="ContainerClass">
+            <div class="HeadingTextsmall" style="height: auto;">
+                <div class="mouseOverImageTitleBottom" style="margin-top: 27px;"></div>
+            </div>
+
+            <div class="TextContainersmall"></div>
+        </div>
+    </div>
+    <div id="MouseHoverSmallerDiv" style="display: none;">
+        <div class="topleftimage"></div>
+        <div class="leftbottomimage"></div>
+        <div class="toprightimage"></div>
+        <div class="centerdivdark">
+            <div class="mousehoversmallpopuptext"></div>
+        </div>
+    </div>
+    <div id="MouseHoverExtraSmallDiv" style="display: none;">
+        <div class="topleftimage"></div>
+        <div class="leftbottomimage"></div>
+        <div class="toprightimage"></div>
+        <div class="centerdivlight">
+            <div class="mousehoversmallpopuptext"></div>
+        </div>
+    </div>
+    @*Export to excel popup*@
+    <div class="exporttoexcelpopup" style="display: none;">
+        @*  <div id="excel-title" class="stat-heading" style="text-align: center;">Export To Excel</div>*@
+        <div class="stat-clsebtn"></div>
+        <div class="stat-closediv">
+            <div class="stat-heading">EXPORT TO EXCEL</div>
+        </div>
+        <div class="ExcelSelection">
+            <ul>
+                <li>
+                    <input class="exporttoexcel" type="checkbox" name="divshopperaccrossDemographicProfiling activefactsheettab" onclick="CheckSelectOrUnSelectSheets();"><span>Demographic Profiling</span>
+                </li>
+                <li>
+                    <input class="exporttoexcel" type="checkbox" name="divshopperaccrossGeneral inactivefactsheettab" onclick="CheckSelectOrUnSelectSheets();"><span>General</span>
+                </li>
+                <li>
+                    <input class="exporttoexcel" type="checkbox" name="divshopperaccrossStoreImagery inactivefactsheettab" onclick="CheckSelectOrUnSelectSheets();"><span>Store Imagery</span>
+                </li>
+                <li>
+                    <input class="exporttoexcel" type="checkbox" name="divshopperaccrossBeverageDetail inactivefactsheettab" onclick="CheckSelectOrUnSelectSheets();"><span>Beverage Detail</span>
+                </li>
+            </ul>
+        </div>
+        <div class="ExcelSelectAll">
+            <input id="chk_SelectAll" type="checkbox" onclick="SelectOrUnSelectAllSheets(this);">Select All
+        </div>
+        <div class="InfoForTimeSpent">
+            Please note the more tabs you download,
+            <br />
+            the longer the load time will be
+        </div>
+        <div class="ExcelButtonArea">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="stat-submt" style="margin: 0;" onclick="GenerateExportToExcel();">OK</div>
+                        </td>
+                        <td style="padding-left: 10px;">
+                            <div class="stat-cancel" onclick="CloseExportToExcel();">Cancel</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    @*end*@
+
+    @*custom base*@
+    <div class="stat-popup" style="display: none;">
+        <div class="stat-topdiv">
+            <div class="stat-topband"></div>
+            <div class="stat-clsebtn"></div>
+        </div>
+        <div class="stat-closediv">
+            <div class="stat-heading">SELECT A STATISTICAL COMPARISON POINT</div>
+            <div class="stat-sub-heading">(ALL OTHER OPTIONS WILL BE STAT TESTED AGAINST YOUR SELECTION)</div>
+        </div>
+        <div class="stat-content">
+        </div>
+        <div class="stat-submtdiv">
+            <div class="stat-submt" onclick="custombaseSubmit();">Submit</div>
+            <div class="stat-cancel">Cancel</div>
+        </div>
+    </div>
+    @*end*@
+
+    @*custom base*@
+    <div class="LowSample-popup" style="display: none;">
+        <div class="LowSample-topdiv">
+            <div class="LowSample-topband"></div>
+            <div class="LowSample-clsebtn"></div>
+        </div>
+        <div class="LowSample-closediv">
+            <div class="LowSample-heading">LOW SAMPLE SIZE</div>
+        </div>
+        <div class="LowSample-content">
+        </div>
+        <div class="LowSample-submtdiv">
+            <div class="LowSample-submt" onclick="LowSampleProceed();">Submit</div>
+            <div class="LowSample-cancel">Cancel</div>
+        </div>
+    </div>
+    @*end*@
+
+    @*stat setting*@
+    <div class="StatArea" style="display: none;">
+        <div class="StatTop">
+            <div name="StatArea" class="stat-clsebtn"></div>
+        </div>
+        <div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="StatTestArea">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td style="padding: 5px; color: #E41E2A;">
+                                            Stat Testing Level (this session only)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="StatTestValue" id="stat80" onclick="GetStatValue('1.2816','-1.2816','80')">
+                                                80%
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="StatTestValue" id="stat90" onclick="GetStatValue('1.6449','-1.6449','90')">
+                                                90%
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="StatTestValue" id="stat95" style="" onclick="GetStatValue('1.96','-1.96','95')">
+                                                95% (default &amp; K&amp;I Recommended)
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="StatTestValue" id="stat99" onclick="GetStatValue('2.5758','-2.5758','99')">
+                                                99%
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="StatText-des">
+                            <div class="StatText">
+                                <div style="font-size: 16px; color: #E41E2A;">
+                                    Important things to consider about stat
+                                    testing
+                                </div>
+                                <p style="font-size: 12px;">
+                                    Testing for statistical significance is a way to determine the likelihood  that
+                                    observed differences between two samples are due to genuine differences in the groups
+                                    and not due to sampling error.   Levels of statistical significance are calculated
+                                    to identify how confidence one should be that the observed difference is genuine.
+                                </p>
+                                <p style="font-size: 12px;">
+                                    The different levels of Stat Testing denote the level of confidence needed in an
+                                    analysis.  For example, if two values are statistically different at 80%, it’s like
+                                    saying the  difference is genuine  4 out of 5 times.   It also implies there is
+                                    a 1 in 5 chance that there is not a difference in the values due to sampling error.
+                                    Using a higher statistical threshold will produce a more confident number.  Example,
+                                    if two numbers are different and significant at 95%,  the difference is expected
+                                    to be genuine  95 out of 100 times.  Or put another way,  you would only make the
+                                    wrong interpretation 1 out of 20 times.
+
+                                </p>
+                                <p style="font-size: 12px;">
+                                    Larger levels of significance are far safer when defending data, but they take larger
+                                    samples size to show a true difference.
+                                </p>
+                                <p style="font-size: 12px;">
+                                    K&amp;I recommends 95%, but encourages 99% as sample sizes grow very large.  Only rely
+                                    on lower confidence intervals as a last resort, but be prepared to defend your decision
+                                    to do so.
+                                </p>
+                                <div class="stat-submt" style="float: right; margin-bottom: 10px;" onclick="SelectStatValue()">
+                                    Select
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+    @*end*@
+    @*alert popups*@
+    <div class="show-message-container" style="display: none;">
+        <div class="alert-message-close"></div>
+        <div class="alert-message"></div>
+    </div>
+    @*end*@
+    @Html.Hidden("URLError", Url.Action("Error", "Error"))
+    @Html.Hidden("URLLeftPanelFilters", Url.Action("GetFilters", "Home"))
+    @Html.Hidden("URLViewFilters", Url.Action("GetViewFilters", "Home"))
+    @Html.Hidden("URLCommonEcommerce", Url.Action("GetECommerceFilters", "Common"))
+
+    @Html.Hidden("URLDemographic", Url.Action("Demographic", "Dashboard"))
+    @Html.Hidden("URLBrandhealth", Url.Action("Brandhealth", "Dashboard"))
+    @Html.Hidden("URLVisits", Url.Action("Visits", "Dashboard"))
+    @Html.Hidden("URLPathToPurchase", Url.Action("PathToPurchase", "Dashboard"))
+
+    @Html.Hidden("URLCommonGetStatTest", Url.Action("GetStatTestValue", "Common"))
+    @Html.Hidden("URLCommonStatTest", Url.Action("SetStatTestValue", "Common"))
+    @Html.Hidden("URLCommonRegions", Url.Action("CustomRegionsFunction", "Common"))
+    @Html.Hidden("URLCommon", Url.Action("GetFilters", "Common"))
+    @Html.Hidden("URLCommon_LogSelection", Url.Action("LogSelection", "Common"))
+    @Html.Hidden("URLTables", Url.Action("", "Tables"))
+    @Html.Hidden("URL_E_Commerce_Table", Url.Action("", "E_Commerce_Table"))
+    @Html.Hidden("URLCharts", Url.Action("", "Charts"))
+    @Html.Hidden("URLReports", Url.Action("", "Reports"))
+    @Html.Hidden("URLAnalysis", Url.Action("", "Analysis"))
+    @Html.Hidden("URLComparisonRetailerFrequencies", Url.Action("GetRetailersData", "Analysis"))
+    @Html.Hidden("URLBGM", Url.Action("GetISHOPBGMData", "Analysis"))
+    @Html.Hidden("URLCrossRetailerImageries", Url.Action("GetRetailersPerceptionsData", "Analysis"))
+    @Html.Hidden("URLSOAP", Url.Action("GetISHOPSOAPData", "Analysis"))
+    @Html.Hidden("URLAdvancedAnalyticsComparisonRetailer", Url.Action("", "Analysis"))
+    @Html.Hidden("URLHomeFrom", Url.Action("GetKIUserDetails", "Home"))
+    @Html.Hidden("URLHome", Url.Action("KIHome", "Home"))
+    @Html.Hidden("URLSignOut", Url.Action("SignOut", "Home"))
+</body>
+@*@Styles.Render("~/Scripts/Slider/jquery-ui-slider-pips.css?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+    @Styles.Render("~/Scripts/Slider/jquery-ui-1.10.1.custom.css?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+    @Scripts.Render("~/Scripts/Slider/jquery-ui-1.10.3.custom.min.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+
+    @Scripts.Render("~/Scripts/Slider/jquery.cookie.js")
+    @Scripts.Render("~/Scripts/Slider/waypoints.min.js")
+    @Scripts.Render("~/Scripts/Slider/plugins.js")
+    @Scripts.Render("~/Scripts/Slider/prettify.js")
+    @Scripts.Render("~/Scripts/Slider/jquery-ui-slider-pips.js?" + @iSHOPNew.DAL.GlobalVariables.GetRandomNumber + "")
+    @Scripts.Render("~/Scripts/Slider/init.js")
+    @Scripts.Render("~/Scripts/jquery.nicescroll.js")
+    @Scripts.Render("~/Scripts/lodash.min.js")
+
+    @Scripts.Render("https://d3js.org/d3.v3.min.js")*@
+@*@Scripts.Render("https://d3js.org/d3.v4.min.js")
+    @Scripts.Render("https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js")*@
+
+@System.Web.Optimization.Scripts.Render("~/bundle/scripts/E-com-bottom-layout")
+</html>
